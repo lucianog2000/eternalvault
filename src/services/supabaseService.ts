@@ -160,14 +160,10 @@ class SupabaseService {
   // ==================== ACCESS KEYS (SIMPLIFIED) ====================
   
   async getAccessKeys(userId: string): Promise<AccessKeyWithCapsules[]> {
+    // First, get the access keys without the join
     const { data: accessKeys, error: keysError } = await supabase
       .from('access_keys')
-      .select(`
-        *,
-        profiles!access_keys_owner_id_fkey (
-          full_name
-        )
-      `)
+      .select('*')
       .eq('owner_id', userId)
       .eq('is_active', true)
       .order('created_at', { ascending: false });
@@ -179,6 +175,17 @@ class SupabaseService {
 
     if (!accessKeys || accessKeys.length === 0) {
       return [];
+    }
+
+    // Get the profile information separately
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('full_name')
+      .eq('id', userId)
+      .single();
+
+    if (profileError) {
+      console.warn('Could not fetch profile information:', profileError);
     }
 
     const accessKeysWithCapsules: AccessKeyWithCapsules[] = [];
@@ -202,7 +209,7 @@ class SupabaseService {
       accessKeysWithCapsules.push({
         ...accessKey,
         capsules: capsules as Capsule[],
-        owner_name: accessKey.profiles?.full_name || 'Unknown User'
+        owner_name: profile?.full_name || 'Unknown User'
       });
     }
 
@@ -332,14 +339,7 @@ class SupabaseService {
       // Direct lookup by ID (no hashing!)
       const { data: accessKey, error: keyError } = await supabase
         .from('access_keys')
-        .select(`
-          *,
-          profiles!access_keys_owner_id_fkey (
-            id,
-            full_name,
-            email
-          )
-        `)
+        .select('*')
         .eq('id', normalizedKey)
         .single();
 
@@ -360,6 +360,17 @@ class SupabaseService {
       }
 
       console.log('✅ Access key found:', accessKey.id, accessKey.name);
+
+      // Get the profile information separately
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('id, full_name, email')
+        .eq('id', accessKey.owner_id)
+        .single();
+
+      if (profileError) {
+        console.warn('Could not fetch profile information:', profileError);
+      }
 
       // Get associated capsules
       const { data: capsuleRelations, error: relationsError } = await supabase
@@ -392,13 +403,13 @@ class SupabaseService {
       const accessKeyWithCapsules: AccessKeyWithCapsules = {
         ...accessKey,
         capsules: capsules as Capsule[],
-        owner_name: accessKey.profiles?.full_name || 'Unknown User'
+        owner_name: profile?.full_name || 'Unknown User'
       };
 
       const owner = {
         id: accessKey.owner_id,
-        name: accessKey.profiles?.full_name || 'Unknown User',
-        email: accessKey.profiles?.email || 'unknown@example.com'
+        name: profile?.full_name || 'Unknown User',
+        email: profile?.email || 'unknown@example.com'
       };
 
       const group = {
