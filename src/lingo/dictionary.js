@@ -505,12 +505,9 @@ export default {
         },
         "5/0/init/body/13/argument/1/3/27/3": {
           content: {
-            de: "Zugriffsschlüsselgruppe erstellen",
             en: "Create Access Key",
-            es: "Crear grupo de clave de acceso",
-            fr: "Créer un groupe de clés d'accès",
           },
-          hash: "657afa2dea8badb5c49910012bcd1af9",
+          hash: "65ace5e9d85d8ad2b67b17e8b931d535",
         },
         "5/0/init/body/13/argument/1/3/3/1": {
           content: {
