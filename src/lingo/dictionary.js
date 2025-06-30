@@ -2185,12 +2185,12 @@ export default {
         "3/0/init/body/10/argument/17/expression/right/1/expression/0/body/1/3/3":
           {
             content: {
-              de: "Gültiger Zugriffsschlüssel • Hinzugefügt <function:Date.toLocaleDateString/>",
-              en: "Valid access key • Added <function:Date.toLocaleDateString/>",
-              es: "Clave de acceso válida • Añadida <function:Date.toLocaleDateString/>",
-              fr: "Clé d'accès valide • Ajoutée le <function:Date.toLocaleDateString/>",
+              de: "Direkter Zugriff • Hinzugefügt <function:Date.toLocaleDateString/>",
+              en: "Direct access • Added <function:Date.toLocaleDateString/>",
+              es: "Acceso directo • Añadido <function:Date.toLocaleDateString/>",
+              fr: "Accès direct • Ajouté <function:Date.toLocaleDateString/>",
             },
-            hash: "f41949b4bebd5569e5c8c65125e6326e",
+            hash: "52429e0ce19621c084d739f69a415a7e",
           },
         "3/0/init/body/10/argument/21/expression/right/3/3-placeholder": {
           content: {
@@ -2214,12 +2214,12 @@ export default {
         "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/consequent/3":
           {
             content: {
-              de: "Validiere...",
-              en: "Validating...",
-              es: "Validando...",
-              fr: "Validation...",
+              de: "Verbindung wird hergestellt...",
+              en: "Connecting...",
+              es: "Conectando...",
+              fr: "Connexion en cours...",
             },
-            hash: "c64cddbf8207da1c7a4593f55fe24ca8",
+            hash: "0627ab04701831ecbde4135e1ef9210c",
           },
         "3/0/init/body/10/argument/21/expression/right/5/3": {
           content: {
@@ -2232,12 +2232,12 @@ export default {
         },
         "3/0/init/body/10/argument/25/1": {
           content: {
-            de: "💡 <element:strong>Anonymer Zugriff:</element:strong> Zugriffsschlüssel funktionieren ohne Kontoerstellung. Jeder Schlüssel gewährt Zugriff auf eine bestimmte Gruppe von Kapseln und gewährleistet maximale Privatsphäre und granulare Kontrolle.",
-            en: "💡 <element:strong>Anonymous Access:</element:strong> Access keys work without creating an account. Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control.",
-            es: "💡 <element:strong>Acceso anónimo:</element:strong> Las claves de acceso funcionan sin necesidad de crear una cuenta. Cada clave da acceso a un grupo específico de cápsulas, garantizando máxima privacidad y control granular.",
-            fr: "💡 <element:strong>Accès anonyme :</element:strong> Les clés d'accès fonctionnent sans création de compte. Chaque clé donne accès à un groupe spécifique de capsules, assurant une confidentialité maximale et un contrôle précis.",
+            de: "✅ <element:strong>Direkter Zugriff:</element:strong> Zugriffsschlüssel funktionieren sofort ohne jegliche Verifizierung. Geben Sie einfach den Schlüssel ein und erhalten Sie sofortigen Zugriff auf alle zugehörigen Kapseln.",
+            en: "✅ <element:strong>Direct Access:</element:strong> Access keys work immediately without any verification. Simply enter the key and get instant access to all associated capsules.",
+            es: "✅ <element:strong>Acceso directo:</element:strong> Las claves de acceso funcionan inmediatamente sin ninguna verificación. Simplemente introduce la clave y obtén acceso instantáneo a todas las cápsulas asociadas.",
+            fr: "✅ <element:strong>Accès direct :</element:strong> Les clés d'accès fonctionnent immédiatement sans aucune vérification. Saisissez simplement la clé et obtenez un accès instantané à toutes les capsules associées.",
           },
-          hash: "4b0ca151dafdf8539c51f05783f535a6",
+          hash: "c84f6b3cee4e0010ceb0264bb1418694",
         },
         "3/0/init/body/10/argument/29/expression/right/1": {
           content: {
@@ -2412,6 +2412,15 @@ export default {
             fr: "Déconnecter",
           },
           hash: "4c64e1137e3e17194d1752dfb02b96df",
+        },
+        "3/0/init/body/9/consequent/0/argument/13/1/3": {
+          content: {
+            de: "✅ <element:strong>Direkter Zugriff:</element:strong> Keine Verifizierung erforderlich - sofortiger Zugriff auf alle Kapseln",
+            en: "✅ <element:strong>Direct Access:</element:strong> No verification needed - immediate access to all capsules",
+            es: "✅ <element:strong>Acceso directo:</element:strong> No se necesita verificación - acceso inmediato a todas las cápsulas",
+            fr: "✅ <element:strong>Accès direct :</element:strong> Aucune vérification nécessaire - accès immédiat à toutes les capsules",
+          },
+          hash: "c395f862ad4c1a40e8f00c7492ff78a6",
         },
       },
     },

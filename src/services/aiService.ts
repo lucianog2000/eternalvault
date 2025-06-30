@@ -47,12 +47,8 @@ class AIService {
 
     let summary = `${this.legacyOwner?.name} has given you access to **${this.legacyCapsules.length} capsule${this.legacyCapsules.length > 1 ? 's' : ''}** from the group "${this.activeGroup?.name || 'Unnamed'}":\n\n`;
 
-    // Show owner status information
-    if (this.legacyOwner?.isDeceased) {
-      summary += `💔 **Owner status:** ${this.legacyOwner.name} passed away on ${new Date(this.legacyOwner.deceasedAt).toLocaleDateString()}.\n\n`;
-    } else {
-      summary += `💓 **Owner status:** ${this.legacyOwner.name} is still alive (last confirmation: ${new Date(this.legacyOwner.lastLifeConfirmation || this.legacyOwner.lastActivity).toLocaleDateString()}).\n\n`;
-    }
+    // Show direct access status
+    summary += `✅ **Access Status:** Direct access granted - no verification needed.\n\n`;
 
     // Show active capsules
     if (activeCapsules.length > 0) {
@@ -104,53 +100,21 @@ To help you find the information you need, you must first connect using a valid 
 2. **If you already have available legacies:** Select the specific legacy you want to chat with
 
 **What is an access key?**
-It's a special code that your loved one created to give you access to a specific group of capsules from their legacy. Each access key gives access only to the capsules that were assigned to that specific group.
+It's a special code that gives you direct access to a specific group of capsules. No verification needed - just enter the key and get immediate access.
 
 **Example access keys to try:**
-• \`evault_juan_familia_2024_abc123def456\` - Juan García's family access (3 capsules) - ⚠️ Requires Juan to be deceased
-• \`evault_juan_abogado_2024_xyz789ghi012\` - Juan García's legal access (1 capsule) - ⚠️ Requires Juan to be deceased
-• \`evault_juan_amigo_2024_mno345pqr678\` - Juan García's friendship access (1 capsule) - ⚠️ Requires Juan to be deceased
-• \`evault_maria_nietos_2024_stu901vwx234\` - María González's grandchildren access (2 capsules) - ✅ María has passed away
-• \`evault_carlos_tech_2024_def456ghi789\` - Carlos Mendoza's technical access (1 capsule) - ✅ Carlos has passed away
-• \`evault_test_alive_2024_test123alive456\` - Test user (1 capsule) - ⚠️ Requires user to be deceased
+• \`evault_juan_familia_2024_abc123def456\` - Juan García's family access (3 capsules)
+• \`evault_juan_abogado_2024_xyz789ghi012\` - Juan García's legal access (1 capsule)
+• \`evault_juan_amigo_2024_mno345pqr678\` - Juan García's friendship access (1 capsule)
+• \`evault_maria_nietos_2024_stu901vwx234\` - María González's grandchildren access (2 capsules)
+• \`evault_carlos_tech_2024_def456ghi789\` - Carlos Mendoza's technical access (1 capsule)
+• \`evault_test_alive_2024_test123alive456\` - Test user (1 capsule)
 
-**💡 Note about Life Verification:**
-Some access keys only activate after the owner's death, ensuring maximum privacy while the person is still alive.
+**💡 Direct Access:**
+All access keys work immediately - no waiting, no verification, no restrictions. Just enter the key and access the capsules instantly.
 
 Each access key will give you access only to a specific group of capsules. 💝`,
       confidence: 1.0
-    };
-  }
-
-  private getOwnerAliveResponse(): AIResponse {
-    return {
-      message: `🚫 **Access Restricted - Owner Still Alive**
-
-I cannot give you access to ${this.legacyOwner?.name}'s capsules because our system has detected they are still alive.
-
-**Why is access restricted?**
-• **Privacy protection:** EternalVault protects personal information while the person is still alive
-• **Automatic verification:** The system regularly checks if the owner is still active
-• **Last life confirmation:** ${new Date(this.legacyOwner?.lastLifeConfirmation || this.legacyOwner?.lastActivity).toLocaleString()}
-
-**When will access be activated?**
-Access will automatically activate when:
-1. ${this.legacyOwner?.name} doesn't confirm their life status during the configured period
-2. Or when manually marked as deceased in the system
-
-**What can you do?**
-• **If you think there's an error:** Contact ${this.legacyOwner?.name} directly
-• **If you have other access keys:** Try keys from other legacies
-• **If you're a direct family member:** Some family keys may have immediate access
-
-**Group information:**
-• **Group:** ${this.activeGroup?.name}
-• **Description:** ${this.activeGroup?.description}
-• **Owner:** ${this.legacyOwner?.name} (Alive)
-
-This system ensures that private information remains protected until the appropriate time. 🔒`,
-      confidence: 1.0,
-      legacyOwnerName: this.legacyOwner?.name
     };
   }
 
@@ -165,7 +129,7 @@ ${this.legacyOwner?.name} organized their legacy into different groups with spec
 **Your current access key gives access to:**
 **Group:** ${this.activeGroup?.name || 'Unnamed'}
 **Description:** ${this.activeGroup?.description || 'No description'}
-**Owner status:** ${this.legacyOwner?.isDeceased ? 'Deceased' : 'Alive'}
+**Access Type:** Direct access (no verification needed)
 
 **Available capsules:**
 ${this.legacyCapsules.filter(c => !c.isDestroyed).map(c => `• ${c.title}`).join('\n')}
@@ -204,11 +168,6 @@ Would you like me to help you with any of these available capsules? 💝`,
     // Check if there's an active legacy configured
     if (!this.activeLegacy || !this.legacyOwner) {
       return this.getNoTokenResponse();
-    }
-
-    // Check if owner is alive and access is restricted
-    if (!this.legacyOwner.isDeceased && this.activeLegacy.requiresOwnerDeceased) {
-      return this.getOwnerAliveResponse();
     }
 
     const ownerName = this.legacyOwner.name;
@@ -299,14 +258,10 @@ Would you like me to help you with any of these available capsules? 💝`,
     }
     // Contextual and empathetic responses
     else if (this.matchesKeywords(question, greetingKeywords)) {
-      const ownerStatus = this.legacyOwner.isDeceased 
-        ? `passed away on ${new Date(this.legacyOwner.deceasedAt).toLocaleDateString()}`
-        : `is still alive (last confirmation: ${new Date(this.legacyOwner.lastLifeConfirmation || this.legacyOwner.lastActivity).toLocaleDateString()})`;
-
       response = {
         message: `Hello, I'm the guardian angel of ${ownerName}'s legacy. I'm here to help you find the information they left specifically for you.
 
-**Owner status:** ${ownerName} ${ownerStatus}.
+**Access Status:** ✅ Direct access granted - no verification needed.
 
 Your access key gives you access to the group **"${this.activeGroup?.name || 'Unnamed'}"** with ${this.legacyCapsules.length} total capsule${this.legacyCapsules.length > 1 ? 's' : ''} (${availableCapsules.length} available, ${destroyedCapsules.length} destroyed).
 
@@ -412,28 +367,26 @@ ${assetCapsules.map(c => `• ${c.title}`).join('\n')}`,
       }
     } 
     else if (this.matchesKeywords(question, statusKeywords)) {
-      const ownerStatus = this.legacyOwner.isDeceased 
-        ? `passed away on ${new Date(this.legacyOwner.deceasedAt).toLocaleDateString()}`
-        : `is still alive`;
-
       response = {
-        message: `**${ownerName}'s status:** ${ownerName} ${ownerStatus}.
+        message: `**${ownerName}'s access information:**
 
-${this.legacyOwner.isDeceased ? 
-  `💔 According to our records, ${ownerName} passed away on ${new Date(this.legacyOwner.deceasedAt).toLocaleDateString()}. That's why you have access to these capsules from their legacy.` :
-  `💓 ${ownerName} is still alive according to our life verification system. Their last confirmation was on ${new Date(this.legacyOwner.lastLifeConfirmation || this.legacyOwner.lastActivity).toLocaleDateString()}.`
-}
+✅ **Access Type:** Direct access - no verification needed
+🔑 **Access Key:** Valid and working
+📦 **Group:** ${this.activeGroup?.name}
+📋 **Description:** ${this.activeGroup?.description || 'No description'}
 
 **Your access information:**
-• **Group:** ${this.activeGroup?.name}
 • **Total capsules:** ${this.legacyCapsules.length}
 • **Available capsules:** ${availableCapsules.length}
-• **Requires death:** ${this.activeLegacy.requiresOwnerDeceased ? 'Yes' : 'No'}
+• **Destroyed capsules:** ${destroyedCapsules.length}
 
-${!this.legacyOwner.isDeceased && this.activeLegacy.requiresOwnerDeceased ? 
-  'Access to these capsules is restricted while the owner is still alive, to protect their privacy.' :
-  'You have full access to the capsules in this group.'
-}`,
+**Access Features:**
+• ✅ Immediate access to all capsules
+• ✅ No waiting or verification required
+• ✅ Direct connection to legacy information
+• ✅ Full access to assigned content
+
+You have complete access to all capsules in this group without any restrictions.`,
         confidence: 1.0,
         legacyOwnerName: ownerName
       };
@@ -471,11 +424,11 @@ ${availableCapsules.some(c => c.selfDestruct?.enabled) ?
       // General search when mentioning family relationship
       if (availableCapsules.length > 0) {
         response = {
-          message: `${ownerName} left ${this.legacyCapsules.length} capsule${this.legacyCapsules.length > 1 ? 's' : ''} specifically in the group "${this.activeGroup?.name}" for you. Your access key gives you access to information they considered appropriate to share with you.
+          message: `${ownerName} left ${this.legacyCapsules.length} capsule${this.legacyCapsules.length > 1 ? 's' : ''} specifically in the group "${this.activeGroup?.name}" for you. Your access key gives you direct access to information they considered appropriate to share with you.
 
 **Current group:** ${this.activeGroup?.name}
 **Description:** ${this.activeGroup?.description}
-**Owner status:** ${this.legacyOwner.isDeceased ? 'Deceased' : 'Alive'}
+**Access Type:** Direct access (no verification needed)
 
 **Capsule status:**
 • **Available:** ${availableCapsules.length}
@@ -510,17 +463,17 @@ If you have other access keys, you can add them to access additional groups that
     } 
     else if (this.matchesKeywords(question, keyTokenKeywords)) {
       response = {
-        message: `You currently have access to the group **"${this.activeGroup?.name}"** from ${ownerName}'s legacy.
+        message: `You currently have direct access to the group **"${this.activeGroup?.name}"** from ${ownerName}'s legacy.
 
 **Your access information:**
-• Owner: ${ownerName} (${this.legacyOwner.isDeceased ? 'Deceased' : 'Alive'})
+• Owner: ${ownerName}
 • Group: ${this.activeGroup?.name}
 • Description: ${this.activeGroup?.description}
 • Total capsules: ${this.legacyCapsules.length}
 • Available capsules: ${availableCapsules.length}
 • Destroyed capsules: ${destroyedCapsules.length}
 • Access granted: ${new Date(this.activeLegacy.grantedAt).toLocaleDateString()}
-• Requires death: ${this.activeLegacy.requiresOwnerDeceased ? 'Yes' : 'No'}
+• Access type: Direct (no verification needed)
 
 **Specific available capsules:**
 ${availableCapsules.map(c => {

@@ -47,7 +47,7 @@ const LegacySelector: React.FC = () => {
         
         console.log('✅ Access key added successfully');
       } else {
-        setValidationError(error || 'Invalid or already added access key');
+        setValidationError(error || 'Access key not found or already added');
         console.log('❌ Failed to add access key:', error);
       }
     } catch (err) {
@@ -110,6 +110,16 @@ const LegacySelector: React.FC = () => {
             </div>
           </div>
         )}
+
+        {/* Direct Access Notice */}
+        <div className="mt-3 p-2 bg-blue-500/20 border border-blue-500/30 rounded">
+          <div className="flex items-center space-x-2">
+            <Shield className="w-4 h-4 text-blue-300" />
+            <p className="text-blue-200 text-xs">
+              ✅ <strong>Direct Access:</strong> No verification needed - immediate access to all capsules
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -173,7 +183,7 @@ const LegacySelector: React.FC = () => {
                 <div>
                   <p className="text-white text-xs lg:text-sm font-medium">{legacy.ownerName}</p>
                   <p className="text-white/60 text-xs">
-                    Valid access key • Added {new Date(legacy.grantedAt).toLocaleDateString()}
+                    Direct access • Added {new Date(legacy.grantedAt).toLocaleDateString()}
                   </p>
                 </div>
               </div>
@@ -229,7 +239,7 @@ const LegacySelector: React.FC = () => {
               {isValidating ? (
                 <>
                   <Loader className="w-3 h-3 lg:w-4 lg:h-4 animate-spin" />
-                  <span>Validating...</span>
+                  <span>Connecting...</span>
                 </>
               ) : (
                 <span>Connect</span>
@@ -251,10 +261,10 @@ const LegacySelector: React.FC = () => {
       )}
 
       {/* Information */}
-      <div className="mt-3 p-2 bg-blue-500/10 rounded border border-blue-500/20">
-        <p className="text-blue-200 text-xs">
-          💡 <strong>Anonymous Access:</strong> Access keys work without creating an account. 
-          Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control.
+      <div className="mt-3 p-2 bg-green-500/10 rounded border border-green-500/20">
+        <p className="text-green-200 text-xs">
+          ✅ <strong>Direct Access:</strong> Access keys work immediately without any verification. 
+          Simply enter the key and get instant access to all associated capsules.
         </p>
       </div>
 

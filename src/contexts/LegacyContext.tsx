@@ -96,8 +96,8 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     try {
       console.log('🔄 Refreshing legacy data for:', activeLegacy.accessToken.substring(0, 10) + '...');
       
-      // Use the new anonymous validation method
-      const response = await supabaseService.validateAccessKeyForAnonymous(activeLegacy.accessToken);
+      // Use direct validation - no restrictions
+      const response = await supabaseService.validateAccessKeyDirect(activeLegacy.accessToken);
       
       if (response.success && response.data) {
         const { accessKey, owner, group } = response.data;
@@ -107,7 +107,7 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           id: owner.id,
           name: owner.name,
           email: owner.email,
-          isDeceased: false, // Access keys work independently of owner status
+          isDeceased: false, // Always allow access - no verification
           lastActivity: new Date().toISOString(),
           lastLifeConfirmation: new Date().toISOString()
         };
@@ -127,7 +127,7 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
             active: capsule.unlock_rule_active
           },
           isActive: capsule.is_active,
-          isUnlocked: capsule.is_unlocked,
+          isUnlocked: true, // Always unlocked for direct access
           selfDestruct: capsule.self_destruct_enabled ? {
             enabled: capsule.self_destruct_enabled,
             maxReads: capsule.self_destruct_max_reads,
@@ -164,20 +164,20 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       setActiveLegacyState(legacy);
       
       if (legacy) {
-        console.log('🔍 Validating access token for legacy:', legacy.accessToken.substring(0, 10) + '...');
+        console.log('🔍 Direct access for legacy:', legacy.accessToken.substring(0, 10) + '...');
         
-        // Use the new anonymous validation method
-        const response = await supabaseService.validateAccessKeyForAnonymous(legacy.accessToken);
+        // Use direct validation - no restrictions
+        const response = await supabaseService.validateAccessKeyDirect(legacy.accessToken);
         
         if (response.success && response.data) {
           const { accessKey, owner, group } = response.data;
           
-          // Map to legacy format
+          // Map to legacy format - always allow access
           const legacyOwnerData: LegacyOwner = {
             id: owner.id,
             name: owner.name,
             email: owner.email,
-            isDeceased: false, // Access keys work independently of owner status
+            isDeceased: false, // Always allow access
             lastActivity: new Date().toISOString(),
             lastLifeConfirmation: new Date().toISOString()
           };
@@ -197,7 +197,7 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
               active: capsule.unlock_rule_active
             },
             isActive: capsule.is_active,
-            isUnlocked: capsule.is_unlocked,
+            isUnlocked: true, // Always unlocked
             selfDestruct: capsule.self_destruct_enabled ? {
               enabled: capsule.self_destruct_enabled,
               maxReads: capsule.self_destruct_max_reads,
@@ -218,9 +218,9 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
             group: group.name
           });
         } else {
-          setError(response.error || 'Invalid access key');
+          setError(response.error || 'Access key not found');
           setActiveLegacyState(null);
-          console.log('❌ Failed to validate access key:', response.error);
+          console.log('❌ Failed to find access key:', response.error);
         }
       } else {
         setLegacyOwner(null);
@@ -244,8 +244,8 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setError(null);
     
     try {
-      // Use the new anonymous validation method
-      const response = await supabaseService.validateAccessKeyForAnonymous(token);
+      // Use direct validation - no restrictions
+      const response = await supabaseService.validateAccessKeyDirect(token);
       
       if (response.success && response.data) {
         const { accessKey, owner, group } = response.data;
@@ -257,7 +257,7 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           accessToken: token,
           capsuleGroupId: group.id,
           grantedAt: new Date().toISOString(),
-          requiresOwnerDeceased: false // Access keys work independently
+          requiresOwnerDeceased: false // No verification needed
         };
         
         console.log('✅ Legacy access validated successfully:', {
@@ -268,7 +268,7 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         
         return legacy;
       } else {
-        setError(response.error || 'Invalid access key');
+        setError(response.error || 'Access key not found');
         console.log('❌ Legacy access validation failed:', response.error);
         return null;
       }
@@ -369,7 +369,8 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       console.log('✅ Capsule access recorded successfully');
     } catch (error) {
       console.error('Error recording capsule access:', error);
-      throw error; // Re-throw to be handled by the calling component
+      // Don't throw - just log the error and continue
+      console.warn('Continuing despite access recording error');
     }
   };
 

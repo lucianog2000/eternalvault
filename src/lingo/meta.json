@@ -1909,11 +1909,11 @@
         },
         "3/0/init/body/10/argument/17/expression/right/1/expression/0/body/1/3/3": {
           "type": "element",
-          "hash": "f41949b4bebd5569e5c8c65125e6326e",
+          "hash": "52429e0ce19621c084d739f69a415a7e",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Valid access key • Added <function:Date.toLocaleDateString/>"
+          "content": "Direct access • Added <function:Date.toLocaleDateString/>"
         },
         "3/0/init/body/10/argument/21/expression/right/3/3-placeholder": {
           "type": "attribute",
@@ -1933,11 +1933,11 @@
         },
         "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/consequent/3": {
           "type": "element",
-          "hash": "c64cddbf8207da1c7a4593f55fe24ca8",
+          "hash": "0627ab04701831ecbde4135e1ef9210c",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Validating..."
+          "content": "Connecting..."
         },
         "3/0/init/body/10/argument/21/expression/right/5/3": {
           "type": "element",
@@ -1949,11 +1949,11 @@
         },
         "3/0/init/body/10/argument/25/1": {
           "type": "element",
-          "hash": "4b0ca151dafdf8539c51f05783f535a6",
+          "hash": "c84f6b3cee4e0010ceb0264bb1418694",
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "💡 <element:strong>Anonymous Access:</element:strong> Access keys work without creating an account. Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control."
+          "content": "✅ <element:strong>Direct Access:</element:strong> Access keys work immediately without any verification. Simply enter the key and get instant access to all associated capsules."
         },
         "3/0/init/body/10/argument/29/expression/right/1": {
           "type": "element",
@@ -2106,6 +2106,14 @@
           "skip": false,
           "overrides": {},
           "content": "Disconnect"
+        },
+        "3/0/init/body/9/consequent/0/argument/13/1/3": {
+          "type": "element",
+          "hash": "c395f862ad4c1a40e8f00c7492ff78a6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✅ <element:strong>Direct Access:</element:strong> No verification needed - immediate access to all capsules"
         }
       }
     },

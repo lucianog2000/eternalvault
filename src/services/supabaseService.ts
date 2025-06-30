@@ -294,13 +294,13 @@ class SupabaseService {
     }
   }
 
-  // ==================== ANONYMOUS ACCESS KEY VALIDATION ====================
+  // ==================== DIRECT ACCESS KEY VALIDATION (SIMPLIFIED) ====================
   
   /**
-   * Validates an access key for anonymous users
-   * This method works independently of user authentication state
+   * Validates an access key and returns associated capsules directly
+   * NO VERIFICATION - just find the key and return capsules
    */
-  async validateAccessKeyForAnonymous(rawKey: string): Promise<{
+  async validateAccessKeyDirect(rawKey: string): Promise<{
     success: boolean;
     data?: {
       accessKey: AccessKeyWithCapsules;
@@ -318,7 +318,7 @@ class SupabaseService {
     error?: string;
   }> {
     try {
-      console.log('🔍 Validating access key for anonymous user:', rawKey.substring(0, 10) + '...');
+      console.log('🔍 Direct access key validation:', rawKey.substring(0, 10) + '...');
       
       // Normalize and hash the key
       const normalizedKey = this.normalizeAccessKey(rawKey);
@@ -326,7 +326,7 @@ class SupabaseService {
       
       console.log('🔐 Key hash:', keyHash);
 
-      // Query access key using service role to bypass RLS
+      // Query access key - NO RESTRICTIONS, just find it
       const { data: accessKeys, error: keyError } = await supabase
         .from('access_keys')
         .select(`
@@ -338,7 +338,6 @@ class SupabaseService {
           )
         `)
         .eq('key_hash', keyHash)
-        .eq('is_active', true)
         .limit(1);
 
       if (keyError) {
@@ -353,32 +352,14 @@ class SupabaseService {
         console.log('❌ Access key not found');
         return {
           success: false,
-          error: 'Invalid access key'
+          error: 'Access key not found'
         };
       }
 
       const accessKey = accessKeys[0];
       console.log('✅ Access key found:', accessKey.id, accessKey.name);
 
-      // Check if expired
-      if (accessKey.expires_at && new Date(accessKey.expires_at) <= new Date()) {
-        console.log('❌ Access key expired');
-        return {
-          success: false,
-          error: 'Access key has expired'
-        };
-      }
-
-      // Check access count limit
-      if (accessKey.max_access_count && accessKey.access_count >= accessKey.max_access_count) {
-        console.log('❌ Access key usage limit reached');
-        return {
-          success: false,
-          error: 'Access key usage limit reached'
-        };
-      }
-
-      // Get associated capsules using service role
+      // Get associated capsules - NO RESTRICTIONS
       const { data: capsuleRelations, error: relationsError } = await supabase
         .from('access_key_capsules')
         .select(`
@@ -398,8 +379,13 @@ class SupabaseService {
       const capsules = capsuleRelations?.map(rel => rel.capsules).filter(Boolean) || [];
       console.log('📦 Found capsules:', capsules.length);
 
-      // Increment access count
-      await this.incrementAccessKeyUsage(accessKey.id);
+      // Increment access count (optional, no error if fails)
+      try {
+        await this.incrementAccessKeyUsage(accessKey.id);
+      } catch (error) {
+        console.warn('Warning: Could not increment access count:', error);
+        // Continue anyway - don't fail the validation
+      }
 
       // Build response data
       const accessKeyWithCapsules: AccessKeyWithCapsules = {
@@ -420,7 +406,7 @@ class SupabaseService {
         description: accessKey.notes || `Access to ${capsules.length} capsule${capsules.length !== 1 ? 's' : ''}`
       };
 
-      console.log('🎉 Access key validation successful');
+      console.log('🎉 Direct access key validation successful');
 
       return {
         success: true,
@@ -441,7 +427,7 @@ class SupabaseService {
   }
 
   /**
-   * Increments the usage count for an access key
+   * Increments the usage count for an access key (best effort)
    */
   private async incrementAccessKeyUsage(accessKeyId: string): Promise<void> {
     try {
@@ -752,8 +738,8 @@ class SupabaseService {
     try {
       console.log('🔄 Legacy validateAccessToken called with token:', token.substring(0, 10) + '...');
       
-      // Use the new anonymous validation method
-      const result = await this.validateAccessKeyForAnonymous(token);
+      // Use the new direct validation method
+      const result = await this.validateAccessKeyDirect(token);
       
       if (!result.success || !result.data) {
         return {
@@ -781,7 +767,7 @@ class SupabaseService {
         currentUses: accessKey.access_count,
         allowedUsers: ['anonymous'],
         priority: 'high',
-        requiresOwnerDeceased: false // Access keys work independently of owner status
+        requiresOwnerDeceased: false // NO VERIFICATION - direct access
       };
 
       return {
