@@ -506,7 +506,7 @@ export default {
         "5/0/init/body/13/argument/1/3/27/3": {
           content: {
             de: "Zugriffsschlüsselgruppe erstellen",
-            en: "Create Access Key Group",
+            en: "Create Access Key",
             es: "Crear grupo de clave de acceso",
             fr: "Créer un groupe de clés d'accès",
           },

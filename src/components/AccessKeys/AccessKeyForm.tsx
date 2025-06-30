@@ -313,7 +313,7 @@ const AccessKeyForm: React.FC<AccessKeyFormProps> = ({ onSave, onCancel }) => {
               type="submit"
               className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all"
             >
-              Create Access Key Group
+              Create Access Key
             </button>
           </div>
         </form>
