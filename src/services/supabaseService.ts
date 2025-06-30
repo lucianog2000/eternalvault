@@ -320,14 +320,16 @@ class SupabaseService {
     try {
       console.log('🔍 Direct access key validation:', rawKey.substring(0, 10) + '...');
       
-      // Normalize and hash the key
+      // Normalize the key
       const normalizedKey = this.normalizeAccessKey(rawKey);
-      const keyHash = this.hashAccessKey(normalizedKey);
+      console.log('🔧 Normalized key:', normalizedKey.substring(0, 10) + '...');
       
-      console.log('🔐 Key hash:', keyHash);
-
-      // Query access key - NO RESTRICTIONS, just find it
-      const { data: accessKeys, error: keyError } = await supabase
+      // Try to find by exact key match first (no hashing)
+      let accessKeys;
+      let keyError;
+      
+      // Method 1: Try to find by exact key match (if stored as plain text)
+      ({ data: accessKeys, error: keyError } = await supabase
         .from('access_keys')
         .select(`
           *,
@@ -337,8 +339,51 @@ class SupabaseService {
             email
           )
         `)
-        .eq('key_hash', keyHash)
-        .limit(1);
+        .eq('key_hash', normalizedKey)
+        .limit(1));
+
+      // Method 2: If not found, try with hash
+      if (!accessKeys || accessKeys.length === 0) {
+        const keyHash = this.hashAccessKey(normalizedKey);
+        console.log('🔐 Trying with hash:', keyHash);
+        
+        ({ data: accessKeys, error: keyError } = await supabase
+          .from('access_keys')
+          .select(`
+            *,
+            profiles!access_keys_owner_id_fkey (
+              id,
+              full_name,
+              email
+            )
+          `)
+          .eq('key_hash', keyHash)
+          .limit(1));
+      }
+
+      // Method 3: If still not found, search all keys and compare (fallback)
+      if (!accessKeys || accessKeys.length === 0) {
+        console.log('🔍 Fallback: Searching all access keys...');
+        
+        ({ data: accessKeys, error: keyError } = await supabase
+          .from('access_keys')
+          .select(`
+            *,
+            profiles!access_keys_owner_id_fkey (
+              id,
+              full_name,
+              email
+            )
+          `));
+
+        if (accessKeys && accessKeys.length > 0) {
+          // Find matching key by comparing normalized versions
+          accessKeys = accessKeys.filter(ak => {
+            const storedKeyNormalized = this.normalizeAccessKey(ak.key_hash);
+            return storedKeyNormalized === normalizedKey;
+          });
+        }
+      }
 
       if (keyError) {
         console.error('❌ Error querying access key:', keyError);
@@ -683,17 +728,18 @@ class SupabaseService {
     return data || [];
   }
 
-  // Hash function for access keys (simple implementation)
+  // Improved hash function for access keys
   hashAccessKey(key: string): string {
-    // In production, use a proper hashing library like bcrypt
-    // This is a simple implementation for demo purposes
+    // Simple but consistent hash function
     let hash = 0;
-    for (let i = 0; i < key.length; i++) {
-      const char = key.charCodeAt(i);
+    const str = key.toString();
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash; // Convert to 32-bit integer
     }
-    return hash.toString(36);
+    // Convert to positive number and then to base36
+    return Math.abs(hash).toString(36);
   }
 
   // Generate secure access key
