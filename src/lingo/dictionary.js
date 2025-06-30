@@ -505,7 +505,9 @@ export default {
         },
         "5/0/init/body/13/argument/1/3/27/3": {
           content: {
+            de: "Zugriffsschlüssel erstellen",
             en: "Create Access Key",
+            es: "Crear clave de acceso",
             fr: "Créer une clé d'accès",
           },
           hash: "65ace5e9d85d8ad2b67b17e8b931d535",
