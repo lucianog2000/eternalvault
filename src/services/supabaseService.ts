@@ -307,10 +307,10 @@ class SupabaseService {
     }
   }
 
-  // ==================== DIRECT ACCESS KEY VALIDATION (SUPER SIMPLIFIED) ====================
+  // ==================== DIRECT ACCESS KEY VALIDATION (NO NORMALIZATION) ====================
   
   /**
-   * Validates an access key by direct ID lookup - NO HASHING
+   * Validates an access key by direct ID lookup - EXACT MATCH, NO NORMALIZATION
    */
   async validateAccessKeyDirect(rawKey: string): Promise<{
     success: boolean;
@@ -330,17 +330,17 @@ class SupabaseService {
     error?: string;
   }> {
     try {
-      console.log('🔍 Direct access key lookup:', rawKey.substring(0, 10) + '...');
+      console.log('🔍 Direct access key lookup (EXACT MATCH):', rawKey);
       
-      // Normalize the key (remove spaces, dashes, etc.)
-      const normalizedKey = this.normalizeAccessKey(rawKey);
-      console.log('🔧 Normalized key:', normalizedKey.substring(0, 10) + '...');
+      // Clean the key (only remove spaces and dashes, preserve case)
+      const cleanedKey = rawKey.replace(/[-\s]/g, '').trim();
+      console.log('🔧 Cleaned key (preserving case):', cleanedKey);
       
-      // Direct lookup by ID (no hashing!) - Use limit(1) instead of single()
+      // Direct lookup by ID (EXACT MATCH) - Use limit(1) instead of single()
       const { data: accessKeyData, error: keyError } = await supabase
         .from('access_keys')
         .select('*')
-        .eq('id', normalizedKey)
+        .eq('id', cleanedKey)
         .limit(1);
 
       if (keyError) {
@@ -353,7 +353,7 @@ class SupabaseService {
 
       // Check if any results were returned
       if (!accessKeyData || accessKeyData.length === 0) {
-        console.log('❌ Access key not found');
+        console.log('❌ Access key not found with exact match');
         return {
           success: false,
           error: 'Access key not found'
@@ -461,13 +461,6 @@ class SupabaseService {
     } catch (error) {
       console.error('Exception incrementing access key usage:', error);
     }
-  }
-
-  /**
-   * Normalizes an access key by removing spaces, dashes, and converting to lowercase
-   */
-  private normalizeAccessKey(key: string): string {
-    return key.replace(/[-\s]/g, '').toLowerCase().trim();
   }
 
   // ==================== CAPSULE ACCESS ====================
