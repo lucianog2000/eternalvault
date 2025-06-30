@@ -495,6 +495,358 @@
     },
     "components/AccessKeys/AccessKeyManager.tsx": {
       "scopes": {
+        "8/0/init/body/18/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "51b00c01b5c3b87a1f5ad7a64cb5ca00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading access keys..."
+        },
+        "8/0/init/body/19/argument/11/1/1/3": {
+          "type": "element",
+          "hash": "8f27485be69104a1376e73b70103fa16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Keys"
+        },
+        "8/0/init/body/19/argument/11/3/1/3": {
+          "type": "element",
+          "hash": "3fb32ff075af7daafe4ecce361322026",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Working"
+        },
+        "8/0/init/body/19/argument/11/5/1/3": {
+          "type": "element",
+          "hash": "63b27cccba4ab2143e0f5f3d46e4168a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expired"
+        },
+        "8/0/init/body/19/argument/11/7/1/3": {
+          "type": "element",
+          "hash": "0fed120173c776f62e3eb9961790381a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total Access"
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "2804d2b166c9f95a234d831f409243ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✅ Access Key Created Successfully"
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/3/1/3-title": {
+          "type": "attribute",
+          "hash": "4930a9f1b473f7b072f0c84c63ece133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Copy key"
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/5/1/3/1": {
+          "type": "element",
+          "hash": "f0e6c894493fd7da4cd7d12ad532b0d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚨 CRITICAL: Save this key now"
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/5/1/3/3": {
+          "type": "element",
+          "hash": "e8b63a812f83b9f8a5e54ebbe584662c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is the ONLY time you will see this key. Once you close this window, it cannot be recovered or viewed again. You are 100% responsible for storing and distributing this key securely."
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/7/1/3": {
+          "type": "element",
+          "hash": "8f4f13acec7abf7c3aa6e680b6da99f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Copy Key"
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/7/3": {
+          "type": "element",
+          "hash": "ac87ba96bbaa3ea07acee1c2088c70f1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I have saved the key - Close"
+        },
+        "8/0/init/body/19/argument/19/1/1/1": {
+          "type": "element",
+          "hash": "48137798b00bc197e1db3e8f018ad0c9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Access Keys"
+        },
+        "8/0/init/body/19/argument/19/1/1/3": {
+          "type": "element",
+          "hash": "b3ce5927ae5977a903146b9f2a1306d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Each key defines a group of capsules for specific access"
+        },
+        "8/0/init/body/19/argument/19/1/3": {
+          "type": "element",
+          "hash": "f055eb6325c9b520eaff408fc6e6daae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{accessKeys.length} active key<expression/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/3/3": {
+          "type": "element",
+          "hash": "3e1ec025c4a50830bbb9ad57a176630a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/5/expression/right": {
+          "type": "element",
+          "hash": "54df90bcc08fbc121668cb7d08f6c283",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expired"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/11/expression/right/1": {
+          "type": "element",
+          "hash": "b87055288e32812f6fe319ba6aeda02c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expires: <function:Date.toLocaleDateString/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/1/3": {
+          "type": "element",
+          "hash": "f3121486baf9e3655abff8c0dd85abed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key: ••••••••••••••••••••••••••••••••••••••••"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/3": {
+          "type": "element",
+          "hash": "ff4a9755cd9a190431863398091273ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hidden for security"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/3": {
+          "type": "element",
+          "hash": "4e199869be42c0e9a8d4c95a60c8b318",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔒 Access keys are never displayed after creation for maximum security"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/1/3": {
+          "type": "element",
+          "hash": "bead03e943a09a749bf2bab4341e9884",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> capsule<expression/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/3/3": {
+          "type": "element",
+          "hash": "cba79fc1325325ae0d849b28705ad572",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{accessKey.access_count} access<expression/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/5/3": {
+          "type": "element",
+          "hash": "646d864aab5966792b627be467287682",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Created: <function:Date.toLocaleDateString/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "1a774f6ecbbeac3793c2c6f9785d8622",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last access: <function:Date.toLocaleDateString/>"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/1-title": {
+          "type": "attribute",
+          "hash": "885f3ad1c2e448d104a45c0291b79ba5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View details"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "df3cc4bc521a1a909e7cb2f291d46cf7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Regenerate key (old key will stop working)"
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/5-title": {
+          "type": "attribute",
+          "hash": "134d17114763a88e4ed449d52848fe52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Delete key permanently"
+        },
+        "8/0/init/body/19/argument/19/3/expression/consequent/3": {
+          "type": "element",
+          "hash": "2a7d4929cc5dca87711cc633db15ad65",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No active access keys"
+        },
+        "8/0/init/body/19/argument/19/3/expression/consequent/5": {
+          "type": "element",
+          "hash": "58c3d84126d621da9bad740c54979478",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create first access key"
+        },
+        "8/0/init/body/19/argument/23/1/3/1": {
+          "type": "element",
+          "hash": "155469aac4201762038aa88f00d249bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔑 Simplified Access Keys"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/1/0": {
+          "type": "element",
+          "hash": "9a1dc11b192864cdaf66c81244944cfb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "How it works now:"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/1": {
+          "type": "element",
+          "hash": "455d5049c2542dc69ae6eb57bc6337d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Access keys are generated as unique IDs (no hashing)"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/3": {
+          "type": "element",
+          "hash": "eaaf9f6cd85d6a8b4cc95ce7121d0a9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Direct database lookup by key ID for instant access"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/5": {
+          "type": "element",
+          "hash": "2eaa1436559cb79a4144e9734efcc53c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• No verification needed - immediate access to capsules"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/7": {
+          "type": "element",
+          "hash": "e11bdf4587a97341b67b37ec4d7e998d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Perfect for hackathon demo - simple and reliable"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/5/0": {
+          "type": "element",
+          "hash": "f5eb2ed889b4898199db3d3b617c7bad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Benefits:"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/1": {
+          "type": "element",
+          "hash": "e27cd54d4444437ba8ab133d58beffd9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• ✅ No hash inconsistencies"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/3": {
+          "type": "element",
+          "hash": "7abe15caee4a1b36e3480f7c768381d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• ✅ Direct ID-based lookup"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/5": {
+          "type": "element",
+          "hash": "973ebbbcbb150a8a344e2482f77668e9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• ✅ Instant access without verification"
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/7": {
+          "type": "element",
+          "hash": "21a352c395290b8f57b668b1b94c0756",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• ✅ Simple and reliable for demos"
+        },
+        "8/0/init/body/19/argument/3/1/1": {
+          "type": "element",
+          "hash": "b7375644a9b22a253230eb7556b5721b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key Management"
+        },
+        "8/0/init/body/19/argument/3/1/3": {
+          "type": "element",
+          "hash": "edef18f2b7ec45c037d659ac5050f727",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create and manage secure access keys for your legacy capsules. Each key defines a group of capsules."
+        },
+        "8/0/init/body/19/argument/3/3/3": {
+          "type": "element",
+          "hash": "892f2214ec97ffb97ee298b0e6d4b633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New Access Key"
+        },
+        "8/0/init/body/19/argument/7/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "3c95bcb32c2104b99a46f5b3dd015248",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Error"
+        },
         "9/0/init/body/20/consequent/0/argument/3": {
           "type": "element",
           "hash": "51b00c01b5c3b87a1f5ad7a64cb5ca00",

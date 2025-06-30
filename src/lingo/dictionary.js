@@ -561,6 +561,283 @@ export default {
     },
     "components/AccessKeys/AccessKeyManager.tsx": {
       entries: {
+        "8/0/init/body/18/consequent/0/argument/3": {
+          content: {
+            en: "Loading access keys...",
+          },
+          hash: "51b00c01b5c3b87a1f5ad7a64cb5ca00",
+        },
+        "8/0/init/body/19/argument/11/1/1/3": {
+          content: {
+            en: "Active Keys",
+          },
+          hash: "8f27485be69104a1376e73b70103fa16",
+        },
+        "8/0/init/body/19/argument/11/3/1/3": {
+          content: {
+            en: "Working",
+          },
+          hash: "3fb32ff075af7daafe4ecce361322026",
+        },
+        "8/0/init/body/19/argument/11/5/1/3": {
+          content: {
+            en: "Expired",
+          },
+          hash: "63b27cccba4ab2143e0f5f3d46e4168a",
+        },
+        "8/0/init/body/19/argument/11/7/1/3": {
+          content: {
+            en: "Total Access",
+          },
+          hash: "0fed120173c776f62e3eb9961790381a",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/1": {
+          content: {
+            en: "✅ Access Key Created Successfully",
+          },
+          hash: "2804d2b166c9f95a234d831f409243ee",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/3/1/3-title": {
+          content: {
+            en: "Copy key",
+          },
+          hash: "4930a9f1b473f7b072f0c84c63ece133",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/5/1/3/1": {
+          content: {
+            en: "🚨 CRITICAL: Save this key now",
+          },
+          hash: "f0e6c894493fd7da4cd7d12ad532b0d2",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/5/1/3/3": {
+          content: {
+            en: "This is the ONLY time you will see this key. Once you close this window, it cannot be recovered or viewed again. You are 100% responsible for storing and distributing this key securely.",
+          },
+          hash: "e8b63a812f83b9f8a5e54ebbe584662c",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/7/1/3": {
+          content: {
+            en: "Copy Key",
+          },
+          hash: "8f4f13acec7abf7c3aa6e680b6da99f8",
+        },
+        "8/0/init/body/19/argument/15/expression/right/1/3/7/3": {
+          content: {
+            en: "I have saved the key - Close",
+          },
+          hash: "ac87ba96bbaa3ea07acee1c2088c70f1",
+        },
+        "8/0/init/body/19/argument/19/1/1/1": {
+          content: {
+            en: "Active Access Keys",
+          },
+          hash: "48137798b00bc197e1db3e8f018ad0c9",
+        },
+        "8/0/init/body/19/argument/19/1/1/3": {
+          content: {
+            en: "Each key defines a group of capsules for specific access",
+          },
+          hash: "b3ce5927ae5977a903146b9f2a1306d4",
+        },
+        "8/0/init/body/19/argument/19/1/3": {
+          content: {
+            en: "{accessKeys.length} active key<expression/>",
+          },
+          hash: "f055eb6325c9b520eaff408fc6e6daae",
+        },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/3/3":
+          {
+            content: {
+              en: "Active",
+            },
+            hash: "3e1ec025c4a50830bbb9ad57a176630a",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/5/expression/right":
+          {
+            content: {
+              en: "Expired",
+            },
+            hash: "54df90bcc08fbc121668cb7d08f6c283",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/11/expression/right/1":
+          {
+            content: {
+              en: "Expires: <function:Date.toLocaleDateString/>",
+            },
+            hash: "b87055288e32812f6fe319ba6aeda02c",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/1/3":
+          {
+            content: {
+              en: "Key: ••••••••••••••••••••••••••••••••••••••••",
+            },
+            hash: "f3121486baf9e3655abff8c0dd85abed",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/3":
+          {
+            content: {
+              en: "Hidden for security",
+            },
+            hash: "ff4a9755cd9a190431863398091273ce",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/3":
+          {
+            content: {
+              en: "🔒 Access keys are never displayed after creation for maximum security",
+            },
+            hash: "4e199869be42c0e9a8d4c95a60c8b318",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/1/3":
+          {
+            content: {
+              en: "<expression/> capsule<expression/>",
+            },
+            hash: "bead03e943a09a749bf2bab4341e9884",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/3/3":
+          {
+            content: {
+              en: "{accessKey.access_count} access<expression/>",
+            },
+            hash: "cba79fc1325325ae0d849b28705ad572",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/5/3":
+          {
+            content: {
+              en: "Created: <function:Date.toLocaleDateString/>",
+            },
+            hash: "646d864aab5966792b627be467287682",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/9/expression/right/1":
+          {
+            content: {
+              en: "Last access: <function:Date.toLocaleDateString/>",
+            },
+            hash: "1a774f6ecbbeac3793c2c6f9785d8622",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/1-title":
+          {
+            content: {
+              en: "View details",
+            },
+            hash: "885f3ad1c2e448d104a45c0291b79ba5",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/3/expression/right-title":
+          {
+            content: {
+              en: "Regenerate key (old key will stop working)",
+            },
+            hash: "df3cc4bc521a1a909e7cb2f291d46cf7",
+          },
+        "8/0/init/body/19/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/5-title":
+          {
+            content: {
+              en: "Delete key permanently",
+            },
+            hash: "134d17114763a88e4ed449d52848fe52",
+          },
+        "8/0/init/body/19/argument/19/3/expression/consequent/3": {
+          content: {
+            en: "No active access keys",
+          },
+          hash: "2a7d4929cc5dca87711cc633db15ad65",
+        },
+        "8/0/init/body/19/argument/19/3/expression/consequent/5": {
+          content: {
+            en: "Create first access key",
+          },
+          hash: "58c3d84126d621da9bad740c54979478",
+        },
+        "8/0/init/body/19/argument/23/1/3/1": {
+          content: {
+            en: "🔑 Simplified Access Keys",
+          },
+          hash: "155469aac4201762038aa88f00d249bc",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/1/0": {
+          content: {
+            en: "How it works now:",
+          },
+          hash: "9a1dc11b192864cdaf66c81244944cfb",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/1": {
+          content: {
+            en: "• Access keys are generated as unique IDs (no hashing)",
+          },
+          hash: "455d5049c2542dc69ae6eb57bc6337d2",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/3": {
+          content: {
+            en: "• Direct database lookup by key ID for instant access",
+          },
+          hash: "eaaf9f6cd85d6a8b4cc95ce7121d0a9f",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/5": {
+          content: {
+            en: "• No verification needed - immediate access to capsules",
+          },
+          hash: "2eaa1436559cb79a4144e9734efcc53c",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/3/7": {
+          content: {
+            en: "• Perfect for hackathon demo - simple and reliable",
+          },
+          hash: "e11bdf4587a97341b67b37ec4d7e998d",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/5/0": {
+          content: {
+            en: "Benefits:",
+          },
+          hash: "f5eb2ed889b4898199db3d3b617c7bad",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/1": {
+          content: {
+            en: "• ✅ No hash inconsistencies",
+          },
+          hash: "e27cd54d4444437ba8ab133d58beffd9",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/3": {
+          content: {
+            en: "• ✅ Direct ID-based lookup",
+          },
+          hash: "7abe15caee4a1b36e3480f7c768381d0",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/5": {
+          content: {
+            en: "• ✅ Instant access without verification",
+          },
+          hash: "973ebbbcbb150a8a344e2482f77668e9",
+        },
+        "8/0/init/body/19/argument/23/1/3/3/7/7": {
+          content: {
+            en: "• ✅ Simple and reliable for demos",
+          },
+          hash: "21a352c395290b8f57b668b1b94c0756",
+        },
+        "8/0/init/body/19/argument/3/1/1": {
+          content: {
+            en: "Access Key Management",
+          },
+          hash: "b7375644a9b22a253230eb7556b5721b",
+        },
+        "8/0/init/body/19/argument/3/1/3": {
+          content: {
+            en: "Create and manage secure access keys for your legacy capsules. Each key defines a group of capsules.",
+          },
+          hash: "edef18f2b7ec45c037d659ac5050f727",
+        },
+        "8/0/init/body/19/argument/3/3/3": {
+          content: {
+            en: "New Access Key",
+          },
+          hash: "892f2214ec97ffb97ee298b0e6d4b633",
+        },
+        "8/0/init/body/19/argument/7/expression/right/1/3/1": {
+          content: {
+            en: "Error",
+          },
+          hash: "3c95bcb32c2104b99a46f5b3dd015248",
+        },
         "9/0/init/body/20/consequent/0/argument/3": {
           content: {
             de: "Zugriffsschlüssel werden geladen...",

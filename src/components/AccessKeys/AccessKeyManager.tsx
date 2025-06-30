@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Key, Plus, Shield, Eye, Trash2, RotateCcw, AlertTriangle, CheckCircle, Clock, Users, Package, Calendar, Copy } from 'lucide-react';
 import { AccessKey, GeneratedAccessKey } from '../../types';
-import { accessKeyService } from '../../services/accessKeyService';
 import { supabaseService } from '../../services/supabaseService';
 import { useCapsules } from '../../contexts/CapsuleContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -19,7 +18,6 @@ const AccessKeyManager: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Load access keys from Supabase
   useEffect(() => {
     if (user) {
       loadAccessKeys();
@@ -62,13 +60,8 @@ const AccessKeyManager: React.FC = () => {
     try {
       console.log('🔧 Creating access key with request:', request);
       
-      // Generate the access key using the service
-      const generatedKeyData = supabaseService.generateAccessKey();
-      const keyHash = supabaseService.hashAccessKey(generatedKeyData);
-
-      // Create access key in Supabase
+      // Create access key in Supabase (the service will generate the key as ID)
       const accessKeyData = {
-        key_hash: keyHash,
         name: request.name,
         owner_id: user.id,
         expires_at: request.expiresAt,
@@ -86,10 +79,10 @@ const AccessKeyManager: React.FC = () => {
       // Add to local state
       setAccessKeys(prev => [newAccessKey, ...prev]);
       
-      // Show the generated key
-      const displayKey = formatKeyForDisplay(generatedKeyData);
+      // Show the generated key (which is the ID)
+      const displayKey = formatKeyForDisplay(newAccessKey.id);
       setGeneratedKey({
-        key: generatedKeyData,
+        key: newAccessKey.id, // The actual access key is the ID
         displayKey,
         isVisible: true
       });
@@ -115,7 +108,6 @@ const AccessKeyManager: React.FC = () => {
       
       await supabaseService.deleteAccessKey(accessKeyId);
       
-      // Remove from local state
       setAccessKeys(prev => prev.filter(key => key.id !== accessKeyId));
       
       console.log(`✅ ACCESS KEY PERMANENTLY DELETED: ${accessKeyId}`);
@@ -136,25 +128,40 @@ const AccessKeyManager: React.FC = () => {
     try {
       console.log('🔄 Regenerating access key:', accessKeyId);
       
-      const newGeneratedKey = supabaseService.generateAccessKey();
-      const newKeyHash = supabaseService.hashAccessKey(newGeneratedKey);
-      
-      // Update in Supabase
-      await supabaseService.updateAccessKey(accessKeyId, {
-        key_hash: newKeyHash,
+      // For regeneration, we need to create a new access key and delete the old one
+      const oldAccessKey = accessKeys.find(ak => ak.id === accessKeyId);
+      if (!oldAccessKey) {
+        throw new Error('Access key not found');
+      }
+
+      // Create new access key with same settings
+      const newAccessKeyData = {
+        name: oldAccessKey.name,
+        owner_id: oldAccessKey.owner_id,
+        expires_at: oldAccessKey.expires_at,
+        max_access_count: oldAccessKey.max_access_count,
         access_count: 0,
-        last_accessed_at: undefined
-      });
+        notes: oldAccessKey.notes,
+        is_active: true
+      };
+
+      // Get capsule IDs from old key
+      const capsuleIds = oldAccessKey.capsules?.map((c: any) => c.id) || [];
+
+      // Create new key
+      const newAccessKey = await supabaseService.createAccessKey(newAccessKeyData, capsuleIds);
       
+      // Delete old key
+      await supabaseService.deleteAccessKey(accessKeyId);
+      
+      // Update local state
       setAccessKeys(prev => prev.map(key =>
-        key.id === accessKeyId 
-          ? { ...key, access_count: 0, last_accessed_at: null }
-          : key
+        key.id === accessKeyId ? newAccessKey : key
       ));
       
-      const displayKey = formatKeyForDisplay(newGeneratedKey);
+      const displayKey = formatKeyForDisplay(newAccessKey.id);
       setGeneratedKey({
-        key: newGeneratedKey,
+        key: newAccessKey.id,
         displayKey,
         isVisible: true
       });
@@ -186,24 +193,6 @@ const AccessKeyManager: React.FC = () => {
     }
     
     return `${prefix}${groups.join('-')}`;
-  };
-
-  const getSecurityLevelColor = (level: string) => {
-    switch (level) {
-      case 'high': return 'text-green-300 bg-green-500/20 border-green-500/40';
-      case 'medium': return 'text-yellow-300 bg-yellow-500/20 border-yellow-500/40';
-      case 'low': return 'text-red-300 bg-red-500/20 border-red-500/40';
-      default: return 'text-gray-300 bg-gray-500/20 border-gray-500/40';
-    }
-  };
-
-  const getSecurityLevelIcon = (level: string) => {
-    switch (level) {
-      case 'high': return <Shield className="w-5 h-5 text-green-300" />;
-      case 'medium': return <Clock className="w-5 h-5 text-yellow-300" />;
-      case 'low': return <AlertTriangle className="w-5 h-5 text-red-300" />;
-      default: return <Shield className="w-5 h-5 text-gray-300" />;
-    }
   };
 
   if (isLoading && accessKeys.length === 0) {
@@ -476,28 +465,28 @@ const AccessKeyManager: React.FC = () => {
         )}
       </div>
 
-      {/* Grouping Information */}
+      {/* Simplified Information */}
       <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-md rounded-xl p-6 border border-blue-300/20">
         <div className="flex items-start space-x-4">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-400 rounded-lg flex items-center justify-center">
             <Package className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">📦 Capsule Grouping by Access Keys</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">🔑 Simplified Access Keys</h3>
             <div className="text-white/80 space-y-2">
-              <p><strong>How it works:</strong></p>
+              <p><strong>How it works now:</strong></p>
               <ul className="text-sm space-y-1 text-white/70 ml-4">
-                <li>• Each Access Key defines its own group of capsules</li>
-                <li>• When creating an Access Key, you select which specific capsules to include</li>
-                <li>• This provides granular control - different people get different information</li>
-                <li>• No separate "groups" table needed - Access Keys ARE the groups</li>
+                <li>• Access keys are generated as unique IDs (no hashing)</li>
+                <li>• Direct database lookup by key ID for instant access</li>
+                <li>• No verification needed - immediate access to capsules</li>
+                <li>• Perfect for hackathon demo - simple and reliable</li>
               </ul>
               <p className="mt-3"><strong>Benefits:</strong></p>
               <ul className="text-sm space-y-1 text-white/70 ml-4">
-                <li>• Maximum privacy - each key only accesses its assigned capsules</li>
-                <li>• Flexible grouping - same capsule can be in multiple "groups" (keys)</li>
-                <li>• Simple management - create key, select capsules, done</li>
-                <li>• Perfect for different audiences (family, lawyer, friend, etc.)</li>
+                <li>• ✅ No hash inconsistencies</li>
+                <li>• ✅ Direct ID-based lookup</li>
+                <li>• ✅ Instant access without verification</li>
+                <li>• ✅ Simple and reliable for demos</li>
               </ul>
             </div>
           </div>

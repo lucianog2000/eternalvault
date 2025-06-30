@@ -26,8 +26,7 @@ export interface Capsule {
 }
 
 export interface AccessKey {
-  id: string;
-  key_hash: string;
+  id: string; // Now this is the actual access key (no hashing)
   name: string;
   owner_id: string;
   expires_at?: string;
@@ -43,7 +42,7 @@ export interface AccessKey {
 
 export interface AccessKeyWithCapsules extends AccessKey {
   capsules: Capsule[];
-  owner_name?: string; // Add owner name for display
+  owner_name?: string;
 }
 
 export interface CapsuleAccessRecord {
@@ -65,7 +64,7 @@ class SupabaseService {
       .from('capsules')
       .select('*')
       .eq('owner_id', userId)
-      .eq('is_destroyed', false) // Only get non-destroyed capsules
+      .eq('is_destroyed', false)
       .order('created_at', { ascending: false });
 
     if (error) {
@@ -85,7 +84,7 @@ class SupabaseService {
 
     if (error) {
       if (error.code === 'PGRST116') {
-        return null; // Not found
+        return null;
       }
       console.error('Error fetching capsule:', error);
       throw new Error(error.message);
@@ -137,7 +136,6 @@ class SupabaseService {
     }
   }
 
-  // Soft delete method for destroyed capsules
   async destroyCapsule(id: string): Promise<Capsule> {
     const updates: Partial<Capsule> = {
       is_destroyed: true,
@@ -159,10 +157,9 @@ class SupabaseService {
     return data;
   }
 
-  // ==================== ACCESS KEYS ====================
+  // ==================== ACCESS KEYS (SIMPLIFIED) ====================
   
   async getAccessKeys(userId: string): Promise<AccessKeyWithCapsules[]> {
-    // First get access keys with owner profile information
     const { data: accessKeys, error: keysError } = await supabase
       .from('access_keys')
       .select(`
@@ -184,7 +181,6 @@ class SupabaseService {
       return [];
     }
 
-    // Get capsules for each access key
     const accessKeysWithCapsules: AccessKeyWithCapsules[] = [];
 
     for (const accessKey of accessKeys) {
@@ -214,13 +210,23 @@ class SupabaseService {
   }
 
   async createAccessKey(
-    accessKey: Omit<AccessKey, 'id' | 'created_at' | 'updated_at'>,
+    accessKeyData: Omit<AccessKey, 'id' | 'created_at' | 'updated_at'>,
     capsuleIds: string[]
   ): Promise<AccessKeyWithCapsules> {
+    // Generate the access key that will be used as the primary key
+    const generatedKey = this.generateAccessKey();
+    
+    console.log('🔑 Generated access key:', generatedKey);
+
+    const newAccessKey = {
+      id: generatedKey, // Use the generated key as the primary key
+      ...accessKeyData
+    };
+
     // Create the access key
-    const { data: newAccessKey, error: keyError } = await supabase
+    const { data: createdAccessKey, error: keyError } = await supabase
       .from('access_keys')
-      .insert(accessKey)
+      .insert(newAccessKey)
       .select()
       .single();
 
@@ -229,10 +235,12 @@ class SupabaseService {
       throw new Error(keyError.message);
     }
 
+    console.log('✅ Access key created with ID:', createdAccessKey.id);
+
     // Create relationships with capsules
     if (capsuleIds.length > 0) {
       const relations = capsuleIds.map(capsuleId => ({
-        access_key_id: newAccessKey.id,
+        access_key_id: createdAccessKey.id,
         capsule_id: capsuleId
       }));
 
@@ -242,24 +250,23 @@ class SupabaseService {
 
       if (relationsError) {
         console.error('Error creating capsule relations:', relationsError);
-        // Clean up the access key if relations failed
-        await this.deleteAccessKey(newAccessKey.id);
+        await this.deleteAccessKey(createdAccessKey.id);
         throw new Error(relationsError.message);
       }
+
+      console.log('✅ Capsule relations created:', relations.length);
     }
 
-    // Get the capsules for the response
     const capsules = await this.getCapsulesByIds(capsuleIds);
 
-    // Get owner name
     const { data: profile } = await supabase
       .from('profiles')
       .select('full_name')
-      .eq('id', newAccessKey.owner_id)
+      .eq('id', createdAccessKey.owner_id)
       .single();
 
     return {
-      ...newAccessKey,
+      ...createdAccessKey,
       capsules,
       owner_name: profile?.full_name || 'Unknown User'
     };
@@ -282,7 +289,6 @@ class SupabaseService {
   }
 
   async deleteAccessKey(id: string): Promise<void> {
-    // Relations will be deleted automatically due to CASCADE
     const { error } = await supabase
       .from('access_keys')
       .delete()
@@ -294,11 +300,10 @@ class SupabaseService {
     }
   }
 
-  // ==================== DIRECT ACCESS KEY VALIDATION (SIMPLIFIED) ====================
+  // ==================== DIRECT ACCESS KEY VALIDATION (SUPER SIMPLIFIED) ====================
   
   /**
-   * Validates an access key and returns associated capsules directly
-   * NO VERIFICATION - just find the key and return capsules
+   * Validates an access key by direct ID lookup - NO HASHING
    */
   async validateAccessKeyDirect(rawKey: string): Promise<{
     success: boolean;
@@ -318,18 +323,14 @@ class SupabaseService {
     error?: string;
   }> {
     try {
-      console.log('🔍 Direct access key validation:', rawKey.substring(0, 10) + '...');
+      console.log('🔍 Direct access key lookup:', rawKey.substring(0, 10) + '...');
       
-      // Normalize the key
+      // Normalize the key (remove spaces, dashes, etc.)
       const normalizedKey = this.normalizeAccessKey(rawKey);
       console.log('🔧 Normalized key:', normalizedKey.substring(0, 10) + '...');
       
-      // Try to find by exact key match first (no hashing)
-      let accessKeys;
-      let keyError;
-      
-      // Method 1: Try to find by exact key match (if stored as plain text)
-      ({ data: accessKeys, error: keyError } = await supabase
+      // Direct lookup by ID (no hashing!)
+      const { data: accessKey, error: keyError } = await supabase
         .from('access_keys')
         .select(`
           *,
@@ -339,61 +340,18 @@ class SupabaseService {
             email
           )
         `)
-        .eq('key_hash', normalizedKey)
-        .limit(1));
-
-      // Method 2: If not found, try with hash
-      if (!accessKeys || accessKeys.length === 0) {
-        const keyHash = this.hashAccessKey(normalizedKey);
-        console.log('🔐 Trying with hash:', keyHash);
-        
-        ({ data: accessKeys, error: keyError } = await supabase
-          .from('access_keys')
-          .select(`
-            *,
-            profiles!access_keys_owner_id_fkey (
-              id,
-              full_name,
-              email
-            )
-          `)
-          .eq('key_hash', keyHash)
-          .limit(1));
-      }
-
-      // Method 3: If still not found, search all keys and compare (fallback)
-      if (!accessKeys || accessKeys.length === 0) {
-        console.log('🔍 Fallback: Searching all access keys...');
-        
-        ({ data: accessKeys, error: keyError } = await supabase
-          .from('access_keys')
-          .select(`
-            *,
-            profiles!access_keys_owner_id_fkey (
-              id,
-              full_name,
-              email
-            )
-          `));
-
-        if (accessKeys && accessKeys.length > 0) {
-          // Find matching key by comparing normalized versions
-          accessKeys = accessKeys.filter(ak => {
-            const storedKeyNormalized = this.normalizeAccessKey(ak.key_hash);
-            return storedKeyNormalized === normalizedKey;
-          });
-        }
-      }
+        .eq('id', normalizedKey)
+        .single();
 
       if (keyError) {
         console.error('❌ Error querying access key:', keyError);
         return {
           success: false,
-          error: 'Error validating access key'
+          error: 'Access key not found'
         };
       }
 
-      if (!accessKeys || accessKeys.length === 0) {
+      if (!accessKey) {
         console.log('❌ Access key not found');
         return {
           success: false,
@@ -401,10 +359,9 @@ class SupabaseService {
         };
       }
 
-      const accessKey = accessKeys[0];
       console.log('✅ Access key found:', accessKey.id, accessKey.name);
 
-      // Get associated capsules - NO RESTRICTIONS
+      // Get associated capsules
       const { data: capsuleRelations, error: relationsError } = await supabase
         .from('access_key_capsules')
         .select(`
@@ -424,12 +381,11 @@ class SupabaseService {
       const capsules = capsuleRelations?.map(rel => rel.capsules).filter(Boolean) || [];
       console.log('📦 Found capsules:', capsules.length);
 
-      // Increment access count (optional, no error if fails)
+      // Increment access count (best effort)
       try {
         await this.incrementAccessKeyUsage(accessKey.id);
       } catch (error) {
         console.warn('Warning: Could not increment access count:', error);
-        // Continue anyway - don't fail the validation
       }
 
       // Build response data
@@ -448,7 +404,7 @@ class SupabaseService {
       const group = {
         id: `group_${accessKey.id}`,
         name: accessKey.name,
-        description: accessKey.notes || `Access to ${capsules.length} capsule${capsules.length !== 1 ? 's' : ''}`
+        description: accessKey.notes || `Direct access to ${capsules.length} capsule${capsules.length !== 1 ? 's' : ''}`
       };
 
       console.log('🎉 Direct access key validation successful');
@@ -472,7 +428,7 @@ class SupabaseService {
   }
 
   /**
-   * Increments the usage count for an access key (best effort)
+   * Increments the usage count for an access key
    */
   private async incrementAccessKeyUsage(accessKeyId: string): Promise<void> {
     try {
@@ -501,63 +457,6 @@ class SupabaseService {
     return key.replace(/[-\s]/g, '').toLowerCase().trim();
   }
 
-  async validateAccessKeyByHash(keyHash: string): Promise<AccessKeyWithCapsules | null> {
-    const { data: accessKeys, error } = await supabase
-      .from('access_keys')
-      .select(`
-        *,
-        profiles!access_keys_owner_id_fkey (
-          full_name
-        )
-      `)
-      .eq('key_hash', keyHash)
-      .eq('is_active', true)
-      .limit(1);
-
-    if (error) {
-      console.error('Error validating access key:', error);
-      throw new Error(error.message);
-    }
-
-    if (!accessKeys || accessKeys.length === 0) {
-      return null; // Not found
-    }
-
-    const accessKey = accessKeys[0];
-
-    // Check if expired
-    if (accessKey.expires_at && new Date(accessKey.expires_at) <= new Date()) {
-      return null;
-    }
-
-    // Check access count limit
-    if (accessKey.max_access_count && accessKey.access_count >= accessKey.max_access_count) {
-      return null;
-    }
-
-    // Get associated capsules
-    const { data: capsuleRelations, error: relationsError } = await supabase
-      .from('access_key_capsules')
-      .select(`
-        capsule_id,
-        capsules (*)
-      `)
-      .eq('access_key_id', accessKey.id);
-
-    if (relationsError) {
-      console.error('Error fetching capsule relations:', relationsError);
-      throw new Error(relationsError.message);
-    }
-
-    const capsules = capsuleRelations?.map(rel => rel.capsules).filter(Boolean) || [];
-
-    return {
-      ...accessKey,
-      capsules: capsules as Capsule[],
-      owner_name: accessKey.profiles?.full_name || 'Unknown User'
-    };
-  }
-
   // ==================== CAPSULE ACCESS ====================
   
   async recordCapsuleAccess(
@@ -571,13 +470,11 @@ class SupabaseService {
     
     const { data: user } = await supabase.auth.getUser();
     
-    // Get current capsule to check self-destruction BEFORE creating access record
     const capsule = await this.getCapsuleById(capsuleId);
     if (!capsule) {
       throw new Error('Capsule not found');
     }
 
-    // Check if capsule is already destroyed
     if (capsule.is_destroyed) {
       throw new Error('Capsule has been destroyed and is no longer accessible');
     }
@@ -592,9 +489,8 @@ class SupabaseService {
     });
 
     let capsuleDestroyed = false;
-    let updatedCapsule = capsule;
 
-    // Handle self-destruction FIRST
+    // Handle self-destruction
     if (capsule.self_destruct_enabled) {
       const newReadCount = capsule.self_destruct_current_reads + 1;
       
@@ -605,11 +501,10 @@ class SupabaseService {
         destroyAfterRead: capsule.self_destruct_destroy_after_read
       });
       
-      // Check if should be destroyed (soft delete)
       if (newReadCount >= capsule.self_destruct_max_reads && capsule.self_destruct_destroy_after_read) {
         capsuleDestroyed = true;
         
-        console.log('💥 CAPSULE WILL BE SOFT DELETED:', {
+        console.log('💥 CAPSULE WILL BE DESTROYED:', {
           capsuleId,
           title: capsule.title,
           finalReadCount: newReadCount,
@@ -637,7 +532,6 @@ class SupabaseService {
           throw new Error(accessError.message);
         }
 
-        // Now soft delete the capsule (mark as destroyed)
         await this.destroyCapsule(capsuleId);
         
         console.log('✅ Capsule marked as destroyed in database');
@@ -647,16 +541,15 @@ class SupabaseService {
           capsuleDestroyed: true
         };
       } else {
-        // Just update read count
         const updates: Partial<Capsule> = {
           self_destruct_current_reads: newReadCount
         };
 
-        updatedCapsule = await this.updateCapsule(capsuleId, updates);
+        await this.updateCapsule(capsuleId, updates);
         
         console.log('✅ Capsule read count updated:', {
-          id: updatedCapsule.id,
-          self_destruct_current_reads: updatedCapsule.self_destruct_current_reads
+          id: capsule.id,
+          self_destruct_current_reads: newReadCount
         });
       }
     }
@@ -718,7 +611,7 @@ class SupabaseService {
       .from('capsules')
       .select('*')
       .in('id', ids)
-      .eq('is_destroyed', false); // Only get non-destroyed capsules
+      .eq('is_destroyed', false);
 
     if (error) {
       console.error('Error fetching capsules by IDs:', error);
@@ -728,25 +621,11 @@ class SupabaseService {
     return data || [];
   }
 
-  // Improved hash function for access keys
-  hashAccessKey(key: string): string {
-    // Simple but consistent hash function
-    let hash = 0;
-    const str = key.toString();
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
-      hash = hash & hash; // Convert to 32-bit integer
-    }
-    // Convert to positive number and then to base36
-    return Math.abs(hash).toString(36);
-  }
-
-  // Generate secure access key
+  // Generate secure access key (will be used as primary key)
   generateAccessKey(): string {
     const prefix = 'evault_';
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const keyLength = 35; // Total length will be ~42 with prefix
+    const keyLength = 35;
     
     let key = prefix;
     for (let i = 0; i < keyLength; i++) {
@@ -778,26 +657,23 @@ class SupabaseService {
   }
 
   // ==================== LEGACY COMPATIBILITY METHODS ====================
-  // These methods provide compatibility with the old API for legacy context
-
+  
   async validateAccessToken(token: string) {
     try {
       console.log('🔄 Legacy validateAccessToken called with token:', token.substring(0, 10) + '...');
       
-      // Use the new direct validation method
       const result = await this.validateAccessKeyDirect(token);
       
       if (!result.success || !result.data) {
         return {
           data: null,
           success: false,
-          error: result.error || 'Invalid access key'
+          error: result.error || 'Access key not found'
         };
       }
 
       const { accessKey, owner, group } = result.data;
 
-      // Create a virtual access token for compatibility
       const virtualAccessToken = {
         id: accessKey.id,
         token: token,
@@ -813,7 +689,7 @@ class SupabaseService {
         currentUses: accessKey.access_count,
         allowedUsers: ['anonymous'],
         priority: 'high',
-        requiresOwnerDeceased: false // NO VERIFICATION - direct access
+        requiresOwnerDeceased: false
       };
 
       return {
@@ -837,7 +713,6 @@ class SupabaseService {
 
   async updateAccessToken(id: string, updates: any) {
     try {
-      // Map legacy updates to access key updates
       const accessKeyUpdates: Partial<AccessKey> = {};
       
       if (updates.currentUses !== undefined) {
@@ -857,7 +732,6 @@ class SupabaseService {
     }
   }
 
-  // Legacy method names for compatibility
   async getAccessKeysByOwnerId(ownerId: string) {
     try {
       const accessKeys = await this.getAccessKeys(ownerId);
