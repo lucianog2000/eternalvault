@@ -1,0 +1,15 @@
+# Netlify redirects file for SPA routing
+# This ensures all routes are handled by index.html for client-side routing
+
+# Handle all routes by redirecting to index.html
+/*    /index.html   200
+
+# Optional: Handle API routes if you have any
+# /api/*  https://your-api-domain.com/api/:splat  200
+
+# Optional: Handle specific file extensions that should not be redirected
+# *.js    /assets/:splat  200
+# *.css   /assets/:splat  200
+# *.png   /assets/:splat  200
+# *.jpg   /assets/:splat  200
+# *.svg   /assets/:splat  200

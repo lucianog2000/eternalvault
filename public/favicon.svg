@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Star shape optimized for small sizes -->
+  <path d="M24 4 L28.8 16.8 L42 18.4 L33 27.2 L35.6 40.4 L24 34.4 L12.4 40.4 L15 27.2 L6 18.4 L19.2 16.8 Z" 
+        fill="url(#starGradient)" 
+        stroke="#FFFFFF" 
+        stroke-width="1" 
+        stroke-linejoin="round"/>
+</svg>

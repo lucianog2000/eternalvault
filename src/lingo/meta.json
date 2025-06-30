@@ -1,0 +1,5205 @@
+{
+  "version": 0.1,
+  "files": {
+    "App.tsx": {
+      "scopes": {
+        "16/0/init/body/1/consequent/1/argument/1/11": {
+          "type": "element",
+          "hash": "4c41f2e320da4cbdc1744552e5c89ba9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If this takes more than 5 seconds, please check your network connection"
+        },
+        "16/0/init/body/1/consequent/1/argument/1/3": {
+          "type": "element",
+          "hash": "670c99f33181649cf503f5ed46c9e3e3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Initializing EternalVault..."
+        },
+        "16/0/init/body/1/consequent/1/argument/1/5": {
+          "type": "element",
+          "hash": "3c849e56a28fcc23abf4e7fc351e2518",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by Supabase"
+        },
+        "16/0/init/body/1/consequent/1/argument/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "4a1e543b3d8c52f5084e10348d5cc5cf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔄 Auth Status: <expression/>"
+        },
+        "16/0/init/body/1/consequent/1/argument/1/9/expression/right/3": {
+          "type": "element",
+          "hash": "3da391f59096d1a8cac73c91a0956f1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📱 Storage: <expression/>"
+        },
+        "16/0/init/body/1/consequent/1/argument/1/9/expression/right/5": {
+          "type": "element",
+          "hash": "f9ae54e6e4d5c0d20de7ebe3e34251bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔑 Token: {storageInfo.authToken}"
+        },
+        "16/0/init/body/1/consequent/1/argument/1/9/expression/right/7": {
+          "type": "element",
+          "hash": "ec50dcdbf56433cf86645ba434cf323d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🌐 Browser: {storageInfo.userAgent}"
+        }
+      }
+    },
+    "components/AccessKeys/AccessKeyDetails.tsx": {
+      "scopes": {
+        "4/0/init/body/3/argument/1/1/1": {
+          "type": "element",
+          "hash": "aed18cdbbe956cb23ce3ddbd9cb97a92",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key Group Details"
+        },
+        "4/0/init/body/3/argument/1/3/11/1/3/1": {
+          "type": "element",
+          "hash": "0fed120173c776f62e3eb9961790381a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total Access"
+        },
+        "4/0/init/body/3/argument/1/3/11/3/3/1": {
+          "type": "element",
+          "hash": "6045b4ff97fb7dca19ebadfa2e34a700",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Created"
+        },
+        "4/0/init/body/3/argument/1/3/11/5/expression/right/3/1": {
+          "type": "element",
+          "hash": "ee02c8e2bf51dd3b24205d7468fc6088",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last Access"
+        },
+        "4/0/init/body/3/argument/1/3/15/expression/right/1/expression/right/3/1": {
+          "type": "element",
+          "hash": "c7be2eba0aa8a35d1b057bde5229508d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expires"
+        },
+        "4/0/init/body/3/argument/1/3/15/expression/right/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "4614505ca63a0023f00f25813f3cee34",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Limit"
+        },
+        "4/0/init/body/3/argument/1/3/15/expression/right/3/expression/right/3/3": {
+          "type": "element",
+          "hash": "641b2340ca0f7c883681f64627b3503d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{accessKey.access_count} / {accessKey.max_access_count}"
+        },
+        "4/0/init/body/3/argument/1/3/19/1/3/1": {
+          "type": "element",
+          "hash": "7662cd885a9bb5cc11b7835a0d47f9c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📦 Access Key Group"
+        },
+        "4/0/init/body/3/argument/1/3/19/1/3/3": {
+          "type": "element",
+          "hash": "911991ab8aa9d5ffb2ff53e803843a6e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This Access Key defines a group containing <expression/> specific capsule<expression/>. Anyone with this key will only see these capsules and nothing else."
+        },
+        "4/0/init/body/3/argument/1/3/23/1/3": {
+          "type": "element",
+          "hash": "283f6bc624b473e386c032607f42c395",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Capsules in this Group (<expression/>)"
+        },
+        "4/0/init/body/3/argument/1/3/23/3/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "a8fbd4ced1b0b18e809bb2efa7255878",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No capsules assigned to this group"
+        },
+        "4/0/init/body/3/argument/1/3/23/3/1/expression/consequent/0/body/3/1/5/expression/right": {
+          "type": "element",
+          "hash": "8a42eda0165b3a5f884dbd010a021e0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥 Self-destruct"
+        },
+        "4/0/init/body/3/argument/1/3/23/3/1/expression/consequent/0/body/3/1/7/expression/right": {
+          "type": "element",
+          "hash": "08a53ffd2b6b33ef230f91eeb8b2fbd6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💀 Destroyed"
+        },
+        "4/0/init/body/3/argument/1/3/27/expression/right/1": {
+          "type": "element",
+          "hash": "93c7ef9bc767f51fbe360afcf6b1fecb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Notes"
+        },
+        "4/0/init/body/3/argument/1/3/3/1/3/3/1/3": {
+          "type": "element",
+          "hash": "9966920410959b925bcafc74bfc9a76b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Group"
+        },
+        "4/0/init/body/3/argument/1/3/3/1/3/3/3/expression/right": {
+          "type": "element",
+          "hash": "a92daa2a4eee65b6a2730e5ab0eefded",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Revoked"
+        },
+        "4/0/init/body/3/argument/1/3/3/1/3/3/5/expression/right": {
+          "type": "element",
+          "hash": "e98eb9c4e98a8c2cb8b14f69ae302610",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expired"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/1": {
+          "type": "element",
+          "hash": "2a5abcbb50c1e1557eb4738afc45e317",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security Information"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/1": {
+          "type": "element",
+          "hash": "745585ba2e7315ab9b475e65abfc3d38",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• This key gives access only to the <expression/> selected capsules"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/11": {
+          "type": "element",
+          "hash": "bf32b7b1383325afc034a8abd9ce7005",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• This Access Key defines its own group - no separate groups needed"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/3": {
+          "type": "element",
+          "hash": "b1d398eaf22706ac43464e48ad8c6072",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• All access is logged for audit purposes"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/5": {
+          "type": "element",
+          "hash": "604d72f8163d274185cd81707acd62d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Can be revoked at any time"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/7": {
+          "type": "element",
+          "hash": "a68ca37c1b134383be5028775744a413",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• The key is encrypted and protected"
+        },
+        "4/0/init/body/3/argument/1/3/31/1/3/3/9": {
+          "type": "element",
+          "hash": "5c511f91382ca607f055614c752b49e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Key content is never stored or displayed after creation"
+        },
+        "4/0/init/body/3/argument/1/3/7/1": {
+          "type": "element",
+          "hash": "cb3f1001844b876baaa6ad1896ddfb50",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key"
+        },
+        "4/0/init/body/3/argument/1/3/7/3/1/1/3": {
+          "type": "element",
+          "hash": "3417a063fa39299d9918b9d8f9668cab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "••••••••••••••••••••••••••••••••••••••••"
+        },
+        "4/0/init/body/3/argument/1/3/7/3/1/3": {
+          "type": "element",
+          "hash": "f55693f8d4a1c744c2826926b982ce21",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "HIDDEN FOR SECURITY"
+        },
+        "4/0/init/body/3/argument/1/3/7/5/1/3/1": {
+          "type": "element",
+          "hash": "73e1b68c07f4bce82d73ece414fa469e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔒 Maximum Security Policy"
+        },
+        "4/0/init/body/3/argument/1/3/7/5/1/3/3": {
+          "type": "element",
+          "hash": "d6141f648b0c254d98702def902aefd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access keys are NEVER displayed after creation. This is a zero-knowledge security feature. If you lost the key, you must regenerate it (which will invalidate the old one)."
+        },
+        "4/0/init/body/3/argument/1/5/1": {
+          "type": "element",
+          "hash": "cba1205249020634b8f3b25105b9712b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Close"
+        }
+      }
+    },
+    "components/AccessKeys/AccessKeyForm.tsx": {
+      "scopes": {
+        "5/0/init/body/13/argument/1/1/1": {
+          "type": "element",
+          "hash": "83730c848c3caae65f4509fcd5a2ceb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New Access Key Group"
+        },
+        "5/0/init/body/13/argument/1/3/11/1/1": {
+          "type": "element",
+          "hash": "a5293759b82b155c721d87da1d41e749",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Select Capsules for This Group ({selectedCapsuleIds.length} of {capsules.length})"
+        },
+        "5/0/init/body/13/argument/1/3/11/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "679da0d908f1d425f5a718e184dab0fe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Selected capsules:"
+        },
+        "5/0/init/body/13/argument/1/3/11/11/expression/right/3": {
+          "type": "element",
+          "hash": "81a47ede9d250d9da48dbee3281421c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This Access Key will create a group containing only these {selectedCapsuleIds.length} capsule<expression/>"
+        },
+        "5/0/init/body/13/argument/1/3/11/5/expression/right/3-placeholder": {
+          "type": "attribute",
+          "hash": "d29674896815d747555348f709cba439",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search capsules..."
+        },
+        "5/0/init/body/13/argument/1/3/11/9/1/expression/consequent/0/body/3/1/7/expression/right": {
+          "type": "element",
+          "hash": "8a42eda0165b3a5f884dbd010a021e0c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥 Self-destruct"
+        },
+        "5/0/init/body/13/argument/1/3/15/1": {
+          "type": "element",
+          "hash": "1df4b20a9e25d1270d0cf21aa1767b83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Advanced Options"
+        },
+        "5/0/init/body/13/argument/1/3/15/3/1/1": {
+          "type": "element",
+          "hash": "d5d33742ac15bd475f9ae200d2425815",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expiration Date"
+        },
+        "5/0/init/body/13/argument/1/3/15/3/1/5": {
+          "type": "element",
+          "hash": "3807ca5cf8213be72efbfdb73d7265c7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Optional: the key will automatically expire on this date"
+        },
+        "5/0/init/body/13/argument/1/3/15/3/3/1": {
+          "type": "element",
+          "hash": "d701dcc23878d3d78b36b3a17860dd9c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Limit"
+        },
+        "5/0/init/body/13/argument/1/3/15/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "e1a92523172cd1bdde5550689840e42d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlimited"
+        },
+        "5/0/init/body/13/argument/1/3/15/3/3/5": {
+          "type": "element",
+          "hash": "cf91f9b3f653b748ea0bead96ea991c2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Optional: maximum number of times the key can be used"
+        },
+        "5/0/init/body/13/argument/1/3/19/1": {
+          "type": "element",
+          "hash": "1481b98d477a7a78a626a79d07646322",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional Notes"
+        },
+        "5/0/init/body/13/argument/1/3/19/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "175199e2d3001e10f2dd5ae52fece4fa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional information about this access key group..."
+        },
+        "5/0/init/body/13/argument/1/3/23/1/3/1": {
+          "type": "element",
+          "hash": "80da88d5b45a1ce21a98c1f26d673bcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Security Information"
+        },
+        "5/0/init/body/13/argument/1/3/23/1/3/3": {
+          "type": "element",
+          "hash": "08766f24c1ba9c76ebfe820ea541767b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The access key will be generated automatically and will only be displayed once. This key will define a group containing only the {selectedCapsuleIds.length} capsule<expression/> you selected. Make sure to copy and save it in a safe place before closing the window."
+        },
+        "5/0/init/body/13/argument/1/3/27/1": {
+          "type": "element",
+          "hash": "07296eb8d91ad98e1b60cd7ab0def914",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "5/0/init/body/13/argument/1/3/27/3": {
+          "type": "element",
+          "hash": "657afa2dea8badb5c49910012bcd1af9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Access Key Group"
+        },
+        "5/0/init/body/13/argument/1/3/3/1": {
+          "type": "element",
+          "hash": "2564d947d49f3ba569535349830c29db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key Name *"
+        },
+        "5/0/init/body/13/argument/1/3/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "a71996b46721dcdd9ed9644e6cbfb107",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ex: Family Access - Complete Information"
+        },
+        "5/0/init/body/13/argument/1/3/3/5": {
+          "type": "element",
+          "hash": "89c66c6bf9d5161a09865ffb25c4d196",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This name will identify the group of capsules accessible with this key"
+        },
+        "5/0/init/body/13/argument/1/3/7/1/3/1": {
+          "type": "element",
+          "hash": "f3964d6d40c2ae942799549c3d961831",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📦 How Access Key Grouping Works"
+        },
+        "5/0/init/body/13/argument/1/3/7/1/3/3": {
+          "type": "element",
+          "hash": "2effd84475cbc05926c4bab95967705f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This Access Key will create a \"group\" containing only the capsules you select below. Anyone with this key will only see these specific capsules - nothing else. This allows you to create different groups for different people (family, lawyer, friend, etc.)."
+        }
+      }
+    },
+    "components/AccessKeys/AccessKeyManager.tsx": {
+      "scopes": {
+        "9/0/init/body/20/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "51b00c01b5c3b87a1f5ad7a64cb5ca00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading access keys..."
+        },
+        "9/0/init/body/21/argument/11/1/1/3": {
+          "type": "element",
+          "hash": "8f27485be69104a1376e73b70103fa16",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Keys"
+        },
+        "9/0/init/body/21/argument/11/3/1/3": {
+          "type": "element",
+          "hash": "3fb32ff075af7daafe4ecce361322026",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Working"
+        },
+        "9/0/init/body/21/argument/11/5/1/3": {
+          "type": "element",
+          "hash": "63b27cccba4ab2143e0f5f3d46e4168a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expired"
+        },
+        "9/0/init/body/21/argument/11/7/1/3": {
+          "type": "element",
+          "hash": "0fed120173c776f62e3eb9961790381a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total Access"
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "2804d2b166c9f95a234d831f409243ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✅ Access Key Created Successfully"
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/3/1/3-title": {
+          "type": "attribute",
+          "hash": "4930a9f1b473f7b072f0c84c63ece133",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Copy key"
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/5/1/3/1": {
+          "type": "element",
+          "hash": "f0e6c894493fd7da4cd7d12ad532b0d2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚨 CRITICAL: Save this key now"
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/5/1/3/3": {
+          "type": "element",
+          "hash": "e8b63a812f83b9f8a5e54ebbe584662c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This is the ONLY time you will see this key. Once you close this window, it cannot be recovered or viewed again. You are 100% responsible for storing and distributing this key securely."
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/7/1/3": {
+          "type": "element",
+          "hash": "8f4f13acec7abf7c3aa6e680b6da99f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Copy Key"
+        },
+        "9/0/init/body/21/argument/15/expression/right/1/3/7/3": {
+          "type": "element",
+          "hash": "ac87ba96bbaa3ea07acee1c2088c70f1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "I have saved the key - Close"
+        },
+        "9/0/init/body/21/argument/19/1/1/1": {
+          "type": "element",
+          "hash": "48137798b00bc197e1db3e8f018ad0c9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Access Keys"
+        },
+        "9/0/init/body/21/argument/19/1/1/3": {
+          "type": "element",
+          "hash": "b3ce5927ae5977a903146b9f2a1306d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Each key defines a group of capsules for specific access"
+        },
+        "9/0/init/body/21/argument/19/1/3": {
+          "type": "element",
+          "hash": "f055eb6325c9b520eaff408fc6e6daae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{accessKeys.length} active key<expression/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/3/3": {
+          "type": "element",
+          "hash": "3e1ec025c4a50830bbb9ad57a176630a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/1/5/expression/right": {
+          "type": "element",
+          "hash": "54df90bcc08fbc121668cb7d08f6c283",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expired"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/11/expression/right/1": {
+          "type": "element",
+          "hash": "b87055288e32812f6fe319ba6aeda02c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Expires: <function:Date.toLocaleDateString/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/1/3": {
+          "type": "element",
+          "hash": "f3121486baf9e3655abff8c0dd85abed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key: ••••••••••••••••••••••••••••••••••••••••"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/1/1/3": {
+          "type": "element",
+          "hash": "ff4a9755cd9a190431863398091273ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hidden for security"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/5/3": {
+          "type": "element",
+          "hash": "4e199869be42c0e9a8d4c95a60c8b318",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔒 Access keys are never displayed after creation for maximum security"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/1/3": {
+          "type": "element",
+          "hash": "bead03e943a09a749bf2bab4341e9884",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> capsule<expression/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/3/3": {
+          "type": "element",
+          "hash": "cba79fc1325325ae0d849b28705ad572",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{accessKey.access_count} access<expression/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/7/5/3": {
+          "type": "element",
+          "hash": "646d864aab5966792b627be467287682",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Created: <function:Date.toLocaleDateString/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/1/9/expression/right/1": {
+          "type": "element",
+          "hash": "1a774f6ecbbeac3793c2c6f9785d8622",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last access: <function:Date.toLocaleDateString/>"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/1-title": {
+          "type": "attribute",
+          "hash": "885f3ad1c2e448d104a45c0291b79ba5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View details"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/3/expression/right-title": {
+          "type": "attribute",
+          "hash": "df3cc4bc521a1a909e7cb2f291d46cf7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Regenerate key (old key will stop working)"
+        },
+        "9/0/init/body/21/argument/19/3/expression/alternate/1/expression/0/body/1/argument/1/3/5-title": {
+          "type": "attribute",
+          "hash": "134d17114763a88e4ed449d52848fe52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Delete key permanently"
+        },
+        "9/0/init/body/21/argument/19/3/expression/consequent/3": {
+          "type": "element",
+          "hash": "2a7d4929cc5dca87711cc633db15ad65",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No active access keys"
+        },
+        "9/0/init/body/21/argument/19/3/expression/consequent/5": {
+          "type": "element",
+          "hash": "58c3d84126d621da9bad740c54979478",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create first access key"
+        },
+        "9/0/init/body/21/argument/23/1/3/1": {
+          "type": "element",
+          "hash": "2206312cd3b261dd5c93657c973ed93e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📦 Capsule Grouping by Access Keys"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/1/0": {
+          "type": "element",
+          "hash": "8ebaf0d5dbbd6a3e8a33a1d1900e3ced",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "How it works:"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/3/1": {
+          "type": "element",
+          "hash": "75c1f92594cd09908e764bcc64af72f5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Each Access Key defines its own group of capsules"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/3/3": {
+          "type": "element",
+          "hash": "49a23deeb049119c2b5e571a6ec3a15e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• When creating an Access Key, you select which specific capsules to include"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/3/5": {
+          "type": "element",
+          "hash": "be6dfd5c78d206c8ec104baacb6831b6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• This provides granular control - different people get different information"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/3/7": {
+          "type": "element",
+          "hash": "7322ed5e445c0c0b3768fdce99d31cfb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• No separate \"groups\" table needed - Access Keys ARE the groups"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/5/0": {
+          "type": "element",
+          "hash": "f5eb2ed889b4898199db3d3b617c7bad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Benefits:"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/7/1": {
+          "type": "element",
+          "hash": "dc37a3d1b168537c9cf9856b10fc1a57",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Maximum privacy - each key only accesses its assigned capsules"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/7/3": {
+          "type": "element",
+          "hash": "64b3b4f5cf122e4b393e3cfb2ed137a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Flexible grouping - same capsule can be in multiple \"groups\" (keys)"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/7/5": {
+          "type": "element",
+          "hash": "32aaad22a76540112bed82ff5693b80c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Simple management - create key, select capsules, done"
+        },
+        "9/0/init/body/21/argument/23/1/3/3/7/7": {
+          "type": "element",
+          "hash": "c36481c76f3216ba9da463468ac84fa8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Perfect for different audiences (family, lawyer, friend, etc.)"
+        },
+        "9/0/init/body/21/argument/3/1/1": {
+          "type": "element",
+          "hash": "b7375644a9b22a253230eb7556b5721b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key Management"
+        },
+        "9/0/init/body/21/argument/3/1/3": {
+          "type": "element",
+          "hash": "edef18f2b7ec45c037d659ac5050f727",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create and manage secure access keys for your legacy capsules. Each key defines a group of capsules."
+        },
+        "9/0/init/body/21/argument/3/3/3": {
+          "type": "element",
+          "hash": "892f2214ec97ffb97ee298b0e6d4b633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New Access Key"
+        },
+        "9/0/init/body/21/argument/7/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "3c95bcb32c2104b99a46f5b3dd015248",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Error"
+        }
+      }
+    },
+    "components/Auth/LoginForm.tsx": {
+      "scopes": {
+        "4/0/init/body/7/0/init/1/11/1/3/1": {
+          "type": "element",
+          "hash": "4cd96fcfc23d44c30a1de6048d4ecc26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>First time signing in?</element:strong> Make sure you've verified your email address by clicking the link we sent you."
+        },
+        "4/0/init/body/7/0/init/1/15/1": {
+          "type": "element",
+          "hash": "96f70e68b3f009eeb1aad2660e65a6d3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't have an account? <element:button>Register here</element:button>"
+        },
+        "4/0/init/body/7/0/init/1/19/1": {
+          "type": "element",
+          "hash": "c023ba1b6a89d743ab3c6b116c18ffc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with email verification"
+        },
+        "4/0/init/body/7/0/init/1/3/1/3": {
+          "type": "element",
+          "hash": "ec7b8f314fe9bc6591006707484ede61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign In"
+        },
+        "4/0/init/body/7/0/init/1/3/1/5": {
+          "type": "element",
+          "hash": "cdb0ca509159a0e9c4e7f372e4be23b5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access your secure digital legacy"
+        },
+        "4/0/init/body/7/0/init/1/7/1/expression/right/1/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "12fc4596627fc89123816de0520ba114",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Need help? Check your spam folder or contact support."
+        },
+        "4/0/init/body/7/0/init/1/7/3/1": {
+          "type": "element",
+          "hash": "57c4459c381ec0a97139fe4fda36b086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email Address"
+        },
+        "4/0/init/body/7/0/init/1/7/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "aff673ce92771063de944944da3d4346",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "your@email.com"
+        },
+        "4/0/init/body/7/0/init/1/7/5/1": {
+          "type": "element",
+          "hash": "3e05f6f7502ce918c9eb30a3daa7590e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "4/0/init/body/7/0/init/1/7/5/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "5ee7cd1a4a7fe6fb896e8a0c4b2d7255",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "••••••••"
+        },
+        "4/0/init/body/7/0/init/1/7/7/1/expression/consequent": {
+          "type": "element",
+          "hash": "43c650918b2296c1836e1382ee9b90c5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:div></element:div> Signing in..."
+        }
+      }
+    },
+    "components/Auth/RegisterForm.tsx": {
+      "scopes": {
+        "4/0/init/body/12/consequent/0/0/init/1/3/1/3": {
+          "type": "element",
+          "hash": "b1eff6819d1e1890c6cec9602d0c9605",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check Your Email!"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/3/1/5": {
+          "type": "element",
+          "hash": "23f3d216377fdb8d1599bd49e596c685",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account created successfully"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/1/1/3/1": {
+          "type": "element",
+          "hash": "af59240e9e78114c95a521455ae235b2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📧 Verification Email Sent"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/1/1/3/3": {
+          "type": "element",
+          "hash": "9fd8f613edc73e38ee5bc3800e34bd20",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We've sent a verification email to:"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/1/1/3/7": {
+          "type": "element",
+          "hash": "fc9ed576b1c627fd343f5326978997a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please check your inbox and click the verification link to confirm your account before signing in."
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/13/1": {
+          "type": "element",
+          "hash": "c6b7e1cf8d9f51845e321e520a13c6ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Go to Sign In"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/13/3": {
+          "type": "element",
+          "hash": "3cd3688bcc2e23ebd948eac2a915eb7b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Register Different Email"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/17/1": {
+          "type": "element",
+          "hash": "cb4ebd9935bd52d81fc2ec8157a2bc1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Didn't receive the email? Check your spam folder or contact <element:a>support@eternalvault.com</element:a>"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/5/1/3/1": {
+          "type": "element",
+          "hash": "dd03d6538c20938c448a6e93071ae15f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Steps:"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/5/1/3/3/1": {
+          "type": "element",
+          "hash": "e3108ad77edf9bdfb165b5d3108de5ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Check your email inbox (and spam folder)"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/5/1/3/3/3": {
+          "type": "element",
+          "hash": "1a1abef38a8a66787a7284ef06a95ac8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Click the verification link in the email"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/5/1/3/3/5": {
+          "type": "element",
+          "hash": "3ebe0b19dc157c2873bbf0df59d8dcff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Return here and sign in with your credentials"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/5/1/3/3/7": {
+          "type": "element",
+          "hash": "5a7864d3124b9c84e1e46f310026e7b9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start protecting your digital legacy!"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/9/1": {
+          "type": "element",
+          "hash": "3068fdd5eed808b47612e07ea2ddb415",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Quick access to popular email providers:"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/9/3/1/3": {
+          "type": "element",
+          "hash": "1040a7eb29253870a319c35853400cc4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Gmail"
+        },
+        "4/0/init/body/12/consequent/0/0/init/1/7/9/3/3/3": {
+          "type": "element",
+          "hash": "63684f1faa4c84ba7b0b3e2b751a83a3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Outlook"
+        },
+        "4/0/init/body/13/0/init/1/11/1": {
+          "type": "element",
+          "hash": "530f7f9b9b941ae1696f37bbaab62ed9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Already have an account? <element:button>Sign in here</element:button>"
+        },
+        "4/0/init/body/13/0/init/1/15/1": {
+          "type": "element",
+          "hash": "c023ba1b6a89d743ab3c6b116c18ffc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with email verification"
+        },
+        "4/0/init/body/13/0/init/1/3/1/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "4/0/init/body/13/0/init/1/3/1/5": {
+          "type": "element",
+          "hash": "dd7cf82655a6f40f7ac7d3e04e844c29",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Start protecting your digital legacy"
+        },
+        "4/0/init/body/13/0/init/1/7/11/1/expression/consequent": {
+          "type": "element",
+          "hash": "e12ea8a5680b9b78b6746ce05885e351",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:div></element:div> Creating account..."
+        },
+        "4/0/init/body/13/0/init/1/7/3/1": {
+          "type": "element",
+          "hash": "5f2f17dd822a7a0b5ee02092890ce57c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full Name"
+        },
+        "4/0/init/body/13/0/init/1/7/3/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "d9a233fafa8d9e9658f1143da07fd266",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your full name"
+        },
+        "4/0/init/body/13/0/init/1/7/5/1": {
+          "type": "element",
+          "hash": "57c4459c381ec0a97139fe4fda36b086",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email Address"
+        },
+        "4/0/init/body/13/0/init/1/7/5/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "aff673ce92771063de944944da3d4346",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "your@email.com"
+        },
+        "4/0/init/body/13/0/init/1/7/7/1": {
+          "type": "element",
+          "hash": "3e05f6f7502ce918c9eb30a3daa7590e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "4/0/init/body/13/0/init/1/7/7/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "5ee7cd1a4a7fe6fb896e8a0c4b2d7255",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "••••••••"
+        },
+        "4/0/init/body/13/0/init/1/7/9/1": {
+          "type": "element",
+          "hash": "eef1cd9b37fca39b73eec0a3eb316c83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Confirm Password"
+        },
+        "4/0/init/body/13/0/init/1/7/9/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "5ee7cd1a4a7fe6fb896e8a0c4b2d7255",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "••••••••"
+        }
+      }
+    },
+    "components/Capsules/CapsuleCard.tsx": {
+      "scopes": {
+        "7/0/init/body/5/argument/11/expression/right/1/3": {
+          "type": "element",
+          "hash": "457b4a3dac183d94b673907a56adbe60",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Self-destruction: {readsRemaining} of {capsule.self_destruct_max_reads} reads remaining"
+        },
+        "7/0/init/body/5/argument/11/expression/right/3/expression/right": {
+          "type": "element",
+          "hash": "a8a32e66cd803fa697e96510ebb2e20b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "\"<function:capsule.self_destruct_warning_message.substring/>...\""
+        },
+        "7/0/init/body/5/argument/15/3/1/1/3": {
+          "type": "element",
+          "hash": "e0e7fcaefb962e7dbeee4d29cd911793",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> days"
+        },
+        "7/0/init/body/5/argument/3/1/3/3/3/expression/right/3": {
+          "type": "element",
+          "hash": "eead935434728eb6b64f7c69ec9d7cdc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{readsRemaining} read<expression/>"
+        },
+        "7/0/init/body/5/argument/3/5/1-title": {
+          "type": "attribute",
+          "hash": "68b120dbf42ea09c5b418f89f65c4a95",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Edit capsule"
+        },
+        "7/0/init/body/5/argument/3/5/3-title": {
+          "type": "attribute",
+          "hash": "1c90a4679fe11ee700be7e1f71da9603",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Delete capsule"
+        }
+      }
+    },
+    "components/Capsules/CapsuleForm.tsx": {
+      "scopes": {
+        "5/0/init/body/9/argument/1/3/11/1": {
+          "type": "element",
+          "hash": "efd0f92f3195a788d773136f1109b049",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥 Self-Destruction"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/1/1/3": {
+          "type": "element",
+          "hash": "56d405b726fbc6fa485dc3a2a8062fd8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enable Self-Destruction"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/1/1/1": {
+          "type": "element",
+          "hash": "0d694350a04c2b745584c99f3dcea6ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Maximum Reads"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/1/1/5": {
+          "type": "element",
+          "hash": "d73eae02657863b8b6c1fcb76b869266",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Number of times it can be read before destruction"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/1/3/1/1/3": {
+          "type": "element",
+          "hash": "e8367b9d6fee0759a1f7c33b305670f4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Destroy immediately"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/1/3/1/3": {
+          "type": "element",
+          "hash": "59cb2b1f754d11f831f9dd783e2f8410",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Destroys when read limit is reached"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/3/1": {
+          "type": "element",
+          "hash": "60b6b812b976e189aa5856753c91fad1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Warning Message (Optional)"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "ef7286a2ebde9e45d63c208df91ec400",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "e.g. WARNING: This information will be destroyed after reading. Make sure to copy everything necessary."
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/3/5": {
+          "type": "element",
+          "hash": "0fca048c1ffada688179f83c508d844a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Message shown before revealing content"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/5/1/3/1": {
+          "type": "element",
+          "hash": "6964d5a6d651b252629d71ee185eb8af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⚠️ Important Warning"
+        },
+        "5/0/init/body/9/argument/1/3/11/3/3/expression/right/5/1/3/3": {
+          "type": "element",
+          "hash": "913a2f6d31a8d16041dcaf1aa03da081",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Once the read limit is reached, this capsule will be permanently destroyed. This action cannot be undone. Use only for extremely sensitive information."
+        },
+        "5/0/init/body/9/argument/1/3/15/1": {
+          "type": "element",
+          "hash": "63d25eb1f97cd7fd3a89251ce822609f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlock Rule"
+        },
+        "5/0/init/body/9/argument/1/3/15/3/1/3": {
+          "type": "element",
+          "hash": "6b0db9037389fbc81a2d7e15f8efa1c0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Prolonged Inactivity"
+        },
+        "5/0/init/body/9/argument/1/3/15/3/3/1/1": {
+          "type": "element",
+          "hash": "2faab0c2cd913b68f9485848425e8dce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Inactivity Days"
+        },
+        "5/0/init/body/9/argument/1/3/15/3/3/3/1/1": {
+          "type": "element",
+          "hash": "d4e31096e7171e813e94b114b7e51a88",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The capsule will unlock automatically if there's no activity in your account for {unlockRuleDays} consecutive days."
+        },
+        "5/0/init/body/9/argument/1/3/15/5": {
+          "type": "element",
+          "hash": "cedd3602da1971ed844b3332420172f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 More unlock methods will be available soon"
+        },
+        "5/0/init/body/9/argument/1/3/19/1/3/1": {
+          "type": "element",
+          "hash": "c925db32b7927ce831e2a9857a9989a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📦 Capsule Grouping"
+        },
+        "5/0/init/body/9/argument/1/3/19/1/3/3": {
+          "type": "element",
+          "hash": "f3288772f2d9950f2901bc7ebcde2aaa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Capsules are automatically grouped by Access Keys. When you create an Access Key, you'll select which specific capsules to include in that group. This provides granular control over who can access what information."
+        },
+        "5/0/init/body/9/argument/1/3/23/1": {
+          "type": "element",
+          "hash": "07296eb8d91ad98e1b60cd7ab0def914",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "5/0/init/body/9/argument/1/3/3/1/1": {
+          "type": "element",
+          "hash": "2a36b16ee3e1833aeed2678ba0db77bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Capsule Title"
+        },
+        "5/0/init/body/9/argument/1/3/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "30f9117dc0c1e9a76755c6bf62947e82",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "e.g. Banking passwords"
+        },
+        "5/0/init/body/9/argument/1/3/3/3/1": {
+          "type": "element",
+          "hash": "d583c42d0cea7874234ea959b4023b2a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Category"
+        },
+        "5/0/init/body/9/argument/1/3/3/3/3/1": {
+          "type": "element",
+          "hash": "d65b261f9b4c3adf41256d5ed13fa608",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Passwords"
+        },
+        "5/0/init/body/9/argument/1/3/3/3/3/3": {
+          "type": "element",
+          "hash": "54062d6a9fb4c5a774633bc921fb95b8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📋 Instructions"
+        },
+        "5/0/init/body/9/argument/1/3/3/3/3/5": {
+          "type": "element",
+          "hash": "5c6f711d64223e2ed2d3f87b62aea921",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💌 Messages"
+        },
+        "5/0/init/body/9/argument/1/3/3/3/3/7": {
+          "type": "element",
+          "hash": "4b193f5257663d4e74fb8eb8a33ceae2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💎 Digital Assets"
+        },
+        "5/0/init/body/9/argument/1/3/7/1": {
+          "type": "element",
+          "hash": "d5093781560992089aa0df2f5b0e831a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Content"
+        },
+        "5/0/init/body/9/argument/1/3/7/3-placeholder": {
+          "type": "attribute",
+          "hash": "9bdac152ecbf1d1a0cbfbf15091d4e52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Write here the information you want to preserve..."
+        }
+      }
+    },
+    "components/Chat/CapsuleViewer.tsx": {
+      "scopes": {
+        "4/0/init/body/11/argument/1/1/1/3/3/3/expression/right/3": {
+          "type": "element",
+          "hash": "d8928f385c92ed1f766431fee21e99ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{readsRemaining} read<expression/> remaining"
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/11/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "450f94d03a900fe55fd7289bc768d639",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "✅ Read Registered"
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/11/expression/right/1/3/3": {
+          "type": "element",
+          "hash": "d392070752ecac83fa858759feec3a42",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This read has been counted. There are <expression/> read<expression/> available before the capsule automatically deletes."
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/3/1/3": {
+          "type": "element",
+          "hash": "0ba3c0f74f017e839635c1d909464916",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Capsule Content"
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/3/1/5/expression/right/3": {
+          "type": "element",
+          "hash": "73a79d71598539d74533567d7e86efe4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Will delete on close"
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/7/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "47d731f03f5ae7f3cadfa2f66738bb83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⚠️ Final Read Completed"
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/alternate/7/expression/right/1/3/3": {
+          "type": "element",
+          "hash": "bf6302046f46799ab450ab77df8e5a8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You have viewed this capsule's content for the last time. When you close this window, the capsule will be permanently deleted from the database and cannot be recovered. Make sure you have copied all necessary information."
+        },
+        "4/0/init/body/11/argument/1/3/11/expression/consequent/7/expression/alternate/1/expression/consequent/3": {
+          "type": "element",
+          "hash": "398be3132c0ad8ae3cb7552f30dcc810",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Registering read..."
+        },
+        "4/0/init/body/11/argument/1/3/15/1": {
+          "type": "element",
+          "hash": "0bc7a3499bd9df8fdea10fc562cf86bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📋 Unlock Information"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/1": {
+          "type": "element",
+          "hash": "eded55eb0b5cd521f38b4e1c414d08d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Rule:</element:strong> Prolonged inactivity"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/3": {
+          "type": "element",
+          "hash": "6827b49d47e270adba67c0a5454e71cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Configured days:</element:strong> {capsule.unlock_rule_days} days"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/5": {
+          "type": "element",
+          "hash": "94d0ad1b3376a6881cdae9191107650e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Status:</element:strong> <expression/>"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/7/expression/right/1": {
+          "type": "element",
+          "hash": "c000c5c8d8110560a1a92469e548891f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Self-destruction:</element:strong> Enabled"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/7/expression/right/3": {
+          "type": "element",
+          "hash": "94d0ad1b3376a6881cdae9191107650e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Reads allowed:</element:strong> {capsule.self_destruct_max_reads}"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/7/expression/right/5": {
+          "type": "element",
+          "hash": "94d0ad1b3376a6881cdae9191107650e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Reads completed:</element:strong> <expression/>"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/7/expression/right/7": {
+          "type": "element",
+          "hash": "94d0ad1b3376a6881cdae9191107650e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• <element:strong>Reads remaining:</element:strong> <function:Math.max/>"
+        },
+        "4/0/init/body/11/argument/1/3/15/3/9": {
+          "type": "element",
+          "hash": "173198e5d79fc440527b7f009486a105",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This capsule was automatically unlocked according to the rules established by {ownerName}."
+        },
+        "4/0/init/body/11/argument/1/3/19/1": {
+          "type": "element",
+          "hash": "80da88d5b45a1ce21a98c1f26d673bcb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Security Information"
+        },
+        "4/0/init/body/11/argument/1/3/19/3/1": {
+          "type": "element",
+          "hash": "8efef3939da30b97aebfacc887e95669",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• This information was protected with military-grade encryption"
+        },
+        "4/0/init/body/11/argument/1/3/19/3/3": {
+          "type": "element",
+          "hash": "91fbaae726a83ab36367938de1878dcc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Only you have access to this specific capsule"
+        },
+        "4/0/init/body/11/argument/1/3/19/3/5": {
+          "type": "element",
+          "hash": "a48c374d995397111db8c556630feff2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Access was granted according to {ownerName}'s instructions"
+        },
+        "4/0/init/body/11/argument/1/3/19/3/7": {
+          "type": "element",
+          "hash": "af821b074c76ce91fe93824bb87e9844",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Your access to this information is logged for audit purposes"
+        },
+        "4/0/init/body/11/argument/1/3/19/3/9/expression/right": {
+          "type": "element",
+          "hash": "46de76e2bd9d631aa0c29685bc3ce718",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• This capsule has self-destruction configured for maximum security"
+        },
+        "4/0/init/body/11/argument/1/3/3/1/3": {
+          "type": "element",
+          "hash": "ef5e60ebeb3347890a9feeba11c401de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Created by {ownerName}"
+        },
+        "4/0/init/body/11/argument/1/3/3/3/3": {
+          "type": "element",
+          "hash": "1596addec1a6d26cf0bb45644ff857bf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Date: <function:Date.toLocaleDateString/>"
+        },
+        "4/0/init/body/11/argument/1/3/3/5/3": {
+          "type": "element",
+          "hash": "d91fd4d5d59e782f3749447c5a91a746",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Category: <expression/>"
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/1": {
+          "type": "element",
+          "hash": "701be679dde3165b5abcc33b59a01f9b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥 Self-Destructing Capsule"
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/3/1": {
+          "type": "element",
+          "hash": "e9626d626bbfa194880475209d0cb059",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Reads remaining:</element:strong> {readsRemaining} of {capsule.self_destruct_max_reads}"
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/3/3/0": {
+          "type": "element",
+          "hash": "9398387d2030bf937c2ca4d1effd8eac",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reads completed:"
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/3/5/expression/right": {
+          "type": "element",
+          "hash": "9d1eea9d49f172e04de9ad1afafc7ae5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⚠️ <element:strong>CRITICAL WARNING:</element:strong> This is the last available read. The capsule will be permanently deleted after viewing and cannot be recovered ever."
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/3/7/expression/right/1/1": {
+          "type": "element",
+          "hash": "489bab3a29b600556902ebe2476735ff",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Owner's message:"
+        },
+        "4/0/init/body/11/argument/1/3/7/expression/right/1/3/3/9/1": {
+          "type": "element",
+          "hash": "e179c5571001745b22bfacfe9e6bc7b0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Important:</element:strong> Once you view the content, the read counter will automatically increment.<expression/><expression/>"
+        },
+        "4/0/init/body/11/argument/1/5/1/1/3": {
+          "type": "element",
+          "hash": "2b19f40af4af768c344cab55dfe6f7a9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Accessed: <function:Date.toLocaleString/>"
+        }
+      }
+    },
+    "components/Chat/ChatInterface.tsx": {
+      "scopes": {
+        "6/0/init/body/15/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "a742008b2c49f92cc5e1432c70b39858",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 Suggested questions:"
+        },
+        "6/0/init/body/15/argument/15/1/3/3": {
+          "type": "element",
+          "hash": "76a8497d7b546628b03bb81d5c1ce995",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send"
+        },
+        "6/0/init/body/15/argument/15/3/expression/right/1": {
+          "type": "element",
+          "hash": "6b7c5b853c3afec14c8d8c8fc80063d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Connect with an access key above to start chatting"
+        },
+        "6/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "14d102875ea0a5db8db9bbd542eeb50c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found capsules (click to view):"
+        },
+        "6/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "f759b7f49c1a2c3205748f0108be9eb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💀"
+        },
+        "6/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "adbc4aac6afb9aa3daa5040c9f09a43f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{capsule.title} (Destroyed)"
+        },
+        "6/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/3/argument/5/expression/right": {
+          "type": "element",
+          "hash": "802e973e6c5e54b89c2dc22d36f65527",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥"
+        },
+        "6/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/3/argument/7": {
+          "type": "element",
+          "hash": "6a6846f59ffea134a24d428e3eb50c02",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "👁️"
+        },
+        "8/0/init/body/15/argument/11/expression/right/1/1": {
+          "type": "element",
+          "hash": "a742008b2c49f92cc5e1432c70b39858",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 Suggested questions:"
+        },
+        "8/0/init/body/15/argument/15/1/3/3": {
+          "type": "element",
+          "hash": "76a8497d7b546628b03bb81d5c1ce995",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send"
+        },
+        "8/0/init/body/15/argument/15/3/expression/right/1": {
+          "type": "element",
+          "hash": "6b7c5b853c3afec14c8d8c8fc80063d1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Connect with an access key above to start chatting"
+        },
+        "8/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "14d102875ea0a5db8db9bbd542eeb50c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found capsules (click to view):"
+        },
+        "8/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/consequent/0/argument/1": {
+          "type": "element",
+          "hash": "f759b7f49c1a2c3205748f0108be9eb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💀"
+        },
+        "8/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "adbc4aac6afb9aa3daa5040c9f09a43f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{capsule.title} (Destroyed)"
+        },
+        "8/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/3/argument/5/expression/right": {
+          "type": "element",
+          "hash": "802e973e6c5e54b89c2dc22d36f65527",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥"
+        },
+        "8/0/init/body/15/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/3/argument/7": {
+          "type": "element",
+          "hash": "6a6846f59ffea134a24d428e3eb50c02",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "👁️"
+        },
+        "8/0/init/body/22/argument/15/1/3/3": {
+          "type": "element",
+          "hash": "76a8497d7b546628b03bb81d5c1ce995",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send"
+        },
+        "8/0/init/body/22/argument/7/1/expression/0/body/1/3/3/expression/right/1": {
+          "type": "element",
+          "hash": "14d102875ea0a5db8db9bbd542eeb50c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Found capsules (click to view):"
+        },
+        "8/0/init/body/22/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/argument/5/expression/right": {
+          "type": "element",
+          "hash": "802e973e6c5e54b89c2dc22d36f65527",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔥"
+        },
+        "8/0/init/body/22/argument/7/1/expression/0/body/1/3/3/expression/right/3/1/expression/0/body/2/argument/7": {
+          "type": "element",
+          "hash": "6a6846f59ffea134a24d428e3eb50c02",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "👁️"
+        }
+      }
+    },
+    "components/Chat/LegacySelector.tsx": {
+      "scopes": {
+        "3/0/init/body/8/consequent/0/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "386c3dcda7f6456c0bb3f95455e6f5a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connected: {legacyOwner.name}"
+        },
+        "3/0/init/body/8/consequent/0/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "fd036bfcd01aa149b0af7dd411ad5978",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Group: {activeGroup.name} • capsule<expression/>"
+        },
+        "3/0/init/body/8/consequent/0/argument/1/3": {
+          "type": "element",
+          "hash": "4c64e1137e3e17194d1752dfb02b96df",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Disconnect"
+        },
+        "3/0/init/body/9/argument/1/1": {
+          "type": "element",
+          "hash": "4de829327f76eccece8380f0d935d589",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connect Access Key"
+        },
+        "3/0/init/body/9/argument/1/3/expression/right/3": {
+          "type": "element",
+          "hash": "87c4a663507f2bcbbf79934af8164e13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add"
+        },
+        "3/0/init/body/9/argument/13/expression/right/1/expression/0/body/1/3/3": {
+          "type": "element",
+          "hash": "f41949b4bebd5569e5c8c65125e6326e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Valid access key • Added <function:Date.toLocaleDateString/>"
+        },
+        "3/0/init/body/9/argument/17/expression/right/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9a2328f6bb18326507d194a3c11e67e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa"
+        },
+        "3/0/init/body/9/argument/17/expression/right/5/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "8778ee245078a8be4a2ce855c8c56edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connect"
+        },
+        "3/0/init/body/9/argument/17/expression/right/5/1/1/expression/consequent/3": {
+          "type": "element",
+          "hash": "c64cddbf8207da1c7a4593f55fe24ca8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Validating..."
+        },
+        "3/0/init/body/9/argument/17/expression/right/5/3": {
+          "type": "element",
+          "hash": "07296eb8d91ad98e1b60cd7ab0def914",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "3/0/init/body/9/argument/21/1": {
+          "type": "element",
+          "hash": "d140eee37bb7e381a9fd2bd01a64b8bc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 <element:strong>Access Keys:</element:strong> Each access key gives access to a specific group of capsules, ensuring maximum privacy and granular control."
+        },
+        "3/0/init/body/9/argument/5/expression/right/3": {
+          "type": "element",
+          "hash": "5457965508bf9a7ce00be467809000ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading legacy..."
+        }
+      }
+    },
+    "components/Dashboard/EternalLegacyUpgrade.tsx": {
+      "scopes": {
+        "3/0/init/body/6/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "b7b1eb8a0869bba91f491a35605c1241",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upgrade to Eternal Legacy"
+        },
+        "3/0/init/body/6/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "8103975e810dc2a1bd1974cc12af99d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlock unlimited features for your digital legacy"
+        },
+        "3/0/init/body/6/argument/1/3/1": {
+          "type": "element",
+          "hash": "254749283d90a1d63a0164027b20e716",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "$9.99"
+        },
+        "3/0/init/body/6/argument/1/3/3": {
+          "type": "element",
+          "hash": "64e96490ee2d7811496cf04adae30aa4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "per month"
+        },
+        "3/0/init/body/6/argument/13/expression/right/1/3": {
+          "type": "element",
+          "hash": "e6c81c6abdd49031632f70b72753cd07",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Authenticated User"
+        },
+        "3/0/init/body/6/argument/13/expression/right/3/1/0": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "3/0/init/body/6/argument/13/expression/right/3/3/0": {
+          "type": "element",
+          "hash": "bdea9a2106a3d0cedcced851872a1abc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Name:"
+        },
+        "3/0/init/body/6/argument/13/expression/right/3/5": {
+          "type": "element",
+          "hash": "05842ab9dfbd575861fbb99684cc5845",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>User ID:</element:strong> <function:user.id.substring/>...<function:user.id.substring/>"
+        },
+        "3/0/init/body/6/argument/13/expression/right/3/7/0": {
+          "type": "element",
+          "hash": "680491de0fb66a8a0bb501794b9e359c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Member since:"
+        },
+        "3/0/init/body/6/argument/17/1/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "b7b1eb8a0869bba91f491a35605c1241",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upgrade to Eternal Legacy"
+        },
+        "3/0/init/body/6/argument/17/1/1/expression/consequent/3": {
+          "type": "element",
+          "hash": "3d5356e311867e13f97aa77ef389011f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Opening payment..."
+        },
+        "3/0/init/body/6/argument/17/3/1/3": {
+          "type": "element",
+          "hash": "fd9acecd57e7d0a236f9b252d0b93ed4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure payment"
+        },
+        "3/0/init/body/6/argument/17/3/3/3": {
+          "type": "element",
+          "hash": "ae51443d033cb7dea112f957d81c9156",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel anytime"
+        },
+        "3/0/init/body/6/argument/17/3/5/3": {
+          "type": "element",
+          "hash": "1318e923b75be937b98b6e4794ad5582",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "30-day guarantee"
+        },
+        "3/0/init/body/6/argument/17/5": {
+          "type": "element",
+          "hash": "5e677f38182f689897b6ad14c24e3590",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by RevenueCat • User ID: <function:getUserId/>..."
+        },
+        "3/0/init/body/6/argument/21/1": {
+          "type": "element",
+          "hash": "6035600024bc9bfb2429d1d8f6ba77db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All Premium Features Include:"
+        },
+        "3/0/init/body/6/argument/5/3/1/3": {
+          "type": "element",
+          "hash": "c995acccc1e3cba379786892a5b4d4e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Free Plan"
+        },
+        "3/0/init/body/6/argument/5/3/1/5": {
+          "type": "element",
+          "hash": "27f172f76ac28e72cb062f80002b0ad5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Current"
+        },
+        "3/0/init/body/6/argument/5/7/1": {
+          "type": "element",
+          "hash": "a822f52be138077b44dac3c515abc8ca",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "PREMIUM"
+        },
+        "3/0/init/body/6/argument/5/7/3/3": {
+          "type": "element",
+          "hash": "bea0bea83ccbbc5cf6f4bb4625fdb751",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Eternal Legacy"
+        },
+        "3/0/init/body/6/argument/9/1/3": {
+          "type": "element",
+          "hash": "aacb9963ba9c4d705b72b4fde0f4c038",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Why Upgrade to Eternal Legacy?"
+        },
+        "3/0/init/body/6/argument/9/3/1/3/1": {
+          "type": "element",
+          "hash": "dfd0646da8058e7f5291a0450620aa3f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlimited Capsules"
+        },
+        "3/0/init/body/6/argument/9/3/1/3/3": {
+          "type": "element",
+          "hash": "27e5f769148b7de6f23ab1886cc8512f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create as many legacy capsules as you need"
+        },
+        "3/0/init/body/6/argument/9/3/3/3/1": {
+          "type": "element",
+          "hash": "42b6b4facc3bed5d7dadf66d88ae6f36",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Advanced AI Guardian"
+        },
+        "3/0/init/body/6/argument/9/3/3/3/3": {
+          "type": "element",
+          "hash": "315effa3dbfaed423a24be240946fbbe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "More empathetic and intelligent responses"
+        },
+        "3/0/init/body/6/argument/9/3/5/3/1": {
+          "type": "element",
+          "hash": "f5dcbabb0dc4c7778a7178add9369b8a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Enhanced Security"
+        },
+        "3/0/init/body/6/argument/9/3/5/3/3": {
+          "type": "element",
+          "hash": "ca368cb71d51c78cace4aa8a8d95836a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Additional layers of protection"
+        },
+        "3/0/init/body/6/argument/9/3/7/3/1": {
+          "type": "element",
+          "hash": "7579256d59bd35246203555a8579b4ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Family Collaboration"
+        },
+        "3/0/init/body/6/argument/9/3/7/3/3": {
+          "type": "element",
+          "hash": "6493b6506c26e277bb496754962a6633",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Work together on legacy planning"
+        }
+      }
+    },
+    "components/Dashboard/LifeVerificationWidget.tsx": {
+      "scopes": {
+        "4/0/init/body/10/consequent/0/argument/1/3": {
+          "type": "element",
+          "hash": "793d52e58b5959925bfc09ac6622f9d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading life verification..."
+        },
+        "4/0/init/body/13/argument/11/1": {
+          "type": "element",
+          "hash": "cab8c3b23a4bce920c3824de9c32b47c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🎭 Simulation Mode (Demo)"
+        },
+        "4/0/init/body/13/argument/11/3/1": {
+          "type": "element",
+          "hash": "4f3dcf3730f12f3e1bf343503f12ceae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Simulate time passage to demonstrate status changes:"
+        },
+        "4/0/init/body/13/argument/11/3/3/1/3": {
+          "type": "element",
+          "hash": "eaef4d499db8784ddcf2e1c618aa1ced",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "-10s"
+        },
+        "4/0/init/body/13/argument/11/3/3/3/3": {
+          "type": "element",
+          "hash": "de5711ab1b02e1e59693f553fb481cd1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "-30s"
+        },
+        "4/0/init/body/13/argument/11/3/3/5/3": {
+          "type": "element",
+          "hash": "2c35a5019fb8a6edb1d9f7f84fb18659",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "-1m"
+        },
+        "4/0/init/body/13/argument/11/3/3/7/3": {
+          "type": "element",
+          "hash": "3a2273fed0556bf8ff6896b330f138c7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "-90 days"
+        },
+        "4/0/init/body/13/argument/11/3/3/9/3": {
+          "type": "element",
+          "hash": "c19c53a05e21c7f3b395247809a14b51",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Reset"
+        },
+        "4/0/init/body/13/argument/11/3/5/1/3/1": {
+          "type": "element",
+          "hash": "471a96bbf7766533c5e2a24ad108a6f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 Hackathon Demo Tips"
+        },
+        "4/0/init/body/13/argument/11/3/5/1/3/3/1": {
+          "type": "element",
+          "hash": "d717bc821a9054e08a6bb0c06d9e9d99",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Quick Demo:</element:strong> Set 45 seconds, wait 35s, then simulate -15s to show critical status."
+        },
+        "4/0/init/body/13/argument/11/3/5/1/3/3/3": {
+          "type": "element",
+          "hash": "35f0bd39411adfac70df6953ec36847a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Full Demo:</element:strong> Use the new \"-90 days\" button to instantly simulate the full inactivity period and trigger legacy activation."
+        },
+        "4/0/init/body/13/argument/11/3/5/1/3/3/5": {
+          "type": "element",
+          "hash": "105fb7c1ce0a1d6b536391e26acc9e7c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Reset:</element:strong> Use \"Reset\" to return to initial state for multiple demonstrations."
+        },
+        "4/0/init/body/13/argument/3/1/1/3/1": {
+          "type": "element",
+          "hash": "7f76451ca456f0e631109314e5d4388c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Life Verification"
+        },
+        "4/0/init/body/13/argument/3/1/1/3/3": {
+          "type": "element",
+          "hash": "39076382e6c2a9e2b0b0f7a3d1905f7e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Inactivity detection system"
+        },
+        "4/0/init/body/13/argument/3/1/3-title": {
+          "type": "attribute",
+          "hash": "8df6777277469c1fd88cc18dde2f1cc3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "4/0/init/body/13/argument/3/5/11/1": {
+          "type": "element",
+          "hash": "6eddeb13a4e7ccb25e21ec3f665dbcdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Status:"
+        },
+        "4/0/init/body/13/argument/3/5/11/3/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "a07d4b23a746d3912f4a1d6d24afd113",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "❌ Inactive - Legacy will be activated"
+        },
+        "4/0/init/body/13/argument/3/5/15/1/3": {
+          "type": "element",
+          "hash": "be1b268f55df49e8cd5719cb638353a9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔁 Confirm I'm alive"
+        },
+        "4/0/init/body/13/argument/3/5/3/1": {
+          "type": "element",
+          "hash": "072773b73ad5c3f1694ebbd39e104164",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last confirmation:"
+        },
+        "4/0/init/body/13/argument/3/5/7/1": {
+          "type": "element",
+          "hash": "e90a66f4dc916ee734b835b1731fcabe",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Time remaining:"
+        },
+        "4/0/init/body/13/argument/7/expression/right/1": {
+          "type": "element",
+          "hash": "911a0c2e43408e91bffe902d4b43c3d8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⚙️ Inactivity Configuration"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/1/1": {
+          "type": "element",
+          "hash": "5347815216607a604dde9d4000cc4937",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Value"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/3/1": {
+          "type": "element",
+          "hash": "4a64e6a60b5d8a441afb8890767c6283",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unit"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/3/3/1": {
+          "type": "element",
+          "hash": "7dcee4cbf5cabec75669c8410a68d469",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Seconds"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/3/3/3": {
+          "type": "element",
+          "hash": "c5442938e948e2e3937fb812cf68869c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Minutes"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/3/3/5": {
+          "type": "element",
+          "hash": "e2807fc69709f121a8003caf52bfc586",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hours"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/1/3/3/7": {
+          "type": "element",
+          "hash": "be91060aa52f40103be636c55c8c50e2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Days"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/3/1": {
+          "type": "element",
+          "hash": "f01517a8d073368efbc342748de35f01",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Apply Configuration"
+        },
+        "4/0/init/body/13/argument/7/expression/right/3/3/3": {
+          "type": "element",
+          "hash": "5936f87dccc089542c7871a72ed1dacf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        }
+      }
+    },
+    "components/Layout.tsx": {
+      "scopes": {
+        "8/0/init/body/14/argument/11/1/11/1/expression/alternate/1/3": {
+          "type": "element",
+          "hash": "2aec6d6ebe0d9a1db0a5c8cd5a98b8c3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guest"
+        },
+        "8/0/init/body/14/argument/11/1/11/1/expression/alternate/3/3": {
+          "type": "element",
+          "hash": "ec7b8f314fe9bc6591006707484ede61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign In"
+        },
+        "8/0/init/body/14/argument/11/1/11/1/expression/alternate/5/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "8/0/init/body/14/argument/11/1/11/1/expression/alternate/7/1": {
+          "type": "element",
+          "hash": "48f9639bca1983bd3d342478c7c3a6fc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with real user management"
+        },
+        "8/0/init/body/14/argument/11/1/11/1/expression/consequent/3/3": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "8/0/init/body/14/argument/11/1/3/1/3": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "8/0/init/body/14/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "8/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/1/3": {
+          "type": "element",
+          "hash": "2aec6d6ebe0d9a1db0a5c8cd5a98b8c3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guest"
+        },
+        "8/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/3/3": {
+          "type": "element",
+          "hash": "ec7b8f314fe9bc6591006707484ede61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign In"
+        },
+        "8/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/5/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "8/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/7/1": {
+          "type": "element",
+          "hash": "f2346530a67dab21bd58e49bc2cb3a73",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with real user management"
+        },
+        "8/0/init/body/14/argument/7/expression/right/1/7/1/expression/consequent/3/3": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "9/0/init/body/14/argument/11/1/11/1/expression/alternate/1/3": {
+          "type": "element",
+          "hash": "2aec6d6ebe0d9a1db0a5c8cd5a98b8c3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guest"
+        },
+        "9/0/init/body/14/argument/11/1/11/1/expression/alternate/3/3": {
+          "type": "element",
+          "hash": "ec7b8f314fe9bc6591006707484ede61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign In"
+        },
+        "9/0/init/body/14/argument/11/1/11/1/expression/alternate/5/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "9/0/init/body/14/argument/11/1/11/1/expression/alternate/7/1": {
+          "type": "element",
+          "hash": "48f9639bca1983bd3d342478c7c3a6fc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with real user management"
+        },
+        "9/0/init/body/14/argument/11/1/11/1/expression/consequent/3/3": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "9/0/init/body/14/argument/11/1/3/1/3": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "9/0/init/body/14/argument/3/1/1/3": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "9/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/1/3": {
+          "type": "element",
+          "hash": "2aec6d6ebe0d9a1db0a5c8cd5a98b8c3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guest"
+        },
+        "9/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/3/3": {
+          "type": "element",
+          "hash": "ec7b8f314fe9bc6591006707484ede61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign In"
+        },
+        "9/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/5/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "9/0/init/body/14/argument/7/expression/right/1/7/1/expression/alternate/7/1": {
+          "type": "element",
+          "hash": "f2346530a67dab21bd58e49bc2cb3a73",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🚀 <element:strong>Powered by Supabase:</element:strong> Secure authentication with real user management"
+        },
+        "9/0/init/body/14/argument/7/expression/right/1/7/1/expression/consequent/3/3": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        }
+      }
+    },
+    "components/PoweredByRibbon.tsx": {
+      "scopes": {
+        "2/0/init/body/1/argument/1/1/1": {
+          "type": "element",
+          "hash": "6b6f88e2fa5a1ecec6cebf813abaeebb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by"
+        },
+        "2/0/init/body/1/argument/1/11/1": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "2/0/init/body/1/argument/1/11/1/1": {
+          "type": "element",
+          "hash": "93e30f2bafcb3b21003fce4c1d74e7e4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "⭐"
+        },
+        "2/0/init/body/1/argument/1/11/3": {
+          "type": "element",
+          "hash": "cb51413e8d1d5b373a21647676ba08cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2025"
+        },
+        "2/0/init/body/1/argument/1/11/5": {
+          "type": "element",
+          "hash": "cb51413e8d1d5b373a21647676ba08cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2025"
+        },
+        "2/0/init/body/1/argument/1/3/1/expression/0/body/11/1/3/expression/right": {
+          "type": "element",
+          "hash": "c9ce7bf24d51d515fb285af41004b193",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming Soon"
+        },
+        "2/0/init/body/1/argument/1/3/1/expression/0/body/11/expression/right": {
+          "type": "element",
+          "hash": "e6e94453f69889df1341f0eef35aa816",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "SOON"
+        },
+        "2/0/init/body/1/argument/1/3/1/expression/0/body/15/1/3/expression/right": {
+          "type": "element",
+          "hash": "c9ce7bf24d51d515fb285af41004b193",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming Soon"
+        },
+        "2/0/init/body/1/argument/1/3/1/expression/0/body/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "24c1e862f3a7231e2e023bde93240de1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "!"
+        },
+        "2/0/init/body/4/argument/1/7/1/1/1": {
+          "type": "element",
+          "hash": "6b6f88e2fa5a1ecec6cebf813abaeebb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by"
+        },
+        "2/0/init/body/4/argument/1/7/1/11/1": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "2/0/init/body/4/argument/1/7/1/11/3": {
+          "type": "element",
+          "hash": "cb51413e8d1d5b373a21647676ba08cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2025"
+        },
+        "2/0/init/body/4/argument/1/7/1/3/1/expression/0/body/11/1/3/expression/right": {
+          "type": "element",
+          "hash": "d22115f756baa5cacbf96a3138524a2d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Click to visit →"
+        },
+        "2/0/init/body/4/argument/1/7/1/3/1/expression/0/body/11/1/5/expression/right": {
+          "type": "element",
+          "hash": "c9ce7bf24d51d515fb285af41004b193",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming Soon"
+        },
+        "2/0/init/body/4/argument/1/7/1/3/1/expression/0/body/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "24c1e862f3a7231e2e023bde93240de1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "!"
+        },
+        "2/0/init/body/5/argument/1/3-title": {
+          "type": "attribute",
+          "hash": "9100469388fc51083f170107fbf98e27",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Close powered by ribbon"
+        },
+        "2/0/init/body/5/argument/1/7/1/1": {
+          "type": "element",
+          "hash": "6b6f88e2fa5a1ecec6cebf813abaeebb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by"
+        },
+        "2/0/init/body/5/argument/1/7/11/1": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "2/0/init/body/5/argument/1/7/11/3": {
+          "type": "element",
+          "hash": "cb51413e8d1d5b373a21647676ba08cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2025"
+        },
+        "2/0/init/body/5/argument/1/7/3/1/expression/0/body/11/1/3/expression/right": {
+          "type": "element",
+          "hash": "edc9615903a4e25c3816c6d4adf55cdf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "(Soon)"
+        },
+        "2/0/init/body/5/argument/1/7/3/1/expression/0/body/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "24c1e862f3a7231e2e023bde93240de1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "!"
+        },
+        "2/0/init/body/7/argument/1/11/1/1/1": {
+          "type": "element",
+          "hash": "6b6f88e2fa5a1ecec6cebf813abaeebb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by"
+        },
+        "2/0/init/body/7/argument/1/11/1/11/1": {
+          "type": "element",
+          "hash": "d3d43482bb530d8b6c0a7e9cdf7d4dab",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault"
+        },
+        "2/0/init/body/7/argument/1/11/1/11/3": {
+          "type": "element",
+          "hash": "cb51413e8d1d5b373a21647676ba08cd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2025"
+        },
+        "2/0/init/body/7/argument/1/11/1/3/1/expression/0/body/11/1/3": {
+          "type": "element",
+          "hash": "d22115f756baa5cacbf96a3138524a2d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Click to visit →"
+        },
+        "2/0/init/body/7/argument/1/11/1/3/1/expression/0/body/11/1/3/expression/right": {
+          "type": "element",
+          "hash": "9bc82b46df93b137363c00d8ab779131",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "(Coming Soon)"
+        },
+        "2/0/init/body/7/argument/1/11/1/3/1/expression/0/body/11/1/5/expression/right": {
+          "type": "element",
+          "hash": "c9ce7bf24d51d515fb285af41004b193",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Coming Soon"
+        },
+        "2/0/init/body/7/argument/1/11/1/3/1/expression/0/body/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "24c1e862f3a7231e2e023bde93240de1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "!"
+        },
+        "2/0/init/body/7/argument/1/3-title": {
+          "type": "attribute",
+          "hash": "9100469388fc51083f170107fbf98e27",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Close powered by ribbon"
+        }
+      }
+    },
+    "pages/AccessKeys.tsx": {
+      "scopes": {
+        "3/0/init/body/0/argument/15/1/3/1": {
+          "type": "element",
+          "hash": "ba4c89f2712cfe9d4c9f433c306844ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Access Key Security"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/1/1/0": {
+          "type": "element",
+          "hash": "6214695f13918c837c15b0be5fbff4e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure Generation:"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/1/3/1": {
+          "type": "element",
+          "hash": "d61363a6e61902995b2c00b72ad00e25",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• 40-character keys with high entropy"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/1/3/3": {
+          "type": "element",
+          "hash": "305097d131476372d4a76f5bc1229c62",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Impossible to guess or brute force"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/1/3/5": {
+          "type": "element",
+          "hash": "7eb6e125c119010dc6a5c619de8e227a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Format similar to GitHub access keys"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/1/3/7": {
+          "type": "element",
+          "hash": "2b5d2e517526ee3a288793a2f303f387",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Only shown once at creation time"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/3/1/0": {
+          "type": "element",
+          "hash": "92bc5bd5bc0a274469beb871ff93edd7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Control:"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/3/3/1": {
+          "type": "element",
+          "hash": "a7f96b5537bc597eaf721bc282d655b8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Granular access per specific capsule"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/3/3/3": {
+          "type": "element",
+          "hash": "d944057e1535736260b861472763423a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Usage limits and expiration dates"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/3/3/5": {
+          "type": "element",
+          "hash": "f3ce63bafc10044f14d34ac4906bb8ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Instant revocation when needed"
+        },
+        "3/0/init/body/0/argument/15/1/3/3/3/3/7": {
+          "type": "element",
+          "hash": "90879c1e33f922d636dc2df60c4dd1f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Complete audit trail of all access"
+        },
+        "3/0/init/body/0/argument/3/3": {
+          "type": "element",
+          "hash": "b7375644a9b22a253230eb7556b5721b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Access Key Management"
+        },
+        "3/0/init/body/0/argument/3/5": {
+          "type": "element",
+          "hash": "6317ba8f11ae5247bf95db3103fc0f31",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create and manage secure access keys for your legacy capsules. Each key provides specific and controlled access to the capsules you designate."
+        },
+        "3/0/init/body/0/argument/7/1/3": {
+          "type": "element",
+          "hash": "2e3a19d8c6b4565a349b213775911233",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic Generation"
+        },
+        "3/0/init/body/0/argument/7/1/5": {
+          "type": "element",
+          "hash": "2bf60c11786954cc1c84a7f6e0664acd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure keys generated automatically, impossible to guess"
+        },
+        "3/0/init/body/0/argument/7/3/3": {
+          "type": "element",
+          "hash": "675c54b8b81489b9f48d1689b09d8597",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Granular Access"
+        },
+        "3/0/init/body/0/argument/7/3/5": {
+          "type": "element",
+          "hash": "793eeea4a1612863a88f68d8fd7a1e08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Precise control over which specific capsules each person can see"
+        },
+        "3/0/init/body/0/argument/7/5/3": {
+          "type": "element",
+          "hash": "b9db01b4f0c1a9e6ec1009df90af611d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manual Distribution"
+        },
+        "3/0/init/body/0/argument/7/5/5": {
+          "type": "element",
+          "hash": "38c1b1989c15b86bde55bddd0a55dee7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "You decide how and when to share each key with the right people"
+        },
+        "3/0/init/body/0/argument/7/7/3": {
+          "type": "element",
+          "hash": "b4177864294984db6472963bd17d023a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Advanced Security"
+        },
+        "3/0/init/body/0/argument/7/7/5": {
+          "type": "element",
+          "hash": "bdce9aefe7752e66f9713374c15e3f13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic expiration, usage limits and instant revocation"
+        }
+      }
+    },
+    "pages/Capsules.tsx": {
+      "scopes": {
+        "6/0/init/body/11/consequent/0/argument/3": {
+          "type": "element",
+          "hash": "67a7ff7a893ee3923c8d76499e3e6862",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading capsules..."
+        },
+        "6/0/init/body/12/argument/11/1/1": {
+          "type": "element",
+          "hash": "ced5d54dfdb06e57d2282d77df3a50d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Capsule Management"
+        },
+        "6/0/init/body/12/argument/11/1/3": {
+          "type": "element",
+          "hash": "3bf972d775a598bc84ac4eb19c523972",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Organize and protect the information you want to preserve for your loved ones"
+        },
+        "6/0/init/body/12/argument/11/3/3": {
+          "type": "element",
+          "hash": "484a40e7a85f859a8f08ead02129ee41",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New Capsule"
+        },
+        "6/0/init/body/12/argument/15/1/1/3": {
+          "type": "element",
+          "hash": "accac11e8c418dd64c5490f980f7c777",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Total Capsules"
+        },
+        "6/0/init/body/12/argument/15/3/1/3": {
+          "type": "element",
+          "hash": "3e1ec025c4a50830bbb9ad57a176630a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active"
+        },
+        "6/0/init/body/12/argument/15/5/1/3": {
+          "type": "element",
+          "hash": "e6a835a3ae5808047d505dbcb921175e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Passwords"
+        },
+        "6/0/init/body/12/argument/15/7/1/3": {
+          "type": "element",
+          "hash": "fdcb861f463c5a5ae59a267a55779c39",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Messages"
+        },
+        "6/0/init/body/12/argument/19/1/1/1": {
+          "type": "element",
+          "hash": "10a8c9b6739d5183fa2141e1d80a9279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legacy Capsules"
+        },
+        "6/0/init/body/12/argument/19/1/1/3": {
+          "type": "element",
+          "hash": "becd603bd15f16147667b53e5388ab7e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage the content you want to preserve"
+        },
+        "6/0/init/body/12/argument/19/1/3": {
+          "type": "element",
+          "hash": "a8cd9309c59236474b9b71ca4a4d7833",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{filteredCapsules.length} of {capsules.length} capsule<expression/>"
+        },
+        "6/0/init/body/12/argument/19/3/1/3-placeholder": {
+          "type": "attribute",
+          "hash": "d29674896815d747555348f709cba439",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search capsules..."
+        },
+        "6/0/init/body/12/argument/19/3/3/3/1": {
+          "type": "element",
+          "hash": "bb1277b9e7c8c43f8e630fe9b9c23412",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All categories"
+        },
+        "6/0/init/body/12/argument/19/3/3/3/3": {
+          "type": "element",
+          "hash": "d65b261f9b4c3adf41256d5ed13fa608",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Passwords"
+        },
+        "6/0/init/body/12/argument/19/3/3/3/5": {
+          "type": "element",
+          "hash": "54062d6a9fb4c5a774633bc921fb95b8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📋 Instructions"
+        },
+        "6/0/init/body/12/argument/19/3/3/3/7": {
+          "type": "element",
+          "hash": "5c6f711d64223e2ed2d3f87b62aea921",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💌 Messages"
+        },
+        "6/0/init/body/12/argument/19/3/3/3/9": {
+          "type": "element",
+          "hash": "4b193f5257663d4e74fb8eb8a33ceae2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💎 Digital Assets"
+        },
+        "6/0/init/body/12/argument/19/7/expression/alternate/5/expression/right": {
+          "type": "element",
+          "hash": "ad0d21f4a8930e5367dc3e267c2ce537",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create first capsule"
+        },
+        "6/0/init/body/12/argument/23/1/3/1": {
+          "type": "element",
+          "hash": "994af9291acb16cfc3557f39c53e16e0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Capsule Security"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/1/1/0": {
+          "type": "element",
+          "hash": "fb7df71453f1cc1a76fcbdb4c9fcd706",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Advanced Protection:"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/1/3/1": {
+          "type": "element",
+          "hash": "d8b834e44c31231268b4a48c945f5bec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Supabase PostgreSQL with Row Level Security"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/1/3/3": {
+          "type": "element",
+          "hash": "5301e76286e9a4797dc8900477faa5ad",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Encrypted storage and secure transmission"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/1/3/5": {
+          "type": "element",
+          "hash": "f1c9e4b2bdd20d0e78765c9ae5ba8903",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Access controlled by smart rules"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/1/3/7": {
+          "type": "element",
+          "hash": "90879c1e33f922d636dc2df60c4dd1f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Complete audit trail of all access"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/3/1/0": {
+          "type": "element",
+          "hash": "c8e9b25ac6a0ec6410e41b818d8155d6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smart Features:"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/3/3/1": {
+          "type": "element",
+          "hash": "dac13ed00fa41b53115cb083fa4df150",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Self-destructing capsules for maximum security"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/3/3/3": {
+          "type": "element",
+          "hash": "9e659b7332d6a6f605a6ce190a2b4ed5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Automatic unlock based on inactivity"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/3/3/5": {
+          "type": "element",
+          "hash": "a6e17bb631c48b0083e313977bafa9a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Granular access control via access keys"
+        },
+        "6/0/init/body/12/argument/23/1/3/3/3/3/7": {
+          "type": "element",
+          "hash": "c1d4580ef809143567b66f2c6c7dd1ce",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• Real-time synchronization across devices"
+        },
+        "6/0/init/body/12/argument/3/3": {
+          "type": "element",
+          "hash": "10a8c9b6739d5183fa2141e1d80a9279",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legacy Capsules"
+        },
+        "6/0/init/body/12/argument/3/5": {
+          "type": "element",
+          "hash": "719d9a5468f582fa3502bc1875421686",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create and manage secure capsules with the most important information for your loved ones. Each capsule protects specific content with military-grade encryption."
+        },
+        "6/0/init/body/12/argument/7/1/3": {
+          "type": "element",
+          "hash": "8ad3ccd355f4fab721ffa5b4c366d7f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure Passwords"
+        },
+        "6/0/init/body/12/argument/7/1/5": {
+          "type": "element",
+          "hash": "a2691feedd9b00a6cbfb5981a7157080",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protect banking credentials and important digital access"
+        },
+        "6/0/init/body/12/argument/7/3/3": {
+          "type": "element",
+          "hash": "296f206934a95bca639a50702d60fc9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personal Messages"
+        },
+        "6/0/init/body/12/argument/7/3/5": {
+          "type": "element",
+          "hash": "5eebc6ef78a4d8b0405350451121ff5d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last words and life advice for each special person"
+        },
+        "6/0/init/body/12/argument/7/5/3": {
+          "type": "element",
+          "hash": "ba6865e4aac1a9991bb75dd09a86855a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Detailed Instructions"
+        },
+        "6/0/init/body/12/argument/7/5/5": {
+          "type": "element",
+          "hash": "7c840a1ab91f42d6aa45770792792e32",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important processes and critical document locations"
+        },
+        "6/0/init/body/12/argument/7/7/3": {
+          "type": "element",
+          "hash": "1b70b6a11c60934b8ef3e23bd0d85bfa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic Unlock"
+        },
+        "6/0/init/body/12/argument/7/7/5": {
+          "type": "element",
+          "hash": "4d384224aa0f9cb568a66ae289136375",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smart rules that activate access when needed most"
+        }
+      }
+    },
+    "pages/Chat.tsx": {
+      "scopes": {
+        "6/0/init/body/2/argument/15/expression/right/1/3": {
+          "type": "element",
+          "hash": "5823e794a16766400858a633e00bda74",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unique Access Keys"
+        },
+        "6/0/init/body/2/argument/15/expression/right/1/5": {
+          "type": "element",
+          "hash": "804813ca8d649e4a2671aba8e675106c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Specific access per capsule"
+        },
+        "6/0/init/body/2/argument/15/expression/right/3/3": {
+          "type": "element",
+          "hash": "57740faf4c63e9f1c5599321344d6599",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Granular Security"
+        },
+        "6/0/init/body/2/argument/15/expression/right/3/5": {
+          "type": "element",
+          "hash": "6be2078a7945358a56f44406c95421ef",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Segmented information"
+        },
+        "6/0/init/body/2/argument/15/expression/right/5/3": {
+          "type": "element",
+          "hash": "5aaa0cd32ad9b9b748088d8deef2505b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personalized Experience"
+        },
+        "6/0/init/body/2/argument/15/expression/right/5/5": {
+          "type": "element",
+          "hash": "2dbab840004ecbac5af7f1af28e25cde",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contextualized and unique"
+        },
+        "6/0/init/body/2/argument/15/expression/right/7/3": {
+          "type": "element",
+          "hash": "4ccf1690cedebadd517ca073895c1a26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contextual Conversation"
+        },
+        "6/0/init/body/2/argument/15/expression/right/7/5": {
+          "type": "element",
+          "hash": "99d41ca39a001b33267295efbe691c45",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AI understands context"
+        },
+        "6/0/init/body/2/argument/3/9/expression/right/1": {
+          "type": "element",
+          "hash": "ae1f727bbb005acddaf5f39898095c70",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 <element:strong>Public Access:</element:strong> Use chat with access keys without registering. To create your own legacy, you need an account."
+        }
+      }
+    },
+    "pages/Dashboard.tsx": {
+      "scopes": {
+        "8/0/init/body/6/argument/11/1-description": {
+          "type": "attribute",
+          "hash": "54f3a8dd580842aab6c8d9f3a48c7e33",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protecting your information"
+        },
+        "8/0/init/body/6/argument/11/1-title": {
+          "type": "attribute",
+          "hash": "78eae415cf0201e188338a74a765c0b3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Capsules"
+        },
+        "8/0/init/body/6/argument/11/3-description": {
+          "type": "attribute",
+          "hash": "c8f66c2bac2116d0c19ad0c4873b8f40",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Trusted people"
+        },
+        "8/0/init/body/6/argument/11/3-title": {
+          "type": "attribute",
+          "hash": "f90e7f266be3f5a724858f21a9fd855e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Recipients"
+        },
+        "8/0/init/body/6/argument/11/5-description": {
+          "type": "attribute",
+          "hash": "5e81d9cd724daccd0d9da2d087d4fe3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security mechanisms"
+        },
+        "8/0/init/body/6/argument/11/5-title": {
+          "type": "attribute",
+          "hash": "06faac4321a2b771312465175babc728",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Unlock Rules"
+        },
+        "8/0/init/body/6/argument/11/7-description": {
+          "type": "attribute",
+          "hash": "7d18fe82dc8a364f1e29a19b31d6c61e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AES-256 encryption"
+        },
+        "8/0/init/body/6/argument/11/7-title": {
+          "type": "attribute",
+          "hash": "d5551c6ea7aa737132e0b09c00bf25ee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security Level"
+        },
+        "8/0/init/body/6/argument/15/1/1": {
+          "type": "element",
+          "hash": "157a51ac3ffbc527a52379a547499fe2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Quick Actions"
+        },
+        "8/0/init/body/6/argument/15/1/3/1/3/1": {
+          "type": "element",
+          "hash": "888db0f52a9eb1200eace53469e24592",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create New Capsule"
+        },
+        "8/0/init/body/6/argument/15/1/3/1/3/3": {
+          "type": "element",
+          "hash": "1af654ff2f59b040bbc88bc459f368b8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protect important information"
+        },
+        "8/0/init/body/6/argument/15/1/3/3/3/1": {
+          "type": "element",
+          "hash": "24289eee8d5fc5492511f2f6e5060626",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Consult AI"
+        },
+        "8/0/init/body/6/argument/15/1/3/3/3/3": {
+          "type": "element",
+          "hash": "eeea9fb1988d908f021dd379b908ddb8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask questions about your legacy"
+        },
+        "8/0/init/body/6/argument/15/3/1": {
+          "type": "element",
+          "hash": "88617e4ab3f894334687a42a420ce959",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Recent Capsules"
+        },
+        "8/0/init/body/6/argument/15/3/3/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "6a7de7f7d5df5f9442c72d469cb12344",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No capsules created yet"
+        },
+        "8/0/init/body/6/argument/15/3/3/1/expression/alternate/5": {
+          "type": "element",
+          "hash": "7864fc434c4017f6ef6295139bb6272c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create your first capsule"
+        },
+        "8/0/init/body/6/argument/23/1/3/1": {
+          "type": "element",
+          "hash": "ddf24134311e23002286fdd29e2541f1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Information is Secure"
+        },
+        "8/0/init/body/6/argument/23/1/3/3": {
+          "type": "element",
+          "hash": "bc385f4f3bd87affec0a66a445714210",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All your capsules are protected with military-grade AES-256 encryption. Only authorized people will be able to access your information when unlock rules are met."
+        },
+        "8/0/init/body/6/argument/23/1/3/5/1": {
+          "type": "element",
+          "hash": "e100ae3ac9e6a1fac182f7e50601921b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔒 End-to-end encryption"
+        },
+        "8/0/init/body/6/argument/23/1/3/5/3": {
+          "type": "element",
+          "hash": "41e2e30d876ce6ab2dceadc09c155ee0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🛡️ Multi-factor authentication"
+        },
+        "8/0/init/body/6/argument/23/1/3/5/5": {
+          "type": "element",
+          "hash": "d9ea1799dbf32676eb275f429d98f0b1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "📋 Complete audit trail"
+        },
+        "8/0/init/body/6/argument/23/1/3/5/7": {
+          "type": "element",
+          "hash": "332ce0cab22f804377a49080f9842eb4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💓 Automatic life verification"
+        },
+        "8/0/init/body/6/argument/3/1": {
+          "type": "element",
+          "hash": "c3aacdcab06cb7e817f3cca9537fbcd3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome, <expression/>"
+        },
+        "8/0/init/body/6/argument/3/3": {
+          "type": "element",
+          "hash": "162d9f0d1573e44403e29face77c31b7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage your digital legacy and protect what matters most"
+        }
+      }
+    },
+    "pages/Home.tsx": {
+      "scopes": {
+        "4/0/init/body/4/argument/11/1/1": {
+          "type": "element",
+          "hash": "62d3c2943d8658fe7d805d1f53de8a10",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Solution: EternalVault"
+        },
+        "4/0/init/body/4/argument/11/1/3": {
+          "type": "element",
+          "hash": "19489cdb33722c2b1050bb0263970983",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "A complete platform that protects, organizes and transmits your digital legacy securely and intelligently."
+        },
+        "4/0/init/body/4/argument/11/3/1/1": {
+          "type": "element",
+          "hash": "3f3336914486c478179bccedfcac7c2f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Secure Legacy Capsules"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/1/3/1": {
+          "type": "element",
+          "hash": "540dbee069edb2d51e55f9c757c220a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Passwords and Credentials"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/1/3/3": {
+          "type": "element",
+          "hash": "ab493956f81c3a7d909f2f04529fef52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure access to bank accounts, social media and digital services"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/3/3/1": {
+          "type": "element",
+          "hash": "296f206934a95bca639a50702d60fc9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personal Messages"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/3/3/3": {
+          "type": "element",
+          "hash": "3e2da4eddfad738bd4414abbb9523187",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last words, life advice and messages of love for each person"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/5/3/1": {
+          "type": "element",
+          "hash": "32aa12084104dbb3e080329508ea0f29",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Instructions"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/5/3/3": {
+          "type": "element",
+          "hash": "02bdd7b14c0c0d10ea14b7707a12df8b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Processes, document locations and steps to follow"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/7/3/1": {
+          "type": "element",
+          "hash": "658dbcc3ad44920a8f000fd0cbd58599",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Digital Assets"
+        },
+        "4/0/init/body/4/argument/11/3/1/3/7/3/3": {
+          "type": "element",
+          "hash": "b2f9a8b816387cba017dab77b5fd1b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cryptocurrencies, NFTs and other valuable digital assets"
+        },
+        "4/0/init/body/4/argument/11/3/3/1/3": {
+          "type": "element",
+          "hash": "81e1d8ce73dd03398ac329d564d488c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Example Capsule"
+        },
+        "4/0/init/body/4/argument/11/3/3/1/5/1": {
+          "type": "element",
+          "hash": "6db1a309a8cfe019f019cb4ef1df5e78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Main Bank<element:br></element:br> User: juan.garcia@email.com<element:br></element:br> Password: ••••••••••••<element:br></element:br> PIN: 1985 (year mom was born)"
+        },
+        "4/0/init/body/4/argument/11/3/3/1/7": {
+          "type": "element",
+          "hash": "b241fafc7239a1058b901855e916f0f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Critical information protected and ready to be transmitted"
+        },
+        "4/0/init/body/4/argument/11/5/1/1/3": {
+          "type": "element",
+          "hash": "f2a3d26723a9d0310be791a455cf1266",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guardian Angel AI"
+        },
+        "4/0/init/body/4/argument/11/5/1/1/5/1": {
+          "type": "element",
+          "hash": "4bc8479f984ac582506e0e1700e99e61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "\"Hello María, I'm the guardian angel of Juan's legacy. He left specific information for you as his wife. How can I help you today?\""
+        },
+        "4/0/init/body/4/argument/11/5/1/1/7": {
+          "type": "element",
+          "hash": "27395cc262f61f7b5aaf2327b9ea09e6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Empathetic AI that guides your loved ones"
+        },
+        "4/0/init/body/4/argument/11/5/3/1": {
+          "type": "element",
+          "hash": "30809b7f3794087638a7b11c4712a1d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🤖 Empathetic AI Assistant"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/1/3/1": {
+          "type": "element",
+          "hash": "33cb6cd76dc3f7cdd485c176217c6ed9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Natural Conversation"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/1/3/3": {
+          "type": "element",
+          "hash": "97c4276b2db61e3d55601551a204adee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Speaks as if it were your loved one, with empathy and understanding"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/3/3/1": {
+          "type": "element",
+          "hash": "8438def2dbc11d23ea664d173d378adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contextual Access"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/3/3/3": {
+          "type": "element",
+          "hash": "7c30e3833c955f5e8d6a3a65a4d4c0f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Only shows relevant information based on relationship and permissions"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/5/3/1": {
+          "type": "element",
+          "hash": "d65ce86082c6f8397f3fa71b1db81ff2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smart Security"
+        },
+        "4/0/init/body/4/argument/11/5/3/3/5/3/3": {
+          "type": "element",
+          "hash": "3e6aebcfc2d6f99420ff11c16c2380dd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Verifies identity and maintains access logs for auditing"
+        },
+        "4/0/init/body/4/argument/15/1/1": {
+          "type": "element",
+          "hash": "41a63bf2397915e9e643197b7d891814",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key Features"
+        },
+        "4/0/init/body/4/argument/15/1/3": {
+          "type": "element",
+          "hash": "a4b69764b8fdcd52cf5af9d1d500891b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cutting-edge technology designed to protect what matters most"
+        },
+        "4/0/init/body/4/argument/19/1/1": {
+          "type": "element",
+          "hash": "de489cfbefd5cf0c241953ca9daa875e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "How It Works"
+        },
+        "4/0/init/body/4/argument/19/1/3": {
+          "type": "element",
+          "hash": "9ffdc3ebd0eeb5a50624227f2a84cd7a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Three simple steps to protect your digital legacy forever"
+        },
+        "4/0/init/body/4/argument/19/3/1/1": {
+          "type": "element",
+          "hash": "cbc75be59348215d0a0d3f4dc01854f2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "1"
+        },
+        "4/0/init/body/4/argument/19/3/1/3": {
+          "type": "element",
+          "hash": "95ac8decbe10f44a00c813be191651ef",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Your Capsules"
+        },
+        "4/0/init/body/4/argument/19/3/1/5": {
+          "type": "element",
+          "hash": "3f6165f5799a77aa76d4f5d99705ce3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Store passwords, messages, instructions and digital assets in secure and encrypted capsules."
+        },
+        "4/0/init/body/4/argument/19/3/3/1": {
+          "type": "element",
+          "hash": "cd803565c478dd4ec8fd8b37507aa0e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2"
+        },
+        "4/0/init/body/4/argument/19/3/3/3": {
+          "type": "element",
+          "hash": "854b08ce82ddd6d6b2a01105a18b68cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Configure Access Keys"
+        },
+        "4/0/init/body/4/argument/19/3/3/5": {
+          "type": "element",
+          "hash": "2dbb78cba73a0532e39b673684c80ce5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generate specific access keys for each person, controlling exactly what they can see."
+        },
+        "4/0/init/body/4/argument/19/3/5/1": {
+          "type": "element",
+          "hash": "6078bfcd8480fd2bdc3f1cc9b4507751",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "3"
+        },
+        "4/0/init/body/4/argument/19/3/5/3": {
+          "type": "element",
+          "hash": "12382d4db2a975031ccd27f4e906df8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic Access"
+        },
+        "4/0/init/body/4/argument/19/3/5/5": {
+          "type": "element",
+          "hash": "47b50f0fc5361207711ece1f136da7c8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Once the unlock conditions are met, your loved ones will be able to access your legacy through the Guardian Angel — a compassionate AI that delivers your final words."
+        },
+        "4/0/init/body/4/argument/23/1/1": {
+          "type": "element",
+          "hash": "0c210d6bc42817ac382be4815ef52b26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protect Your Digital Legacy Today"
+        },
+        "4/0/init/body/4/argument/23/1/3": {
+          "type": "element",
+          "hash": "cea521b89246f18635dabb22a7082053",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't wait until it's too late. Start protecting your digital information and ensure your loved ones have access to what they need."
+        },
+        "4/0/init/body/4/argument/23/1/5/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "4/0/init/body/4/argument/23/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "4/0/init/body/4/argument/23/1/7/1/3": {
+          "type": "element",
+          "hash": "d49f6e1300bd990a90efb07380655a8e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AES-256 Encryption"
+        },
+        "4/0/init/body/4/argument/23/1/7/3/3": {
+          "type": "element",
+          "hash": "2aee046d476c420ca7d92643df7367cb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "5-minute setup"
+        },
+        "4/0/init/body/4/argument/23/1/7/5/3": {
+          "type": "element",
+          "hash": "7d0248dd9abb2f2e92048b3a4c8ba66d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Peace of mind forever"
+        },
+        "4/0/init/body/4/argument/27/1/1": {
+          "type": "element",
+          "hash": "9eaf406d5afd72b5d5f2d3862775bc70",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Have Questions?"
+        },
+        "4/0/init/body/4/argument/27/1/3": {
+          "type": "element",
+          "hash": "389256344a19a415c7cbaa270cf89301",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We're here to help you protect your digital legacy. Contact us for any questions."
+        },
+        "4/0/init/body/4/argument/27/3/1/1/3/1": {
+          "type": "element",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "4/0/init/body/4/argument/27/3/1/1/3/3": {
+          "type": "element",
+          "hash": "073502c0223eedb21f98278ce2e2423f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "support@eternalvault.com"
+        },
+        "4/0/init/body/4/argument/27/3/1/3": {
+          "type": "element",
+          "hash": "d75a9b04a0ca41660005e50b97d41c00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Response in less than 24 hours. Technical support and general inquiries."
+        },
+        "4/0/init/body/4/argument/27/3/3/1/3/1": {
+          "type": "element",
+          "hash": "b9537ee90fc5b0116942e0af29d926cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Phone"
+        },
+        "4/0/init/body/4/argument/27/3/3/1/3/3": {
+          "type": "element",
+          "hash": "d39074f6a278f108c68084ddcef63dbf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+1 (555) 123-4567"
+        },
+        "4/0/init/body/4/argument/27/3/3/3": {
+          "type": "element",
+          "hash": "8b08be21b6d82ffde3134f23b59943f4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monday to Friday, 9:00 AM - 6:00 PM EST. Priority support for premium users."
+        },
+        "4/0/init/body/4/argument/3/3": {
+          "type": "element",
+          "hash": "630c77f88b8dc360fc1b67a9cf5e43c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Digital Legacy<element:br></element:br><element:span>Protected Forever</element:span>"
+        },
+        "4/0/init/body/4/argument/3/5": {
+          "type": "element",
+          "hash": "85cc72703e3a4841ee9f67ca5295205d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault is the most secure platform to protect and transmit your most important digital information. When you're no longer here, your digital legacy will be safe and accessible to those who need it most."
+        },
+        "4/0/init/body/4/argument/3/7/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "4/0/init/body/4/argument/3/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "0971909fecc806c0167a5da41e1cb02c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create My Legacy"
+        },
+        "4/0/init/body/4/argument/3/9/1/3": {
+          "type": "element",
+          "hash": "419f6147e25d5f48ecd2929fabfdaa60",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Always free"
+        },
+        "4/0/init/body/4/argument/3/9/3/3": {
+          "type": "element",
+          "hash": "f95f22a69bce720b796e7dc22d78b91c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Military encryption"
+        },
+        "4/0/init/body/4/argument/3/9/5/3": {
+          "type": "element",
+          "hash": "f483e7c64b296f901a0c3d2baf23b55d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Immediate access"
+        },
+        "4/0/init/body/4/argument/31/1/1/1": {
+          "type": "element",
+          "hash": "2de25720d05d275cbedf886ba29a8b13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "By using EternalVault, you agree to our terms and conditions. Your privacy and security are our top priorities."
+        },
+        "4/0/init/body/4/argument/31/1/1/3/1/3": {
+          "type": "element",
+          "hash": "69d0219661f5fa7c1536e6f883925fb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Terms & Conditions"
+        },
+        "4/0/init/body/4/argument/31/1/1/3/3": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "4/0/init/body/4/argument/31/1/1/3/5": {
+          "type": "element",
+          "hash": "085c4c74960bec8d81fee4772c315f1e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Privacy Policy"
+        },
+        "4/0/init/body/4/argument/31/1/1/3/7": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "4/0/init/body/4/argument/31/1/1/3/9": {
+          "type": "element",
+          "hash": "cc2a66f2271dd66d65ab96ff2dee4933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legal Information"
+        },
+        "4/0/init/body/4/argument/7/1/1": {
+          "type": "element",
+          "hash": "dc95f38600fe01995c729d3389bcf238",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Problem No One Sees Coming"
+        },
+        "4/0/init/body/4/argument/7/1/3": {
+          "type": "element",
+          "hash": "dd9b723d8e54bb770ac77e527b388bc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Every day, millions of families permanently lose access to critical digital information. What will happen to your digital legacy when you're no longer here?"
+        },
+        "5/0/init/body/4/argument/11/1/1": {
+          "type": "element",
+          "hash": "62d3c2943d8658fe7d805d1f53de8a10",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Solution: EternalVault"
+        },
+        "5/0/init/body/4/argument/11/1/3": {
+          "type": "element",
+          "hash": "19489cdb33722c2b1050bb0263970983",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "A complete platform that protects, organizes and transmits your digital legacy securely and intelligently."
+        },
+        "5/0/init/body/4/argument/11/3/1/1": {
+          "type": "element",
+          "hash": "3f3336914486c478179bccedfcac7c2f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Secure Legacy Capsules"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/1/3/1": {
+          "type": "element",
+          "hash": "540dbee069edb2d51e55f9c757c220a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Passwords and Credentials"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/1/3/3": {
+          "type": "element",
+          "hash": "ab493956f81c3a7d909f2f04529fef52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure access to bank accounts, social media and digital services"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/3/3/1": {
+          "type": "element",
+          "hash": "296f206934a95bca639a50702d60fc9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personal Messages"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/3/3/3": {
+          "type": "element",
+          "hash": "3e2da4eddfad738bd4414abbb9523187",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last words, life advice and messages of love for each person"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/5/3/1": {
+          "type": "element",
+          "hash": "32aa12084104dbb3e080329508ea0f29",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Instructions"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/5/3/3": {
+          "type": "element",
+          "hash": "02bdd7b14c0c0d10ea14b7707a12df8b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Processes, document locations and steps to follow"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/7/3/1": {
+          "type": "element",
+          "hash": "658dbcc3ad44920a8f000fd0cbd58599",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Digital Assets"
+        },
+        "5/0/init/body/4/argument/11/3/1/3/7/3/3": {
+          "type": "element",
+          "hash": "b2f9a8b816387cba017dab77b5fd1b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cryptocurrencies, NFTs and other valuable digital assets"
+        },
+        "5/0/init/body/4/argument/11/3/3/1/3": {
+          "type": "element",
+          "hash": "81e1d8ce73dd03398ac329d564d488c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Example Capsule"
+        },
+        "5/0/init/body/4/argument/11/3/3/1/5/1": {
+          "type": "element",
+          "hash": "6db1a309a8cfe019f019cb4ef1df5e78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Main Bank<element:br></element:br> User: juan.garcia@email.com<element:br></element:br> Password: ••••••••••••<element:br></element:br> PIN: 1985 (year mom was born)"
+        },
+        "5/0/init/body/4/argument/11/3/3/1/7": {
+          "type": "element",
+          "hash": "b241fafc7239a1058b901855e916f0f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Critical information protected and ready to be transmitted"
+        },
+        "5/0/init/body/4/argument/11/5/1/1/3": {
+          "type": "element",
+          "hash": "f2a3d26723a9d0310be791a455cf1266",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guardian Angel AI"
+        },
+        "5/0/init/body/4/argument/11/5/1/1/5/1": {
+          "type": "element",
+          "hash": "4bc8479f984ac582506e0e1700e99e61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "\"Hello María, I'm the guardian angel of Juan's legacy. He left specific information for you as his wife. How can I help you today?\""
+        },
+        "5/0/init/body/4/argument/11/5/1/1/7": {
+          "type": "element",
+          "hash": "27395cc262f61f7b5aaf2327b9ea09e6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Empathetic AI that guides your loved ones"
+        },
+        "5/0/init/body/4/argument/11/5/3/1": {
+          "type": "element",
+          "hash": "30809b7f3794087638a7b11c4712a1d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🤖 Empathetic AI Assistant"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/1/3/1": {
+          "type": "element",
+          "hash": "33cb6cd76dc3f7cdd485c176217c6ed9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Natural Conversation"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/1/3/3": {
+          "type": "element",
+          "hash": "97c4276b2db61e3d55601551a204adee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Speaks as if it were your loved one, with empathy and understanding"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/3/3/1": {
+          "type": "element",
+          "hash": "8438def2dbc11d23ea664d173d378adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contextual Access"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/3/3/3": {
+          "type": "element",
+          "hash": "7c30e3833c955f5e8d6a3a65a4d4c0f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Only shows relevant information based on relationship and permissions"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/5/3/1": {
+          "type": "element",
+          "hash": "d65ce86082c6f8397f3fa71b1db81ff2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smart Security"
+        },
+        "5/0/init/body/4/argument/11/5/3/3/5/3/3": {
+          "type": "element",
+          "hash": "3e6aebcfc2d6f99420ff11c16c2380dd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Verifies identity and maintains access logs for auditing"
+        },
+        "5/0/init/body/4/argument/15/1/1": {
+          "type": "element",
+          "hash": "41a63bf2397915e9e643197b7d891814",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key Features"
+        },
+        "5/0/init/body/4/argument/15/1/3": {
+          "type": "element",
+          "hash": "a4b69764b8fdcd52cf5af9d1d500891b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cutting-edge technology designed to protect what matters most"
+        },
+        "5/0/init/body/4/argument/19/1/1": {
+          "type": "element",
+          "hash": "de489cfbefd5cf0c241953ca9daa875e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "How It Works"
+        },
+        "5/0/init/body/4/argument/19/1/3": {
+          "type": "element",
+          "hash": "9ffdc3ebd0eeb5a50624227f2a84cd7a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Three simple steps to protect your digital legacy forever"
+        },
+        "5/0/init/body/4/argument/19/3/1/1": {
+          "type": "element",
+          "hash": "cbc75be59348215d0a0d3f4dc01854f2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "1"
+        },
+        "5/0/init/body/4/argument/19/3/1/3": {
+          "type": "element",
+          "hash": "95ac8decbe10f44a00c813be191651ef",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Your Capsules"
+        },
+        "5/0/init/body/4/argument/19/3/1/5": {
+          "type": "element",
+          "hash": "3f6165f5799a77aa76d4f5d99705ce3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Store passwords, messages, instructions and digital assets in secure and encrypted capsules."
+        },
+        "5/0/init/body/4/argument/19/3/3/1": {
+          "type": "element",
+          "hash": "cd803565c478dd4ec8fd8b37507aa0e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2"
+        },
+        "5/0/init/body/4/argument/19/3/3/3": {
+          "type": "element",
+          "hash": "854b08ce82ddd6d6b2a01105a18b68cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Configure Access Keys"
+        },
+        "5/0/init/body/4/argument/19/3/3/5": {
+          "type": "element",
+          "hash": "2dbb78cba73a0532e39b673684c80ce5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generate specific access keys for each person, controlling exactly what they can see."
+        },
+        "5/0/init/body/4/argument/19/3/5/1": {
+          "type": "element",
+          "hash": "6078bfcd8480fd2bdc3f1cc9b4507751",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "3"
+        },
+        "5/0/init/body/4/argument/19/3/5/3": {
+          "type": "element",
+          "hash": "12382d4db2a975031ccd27f4e906df8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic Access"
+        },
+        "5/0/init/body/4/argument/19/3/5/5": {
+          "type": "element",
+          "hash": "47b50f0fc5361207711ece1f136da7c8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Once the unlock conditions are met, your loved ones will be able to access your legacy through the Guardian Angel — a compassionate AI that delivers your final words."
+        },
+        "5/0/init/body/4/argument/23/1/1": {
+          "type": "element",
+          "hash": "0c210d6bc42817ac382be4815ef52b26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protect Your Digital Legacy Today"
+        },
+        "5/0/init/body/4/argument/23/1/3": {
+          "type": "element",
+          "hash": "cea521b89246f18635dabb22a7082053",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't wait until it's too late. Start protecting your digital information and ensure your loved ones have access to what they need."
+        },
+        "5/0/init/body/4/argument/23/1/5/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "5/0/init/body/4/argument/23/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "5/0/init/body/4/argument/23/1/7/1/3": {
+          "type": "element",
+          "hash": "d49f6e1300bd990a90efb07380655a8e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AES-256 Encryption"
+        },
+        "5/0/init/body/4/argument/23/1/7/3/3": {
+          "type": "element",
+          "hash": "2aee046d476c420ca7d92643df7367cb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "5-minute setup"
+        },
+        "5/0/init/body/4/argument/23/1/7/5/3": {
+          "type": "element",
+          "hash": "7d0248dd9abb2f2e92048b3a4c8ba66d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Peace of mind forever"
+        },
+        "5/0/init/body/4/argument/27/1/1": {
+          "type": "element",
+          "hash": "9eaf406d5afd72b5d5f2d3862775bc70",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Have Questions?"
+        },
+        "5/0/init/body/4/argument/27/1/3": {
+          "type": "element",
+          "hash": "389256344a19a415c7cbaa270cf89301",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We're here to help you protect your digital legacy. Contact us for any questions."
+        },
+        "5/0/init/body/4/argument/27/3/1/1/3/1": {
+          "type": "element",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "5/0/init/body/4/argument/27/3/1/1/3/3": {
+          "type": "element",
+          "hash": "073502c0223eedb21f98278ce2e2423f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "support@eternalvault.com"
+        },
+        "5/0/init/body/4/argument/27/3/1/3": {
+          "type": "element",
+          "hash": "d75a9b04a0ca41660005e50b97d41c00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Response in less than 24 hours. Technical support and general inquiries."
+        },
+        "5/0/init/body/4/argument/27/3/3/1/3/1": {
+          "type": "element",
+          "hash": "b9537ee90fc5b0116942e0af29d926cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Phone"
+        },
+        "5/0/init/body/4/argument/27/3/3/1/3/3": {
+          "type": "element",
+          "hash": "d39074f6a278f108c68084ddcef63dbf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+1 (555) 123-4567"
+        },
+        "5/0/init/body/4/argument/27/3/3/3": {
+          "type": "element",
+          "hash": "8b08be21b6d82ffde3134f23b59943f4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monday to Friday, 9:00 AM - 6:00 PM EST. Priority support for premium users."
+        },
+        "5/0/init/body/4/argument/3/3": {
+          "type": "element",
+          "hash": "630c77f88b8dc360fc1b67a9cf5e43c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Digital Legacy<element:br></element:br><element:span>Protected Forever</element:span>"
+        },
+        "5/0/init/body/4/argument/3/5": {
+          "type": "element",
+          "hash": "85cc72703e3a4841ee9f67ca5295205d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault is the most secure platform to protect and transmit your most important digital information. When you're no longer here, your digital legacy will be safe and accessible to those who need it most."
+        },
+        "5/0/init/body/4/argument/3/7/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "5/0/init/body/4/argument/3/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "0971909fecc806c0167a5da41e1cb02c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create My Legacy"
+        },
+        "5/0/init/body/4/argument/3/9/1/3": {
+          "type": "element",
+          "hash": "230c677cd580ffc20305a630a961a7d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forever safe, so your memory lives on"
+        },
+        "5/0/init/body/4/argument/3/9/3/3": {
+          "type": "element",
+          "hash": "f95f22a69bce720b796e7dc22d78b91c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Military encryption"
+        },
+        "5/0/init/body/4/argument/3/9/5/3": {
+          "type": "element",
+          "hash": "0608737b6e47f076cc9dddb6d9acb983",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Immediate access for your loved ones"
+        },
+        "5/0/init/body/4/argument/31/1/1/1": {
+          "type": "element",
+          "hash": "2de25720d05d275cbedf886ba29a8b13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "By using EternalVault, you agree to our terms and conditions. Your privacy and security are our top priorities."
+        },
+        "5/0/init/body/4/argument/31/1/1/3/1/3": {
+          "type": "element",
+          "hash": "69d0219661f5fa7c1536e6f883925fb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Terms & Conditions"
+        },
+        "5/0/init/body/4/argument/31/1/1/3/3": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "5/0/init/body/4/argument/31/1/1/3/5": {
+          "type": "element",
+          "hash": "085c4c74960bec8d81fee4772c315f1e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Privacy Policy"
+        },
+        "5/0/init/body/4/argument/31/1/1/3/7": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "5/0/init/body/4/argument/31/1/1/3/9": {
+          "type": "element",
+          "hash": "cc2a66f2271dd66d65ab96ff2dee4933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legal Information"
+        },
+        "5/0/init/body/4/argument/7/1/1": {
+          "type": "element",
+          "hash": "dc95f38600fe01995c729d3389bcf238",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Problem No One Sees Coming"
+        },
+        "5/0/init/body/4/argument/7/1/3": {
+          "type": "element",
+          "hash": "dd9b723d8e54bb770ac77e527b388bc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Every day, millions of families permanently lose access to critical digital information. What will happen to your digital legacy when you're no longer here?"
+        }
+      }
+    },
+    "pages/Settings.tsx": {
+      "scopes": {
+        "3/0/init/body/7/argument/11/1/3": {
+          "type": "element",
+          "hash": "4b34923fef858a2b9a4a914c3e822889",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security"
+        },
+        "3/0/init/body/7/argument/11/3/1/1/1": {
+          "type": "element",
+          "hash": "a552fc5c4189ebc3e2e6018edda7d18f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Change Password"
+        },
+        "3/0/init/body/7/argument/11/3/1/1/3": {
+          "type": "element",
+          "hash": "71a026b3568770be04a52f7c7674d151",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Update your access password"
+        },
+        "3/0/init/body/7/argument/11/3/1/3": {
+          "type": "element",
+          "hash": "bfb8d804741c9d8843ca461f281c2634",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Change"
+        },
+        "3/0/init/body/7/argument/11/3/3/1/1": {
+          "type": "element",
+          "hash": "8bc1572b5995cc2b222f381d0f75d873",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Two-Factor Authentication"
+        },
+        "3/0/init/body/7/argument/11/3/3/1/3": {
+          "type": "element",
+          "hash": "204f35a96cb71e8f2c2c4510e075f846",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add an extra layer of security"
+        },
+        "3/0/init/body/7/argument/11/3/3/3": {
+          "type": "element",
+          "hash": "6b7989b3dd20a7e7721691ef9a3f5408",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Configure"
+        },
+        "3/0/init/body/7/argument/11/3/5/1/1": {
+          "type": "element",
+          "hash": "a0de4bbd1e4be3c7d8032991ddef14e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Active Sessions"
+        },
+        "3/0/init/body/7/argument/11/3/5/1/3": {
+          "type": "element",
+          "hash": "f158a1e652c7dbb9f6a3273a6d49bdb4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage your connected devices"
+        },
+        "3/0/init/body/7/argument/11/3/5/3": {
+          "type": "element",
+          "hash": "df7ccf3c3cf05ea37fa774d743fc7c9e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View Sessions"
+        },
+        "3/0/init/body/7/argument/15/1/3": {
+          "type": "element",
+          "hash": "c52df856139b50dbb1cae7bfb1cf73bb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Notifications"
+        },
+        "3/0/init/body/7/argument/15/3/1/1/1": {
+          "type": "element",
+          "hash": "bc0c2df74c6d124beaeafbf387d12eaa",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Activity Reminders"
+        },
+        "3/0/init/body/7/argument/15/3/1/1/3": {
+          "type": "element",
+          "hash": "c2b587b856a658baece7c6edbd95c595",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Receive reminders to keep your account active"
+        },
+        "3/0/init/body/7/argument/15/3/3/1/1": {
+          "type": "element",
+          "hash": "bf005a9305bdcab0a051bce1ef6d99d3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Security Alerts"
+        },
+        "3/0/init/body/7/argument/15/3/3/1/3": {
+          "type": "element",
+          "hash": "4e26c68597952aed1edcc62a4a5dd2d4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Notifications about suspicious activity"
+        },
+        "3/0/init/body/7/argument/15/3/5/1/1": {
+          "type": "element",
+          "hash": "25c2013218cd322f36b4416d215eb4da",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "System Updates"
+        },
+        "3/0/init/body/7/argument/15/3/5/1/3": {
+          "type": "element",
+          "hash": "6788fc3677719df197c3ce440c9fa96e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Information about new features"
+        },
+        "3/0/init/body/7/argument/19/1/3": {
+          "type": "element",
+          "hash": "cdd30d9dcac6164035d8a169e5b89c7b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Data Management"
+        },
+        "3/0/init/body/7/argument/19/3/1/1/1": {
+          "type": "element",
+          "hash": "472cd4d64965fc1bbc16e6340d8a9e05",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Export Data"
+        },
+        "3/0/init/body/7/argument/19/3/1/1/3": {
+          "type": "element",
+          "hash": "dcff860c1d32bae3531352c7d4a1ad48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Download a copy of all your information"
+        },
+        "3/0/init/body/7/argument/19/3/1/3": {
+          "type": "element",
+          "hash": "8bcd7e8ed2f11e9e3a9037e5e9e9ca90",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Export"
+        },
+        "3/0/init/body/7/argument/19/3/3/1/1": {
+          "type": "element",
+          "hash": "f5f7b88ff3122fb0d3a330e2b99d7e3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Delete Account"
+        },
+        "3/0/init/body/7/argument/19/3/3/1/3": {
+          "type": "element",
+          "hash": "6f953b2a7888646a0d02e7aae81ab248",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This action cannot be undone"
+        },
+        "3/0/init/body/7/argument/19/3/3/3": {
+          "type": "element",
+          "hash": "8568ef0f71bc34a3fed5c37520fd4c7f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Delete"
+        },
+        "3/0/init/body/7/argument/23/1/3": {
+          "type": "element",
+          "hash": "06efb815f8e1f5d09e63d262ba48b4e7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign Out"
+        },
+        "3/0/init/body/7/argument/3/1": {
+          "type": "element",
+          "hash": "8df6777277469c1fd88cc18dde2f1cc3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Settings"
+        },
+        "3/0/init/body/7/argument/3/3": {
+          "type": "element",
+          "hash": "5544b2253ca1bb628ad7f21baa05c43f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Manage your account and security preferences"
+        },
+        "3/0/init/body/7/argument/7/1/3": {
+          "type": "element",
+          "hash": "bee775ff7216747b2111e93cefa57ddc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "User Profile"
+        },
+        "3/0/init/body/7/argument/7/3/11/1/1/expression/alternate/3": {
+          "type": "element",
+          "hash": "347ce9cd4e4004b94bd38bc4e0b21530",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Update Profile"
+        },
+        "3/0/init/body/7/argument/7/3/11/1/1/expression/consequent/3": {
+          "type": "element",
+          "hash": "0d59644e851a6a76f1fb45de9353c447",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Updating..."
+        },
+        "3/0/init/body/7/argument/7/3/5/1/1": {
+          "type": "element",
+          "hash": "a2a53cf234580704745603140fd47c1b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Full Name"
+        },
+        "3/0/init/body/7/argument/7/3/5/3/1": {
+          "type": "element",
+          "hash": "59facca6a2a301efd5e95cf58eec48a5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email Address"
+        },
+        "3/0/init/body/7/argument/7/3/5/3/5": {
+          "type": "element",
+          "hash": "d11a0207233d99533968d894c8cfd658",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email cannot be changed"
+        },
+        "3/0/init/body/7/argument/7/3/9/1": {
+          "type": "element",
+          "hash": "e7f6633ad34ab8baa236f391ed6b5a67",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Account Information"
+        },
+        "3/0/init/body/7/argument/7/3/9/3/1/1/0": {
+          "type": "element",
+          "hash": "2a9f2805f2c980ad59cb4c69c4c8c3da",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "User ID:"
+        },
+        "3/0/init/body/7/argument/7/3/9/3/3/1/0": {
+          "type": "element",
+          "hash": "680491de0fb66a8a0bb501794b9e359c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Member since:"
+        },
+        "3/0/init/body/7/argument/7/3/9/3/5/1/0": {
+          "type": "element",
+          "hash": "c2b8ebbef750410ef6714ac15d7d943e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last updated:"
+        },
+        "3/0/init/body/7/argument/7/3/9/3/7/1/0": {
+          "type": "element",
+          "hash": "7be3616263bc5cf1cd19988ebc7fdcf5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Authentication:"
+        },
+        "3/0/init/body/7/argument/7/3/9/3/7/3": {
+          "type": "element",
+          "hash": "0630137d1ec07ec8add21776f3f43205",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Supabase Auth"
+        }
+      }
+    },
+    "pages/Terms.tsx": {
+      "scopes": {
+        "2/0/init/body/2/argument/1/15/1/3/1": {
+          "type": "element",
+          "hash": "ba3da0eb1921cdd3adf58e1812ad2922",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Legal Notice"
+        },
+        "2/0/init/body/2/argument/1/15/1/3/3/1": {
+          "type": "element",
+          "hash": "c852fa798d96155a2ba894b10b0099dd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Digital Legacy Responsibility:</element:strong> EternalVault provides tools for digital legacy management, but you remain solely responsible for the legal validity and proper execution of your digital estate planning."
+        },
+        "2/0/init/body/2/argument/1/15/1/3/3/3": {
+          "type": "element",
+          "hash": "bf23f3cf1ec5862724752c8060dad328",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>No Legal Advice:</element:strong> This service does not constitute legal advice. Consult with qualified legal professionals for estate planning guidance."
+        },
+        "2/0/init/body/2/argument/1/15/1/3/3/5": {
+          "type": "element",
+          "hash": "aecb3f325fae85379f5e45a53b62f033",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Zero-Knowledge Architecture:</element:strong> We cannot access your encrypted data or recover lost access keys. Proper key management is your responsibility."
+        },
+        "2/0/init/body/2/argument/1/15/1/3/3/7": {
+          "type": "element",
+          "hash": "148b327248d6207e7fd7f4a5429758a7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:strong>Service Availability:</element:strong> While we strive for 99.9% uptime, we cannot guarantee uninterrupted service. Consider maintaining backup copies of critical information."
+        },
+        "2/0/init/body/2/argument/1/19/1": {
+          "type": "element",
+          "hash": "e8b99a3bad79c22c9453e3d29e3a9fed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contact Information"
+        },
+        "2/0/init/body/2/argument/1/19/3/1/1": {
+          "type": "element",
+          "hash": "c869b79dfef8803e27bc3880892510da",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legal Questions:"
+        },
+        "2/0/init/body/2/argument/1/19/3/1/3": {
+          "type": "element",
+          "hash": "21b31adbfcd95a4ff10a83c8d5663338",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "legal@eternalvault.com"
+        },
+        "2/0/init/body/2/argument/1/19/3/3/1": {
+          "type": "element",
+          "hash": "e3895ce665b8a2e3720ac1abb314289f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "General Support:"
+        },
+        "2/0/init/body/2/argument/1/19/3/3/3": {
+          "type": "element",
+          "hash": "073502c0223eedb21f98278ce2e2423f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "support@eternalvault.com"
+        },
+        "2/0/init/body/2/argument/1/19/3/5/1": {
+          "type": "element",
+          "hash": "92de102a4494e78d3ee6974781523fdd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Mailing Address:"
+        },
+        "2/0/init/body/2/argument/1/19/3/5/3": {
+          "type": "element",
+          "hash": "8214052531b87fa4356f436be63f5cfc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault Inc.<element:br></element:br>123 Digital Legacy Blvd<element:br></element:br>San Francisco, CA 94105"
+        },
+        "2/0/init/body/2/argument/1/19/3/7/1": {
+          "type": "element",
+          "hash": "023a8ad14c923794975c4baa10037af9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Business Hours:"
+        },
+        "2/0/init/body/2/argument/1/19/3/7/3": {
+          "type": "element",
+          "hash": "f43c7b903bc43b4b42bf59ea67388f23",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monday - Friday<element:br></element:br>9:00 AM - 6:00 PM PST"
+        },
+        "2/0/init/body/2/argument/1/23/1": {
+          "type": "element",
+          "hash": "f1836c4444ba52f26e416dfa95e800a8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "By continuing to use EternalVault, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions."
+        },
+        "2/0/init/body/2/argument/1/3/3": {
+          "type": "element",
+          "hash": "75480415ac710e88f0938e9382942ad8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Terms and Conditions"
+        },
+        "2/0/init/body/2/argument/1/3/5": {
+          "type": "element",
+          "hash": "c5b8b4cacd41413f025b80af33eac4db",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Please read these terms carefully before using EternalVault. By using our service, you agree to be bound by these terms."
+        },
+        "2/0/init/body/2/argument/1/3/7/3": {
+          "type": "element",
+          "hash": "e82cbd8fea0e7962a63a117a59f4fd43",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last updated: {lastUpdated}"
+        },
+        "2/0/init/body/2/argument/1/7/1": {
+          "type": "element",
+          "hash": "d2b6e54d388564c5df4fdd2ef6e493ae",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Quick Navigation"
+        }
+      }
+    }
+  }
+}
