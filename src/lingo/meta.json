@@ -1891,6 +1891,102 @@
     },
     "components/Chat/LegacySelector.tsx": {
       "scopes": {
+        "3/0/init/body/10/argument/1/1": {
+          "type": "element",
+          "hash": "4de829327f76eccece8380f0d935d589",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connect Access Key"
+        },
+        "3/0/init/body/10/argument/1/3/expression/right/3": {
+          "type": "element",
+          "hash": "87c4a663507f2bcbbf79934af8164e13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Add"
+        },
+        "3/0/init/body/10/argument/17/expression/right/1/expression/0/body/1/3/3": {
+          "type": "element",
+          "hash": "f41949b4bebd5569e5c8c65125e6326e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Valid access key • Added <function:Date.toLocaleDateString/>"
+        },
+        "3/0/init/body/10/argument/21/expression/right/3/3-placeholder": {
+          "type": "attribute",
+          "hash": "9a2328f6bb18326507d194a3c11e67e8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa"
+        },
+        "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/alternate": {
+          "type": "element",
+          "hash": "8778ee245078a8be4a2ce855c8c56edc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connect"
+        },
+        "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/consequent/3": {
+          "type": "element",
+          "hash": "c64cddbf8207da1c7a4593f55fe24ca8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Validating..."
+        },
+        "3/0/init/body/10/argument/21/expression/right/5/3": {
+          "type": "element",
+          "hash": "07296eb8d91ad98e1b60cd7ab0def914",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cancel"
+        },
+        "3/0/init/body/10/argument/25/1": {
+          "type": "element",
+          "hash": "4b0ca151dafdf8539c51f05783f535a6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "💡 <element:strong>Anonymous Access:</element:strong> Access keys work without creating an account. Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control."
+        },
+        "3/0/init/body/10/argument/29/expression/right/1": {
+          "type": "element",
+          "hash": "2f46f9ac7a89ffcdd4d97ffca631edd7",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🧪 <element:strong>Demo Keys for Testing:</element:strong>"
+        },
+        "3/0/init/body/10/argument/29/expression/right/3/1": {
+          "type": "element",
+          "hash": "a3857ea2ac107b444f2d522d65124b4c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• evault_test_demo_2024_abc123 (Demo capsules)"
+        },
+        "3/0/init/body/10/argument/29/expression/right/3/3": {
+          "type": "element",
+          "hash": "dabe544aa5dd269c3f5a9b81c6c6e681",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "• evault_sample_key_2024_xyz789 (Sample data)"
+        },
+        "3/0/init/body/10/argument/9/expression/right/3": {
+          "type": "element",
+          "hash": "5457965508bf9a7ce00be467809000ec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading legacy..."
+        },
         "3/0/init/body/8/consequent/0/argument/1/1/3/1": {
           "type": "element",
           "hash": "386c3dcda7f6456c0bb3f95455e6f5a4",
@@ -1986,6 +2082,30 @@
           "skip": false,
           "overrides": {},
           "content": "Loading legacy..."
+        },
+        "3/0/init/body/9/consequent/0/argument/1/1/3/1": {
+          "type": "element",
+          "hash": "386c3dcda7f6456c0bb3f95455e6f5a4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Connected: {legacyOwner.name}"
+        },
+        "3/0/init/body/9/consequent/0/argument/1/1/3/3": {
+          "type": "element",
+          "hash": "fd036bfcd01aa149b0af7dd411ad5978",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Group: {activeGroup.name} • capsule<expression/>"
+        },
+        "3/0/init/body/9/consequent/0/argument/1/3": {
+          "type": "element",
+          "hash": "4c64e1137e3e17194d1752dfb02b96df",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Disconnect"
         }
       }
     },

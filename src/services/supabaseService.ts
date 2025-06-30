@@ -294,6 +294,182 @@ class SupabaseService {
     }
   }
 
+  // ==================== ANONYMOUS ACCESS KEY VALIDATION ====================
+  
+  /**
+   * Validates an access key for anonymous users
+   * This method works independently of user authentication state
+   */
+  async validateAccessKeyForAnonymous(rawKey: string): Promise<{
+    success: boolean;
+    data?: {
+      accessKey: AccessKeyWithCapsules;
+      owner: {
+        id: string;
+        name: string;
+        email: string;
+      };
+      group: {
+        id: string;
+        name: string;
+        description: string;
+      };
+    };
+    error?: string;
+  }> {
+    try {
+      console.log('🔍 Validating access key for anonymous user:', rawKey.substring(0, 10) + '...');
+      
+      // Normalize and hash the key
+      const normalizedKey = this.normalizeAccessKey(rawKey);
+      const keyHash = this.hashAccessKey(normalizedKey);
+      
+      console.log('🔐 Key hash:', keyHash);
+
+      // Query access key using service role to bypass RLS
+      const { data: accessKeys, error: keyError } = await supabase
+        .from('access_keys')
+        .select(`
+          *,
+          profiles!access_keys_owner_id_fkey (
+            id,
+            full_name,
+            email
+          )
+        `)
+        .eq('key_hash', keyHash)
+        .eq('is_active', true)
+        .limit(1);
+
+      if (keyError) {
+        console.error('❌ Error querying access key:', keyError);
+        return {
+          success: false,
+          error: 'Error validating access key'
+        };
+      }
+
+      if (!accessKeys || accessKeys.length === 0) {
+        console.log('❌ Access key not found');
+        return {
+          success: false,
+          error: 'Invalid access key'
+        };
+      }
+
+      const accessKey = accessKeys[0];
+      console.log('✅ Access key found:', accessKey.id, accessKey.name);
+
+      // Check if expired
+      if (accessKey.expires_at && new Date(accessKey.expires_at) <= new Date()) {
+        console.log('❌ Access key expired');
+        return {
+          success: false,
+          error: 'Access key has expired'
+        };
+      }
+
+      // Check access count limit
+      if (accessKey.max_access_count && accessKey.access_count >= accessKey.max_access_count) {
+        console.log('❌ Access key usage limit reached');
+        return {
+          success: false,
+          error: 'Access key usage limit reached'
+        };
+      }
+
+      // Get associated capsules using service role
+      const { data: capsuleRelations, error: relationsError } = await supabase
+        .from('access_key_capsules')
+        .select(`
+          capsule_id,
+          capsules (*)
+        `)
+        .eq('access_key_id', accessKey.id);
+
+      if (relationsError) {
+        console.error('❌ Error fetching capsule relations:', relationsError);
+        return {
+          success: false,
+          error: 'Error loading capsules'
+        };
+      }
+
+      const capsules = capsuleRelations?.map(rel => rel.capsules).filter(Boolean) || [];
+      console.log('📦 Found capsules:', capsules.length);
+
+      // Increment access count
+      await this.incrementAccessKeyUsage(accessKey.id);
+
+      // Build response data
+      const accessKeyWithCapsules: AccessKeyWithCapsules = {
+        ...accessKey,
+        capsules: capsules as Capsule[],
+        owner_name: accessKey.profiles?.full_name || 'Unknown User'
+      };
+
+      const owner = {
+        id: accessKey.owner_id,
+        name: accessKey.profiles?.full_name || 'Unknown User',
+        email: accessKey.profiles?.email || 'unknown@example.com'
+      };
+
+      const group = {
+        id: `group_${accessKey.id}`,
+        name: accessKey.name,
+        description: accessKey.notes || `Access to ${capsules.length} capsule${capsules.length !== 1 ? 's' : ''}`
+      };
+
+      console.log('🎉 Access key validation successful');
+
+      return {
+        success: true,
+        data: {
+          accessKey: accessKeyWithCapsules,
+          owner,
+          group
+        }
+      };
+
+    } catch (error) {
+      console.error('💥 Exception validating access key:', error);
+      return {
+        success: false,
+        error: 'Unexpected error validating access key'
+      };
+    }
+  }
+
+  /**
+   * Increments the usage count for an access key
+   */
+  private async incrementAccessKeyUsage(accessKeyId: string): Promise<void> {
+    try {
+      const { error } = await supabase
+        .from('access_keys')
+        .update({
+          access_count: supabase.sql`access_count + 1`,
+          last_accessed_at: new Date().toISOString()
+        })
+        .eq('id', accessKeyId);
+
+      if (error) {
+        console.error('Error incrementing access key usage:', error);
+      } else {
+        console.log('✅ Access key usage incremented');
+      }
+    } catch (error) {
+      console.error('Exception incrementing access key usage:', error);
+    }
+  }
+
+  /**
+   * Normalizes an access key by removing spaces, dashes, and converting to lowercase
+   */
+  private normalizeAccessKey(key: string): string {
+    return key.replace(/[-\s]/g, '').toLowerCase().trim();
+  }
+
   async validateAccessKeyByHash(keyHash: string): Promise<AccessKeyWithCapsules | null> {
     const { data: accessKeys, error } = await supabase
       .from('access_keys')
@@ -574,63 +750,46 @@ class SupabaseService {
 
   async validateAccessToken(token: string) {
     try {
-      // Hash the token to find it in the database
-      const keyHash = this.hashAccessKey(token);
-      const accessKeyWithCapsules = await this.validateAccessKeyByHash(keyHash);
+      console.log('🔄 Legacy validateAccessToken called with token:', token.substring(0, 10) + '...');
       
-      if (!accessKeyWithCapsules) {
+      // Use the new anonymous validation method
+      const result = await this.validateAccessKeyForAnonymous(token);
+      
+      if (!result.success || !result.data) {
         return {
           data: null,
           success: false,
-          error: 'Invalid or expired access key'
+          error: result.error || 'Invalid access key'
         };
       }
 
-      // Create a virtual group for compatibility
-      const virtualGroup = {
-        id: `virtual_group_${accessKeyWithCapsules.id}`,
-        name: accessKeyWithCapsules.name,
-        description: accessKeyWithCapsules.notes || `Access to ${accessKeyWithCapsules.capsules.length} specific capsules`,
-        ownerId: accessKeyWithCapsules.owner_id,
-        createdAt: accessKeyWithCapsules.created_at,
-        category: 'access_key',
-        priority: 'high'
-      };
-
-      // Create a virtual owner for compatibility using the access key owner info
-      const virtualOwner = {
-        id: accessKeyWithCapsules.owner_id,
-        name: accessKeyWithCapsules.owner_name || 'Unknown User',
-        email: 'access@key.user',
-        isDeceased: false, // Access keys don't depend on owner status by default
-        createdAt: accessKeyWithCapsules.created_at
-      };
+      const { accessKey, owner, group } = result.data;
 
       // Create a virtual access token for compatibility
       const virtualAccessToken = {
-        id: accessKeyWithCapsules.id,
+        id: accessKey.id,
         token: token,
-        name: accessKeyWithCapsules.name,
-        description: accessKeyWithCapsules.notes || '',
-        capsuleGroupId: virtualGroup.id,
-        ownerId: virtualOwner.id,
-        ownerName: virtualOwner.name,
-        createdAt: accessKeyWithCapsules.created_at,
-        expiresAt: accessKeyWithCapsules.expires_at,
-        isActive: accessKeyWithCapsules.is_active,
-        maxUses: accessKeyWithCapsules.max_access_count,
-        currentUses: accessKeyWithCapsules.access_count,
-        allowedUsers: ['access_key_user'],
+        name: accessKey.name,
+        description: accessKey.notes || '',
+        capsuleGroupId: group.id,
+        ownerId: owner.id,
+        ownerName: owner.name,
+        createdAt: accessKey.created_at,
+        expiresAt: accessKey.expires_at,
+        isActive: accessKey.is_active,
+        maxUses: accessKey.max_access_count,
+        currentUses: accessKey.access_count,
+        allowedUsers: ['anonymous'],
         priority: 'high',
-        requiresOwnerDeceased: false // Access keys don't require death by default
+        requiresOwnerDeceased: false // Access keys work independently of owner status
       };
 
       return {
         data: {
           accessToken: virtualAccessToken,
-          group: virtualGroup,
-          capsules: accessKeyWithCapsules.capsules,
-          owner: virtualOwner
+          group: group,
+          capsules: accessKey.capsules,
+          owner: owner
         },
         success: true
       };

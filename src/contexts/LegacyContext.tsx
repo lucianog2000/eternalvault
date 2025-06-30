@@ -74,11 +74,14 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Load saved legacies from localStorage on mount
   useEffect(() => {
     const savedLegacies = localStorage.getItem('eternalvault_legacy_access');
     if (savedLegacies) {
       try {
-        setAvailableLegacies(JSON.parse(savedLegacies));
+        const parsed = JSON.parse(savedLegacies);
+        setAvailableLegacies(parsed);
+        console.log('📂 Loaded saved legacies from localStorage:', parsed.length);
       } catch (error) {
         console.error('Error parsing saved legacies:', error);
         localStorage.removeItem('eternalvault_legacy_access');
@@ -91,21 +94,69 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     
     setIsLoading(true);
     try {
-      const response = await supabaseService.validateAccessToken(activeLegacy.accessToken);
+      console.log('🔄 Refreshing legacy data for:', activeLegacy.accessToken.substring(0, 10) + '...');
+      
+      // Use the new anonymous validation method
+      const response = await supabaseService.validateAccessKeyForAnonymous(activeLegacy.accessToken);
       
       if (response.success && response.data) {
-        setLegacyOwner(response.data.owner);
-        setLegacyCapsules(response.data.capsules);
-        setActiveGroup(response.data.group);
+        const { accessKey, owner, group } = response.data;
+        
+        // Map to legacy format
+        const legacyOwnerData: LegacyOwner = {
+          id: owner.id,
+          name: owner.name,
+          email: owner.email,
+          isDeceased: false, // Access keys work independently of owner status
+          lastActivity: new Date().toISOString(),
+          lastLifeConfirmation: new Date().toISOString()
+        };
+
+        const legacyCapsuleData: LegacyCapsule[] = accessKey.capsules.map(capsule => ({
+          id: capsule.id,
+          title: capsule.title,
+          content: capsule.content,
+          category: capsule.category,
+          groupId: group.id,
+          ownerId: capsule.owner_id,
+          createdAt: capsule.created_at,
+          updatedAt: capsule.updated_at,
+          unlockRule: {
+            type: capsule.unlock_rule_type,
+            days: capsule.unlock_rule_days,
+            active: capsule.unlock_rule_active
+          },
+          isActive: capsule.is_active,
+          isUnlocked: capsule.is_unlocked,
+          selfDestruct: capsule.self_destruct_enabled ? {
+            enabled: capsule.self_destruct_enabled,
+            maxReads: capsule.self_destruct_max_reads,
+            currentReads: capsule.self_destruct_current_reads,
+            destroyAfterRead: capsule.self_destruct_destroy_after_read,
+            warningMessage: capsule.self_destruct_warning_message
+          } : undefined,
+          priority: capsule.priority
+        }));
+
+        setLegacyOwner(legacyOwnerData);
+        setLegacyCapsules(legacyCapsuleData);
+        setActiveGroup(group);
+        
+        console.log('✅ Legacy data refreshed successfully');
+      } else {
+        setError(response.error || 'Failed to refresh legacy data');
       }
     } catch (error) {
       console.error('Error refreshing legacy data:', error);
+      setError('Error refreshing legacy data');
     } finally {
       setIsLoading(false);
     }
   };
 
   const setActiveLegacy = async (legacy: LegacyAccess | null) => {
+    console.log('🎯 Setting active legacy:', legacy ? legacy.ownerName : 'null');
+    
     setIsLoading(true);
     setError(null);
     
@@ -113,29 +164,69 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       setActiveLegacyState(legacy);
       
       if (legacy) {
-        const response = await supabaseService.validateAccessToken(legacy.accessToken);
+        console.log('🔍 Validating access token for legacy:', legacy.accessToken.substring(0, 10) + '...');
+        
+        // Use the new anonymous validation method
+        const response = await supabaseService.validateAccessKeyForAnonymous(legacy.accessToken);
         
         if (response.success && response.data) {
-          setLegacyOwner(response.data.owner);
-          setLegacyCapsules(response.data.capsules);
-          setActiveGroup(response.data.group);
+          const { accessKey, owner, group } = response.data;
           
-          // Record token usage
-          await supabaseService.updateAccessToken(response.data.accessToken.id, {
-            currentUses: response.data.accessToken.currentUses + 1
+          // Map to legacy format
+          const legacyOwnerData: LegacyOwner = {
+            id: owner.id,
+            name: owner.name,
+            email: owner.email,
+            isDeceased: false, // Access keys work independently of owner status
+            lastActivity: new Date().toISOString(),
+            lastLifeConfirmation: new Date().toISOString()
+          };
+
+          const legacyCapsuleData: LegacyCapsule[] = accessKey.capsules.map(capsule => ({
+            id: capsule.id,
+            title: capsule.title,
+            content: capsule.content,
+            category: capsule.category,
+            groupId: group.id,
+            ownerId: capsule.owner_id,
+            createdAt: capsule.created_at,
+            updatedAt: capsule.updated_at,
+            unlockRule: {
+              type: capsule.unlock_rule_type,
+              days: capsule.unlock_rule_days,
+              active: capsule.unlock_rule_active
+            },
+            isActive: capsule.is_active,
+            isUnlocked: capsule.is_unlocked,
+            selfDestruct: capsule.self_destruct_enabled ? {
+              enabled: capsule.self_destruct_enabled,
+              maxReads: capsule.self_destruct_max_reads,
+              currentReads: capsule.self_destruct_current_reads,
+              destroyAfterRead: capsule.self_destruct_destroy_after_read,
+              warningMessage: capsule.self_destruct_warning_message
+            } : undefined,
+            priority: capsule.priority
+          }));
+
+          setLegacyOwner(legacyOwnerData);
+          setLegacyCapsules(legacyCapsuleData);
+          setActiveGroup(group);
+          
+          console.log('✅ Active legacy set successfully:', {
+            owner: legacyOwnerData.name,
+            capsules: legacyCapsuleData.length,
+            group: group.name
           });
         } else {
-          if (response.ownerAlive) {
-            setError(`🚫 Access denied: ${response.ownerName} is still alive. This access key only activates after the owner's death.`);
-          } else {
-            setError(response.error || 'Error loading legacy');
-          }
+          setError(response.error || 'Invalid access key');
           setActiveLegacyState(null);
+          console.log('❌ Failed to validate access key:', response.error);
         }
       } else {
         setLegacyOwner(null);
         setLegacyCapsules([]);
         setActiveGroup(null);
+        console.log('✅ Active legacy cleared');
       }
     } catch (error) {
       console.error('Error setting active legacy:', error);
@@ -147,34 +238,42 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   const validateLegacyAccess = async (token: string): Promise<LegacyAccess | null> => {
+    console.log('🔍 Validating legacy access for token:', token.substring(0, 10) + '...');
+    
     setIsLoading(true);
     setError(null);
     
     try {
-      const response = await supabaseService.validateAccessToken(token);
+      // Use the new anonymous validation method
+      const response = await supabaseService.validateAccessKeyForAnonymous(token);
       
       if (response.success && response.data) {
+        const { accessKey, owner, group } = response.data;
+        
         const legacy: LegacyAccess = {
-          id: `access_${response.data.accessToken.id}_${Date.now()}`,
-          ownerName: response.data.owner.name,
-          ownerId: response.data.owner.id,
+          id: `access_${accessKey.id}_${Date.now()}`,
+          ownerName: owner.name,
+          ownerId: owner.id,
           accessToken: token,
-          capsuleGroupId: response.data.group.id,
+          capsuleGroupId: group.id,
           grantedAt: new Date().toISOString(),
-          requiresOwnerDeceased: response.data.accessToken.requiresOwnerDeceased
+          requiresOwnerDeceased: false // Access keys work independently
         };
+        
+        console.log('✅ Legacy access validated successfully:', {
+          owner: legacy.ownerName,
+          group: group.name,
+          capsules: accessKey.capsules.length
+        });
         
         return legacy;
       } else {
-        if (response.ownerAlive) {
-          setError(`🚫 Access denied: ${response.ownerName} is still alive. This access key only activates after the owner's death.`);
-        } else {
-          setError(response.error || 'Invalid access key');
-        }
+        setError(response.error || 'Invalid access key');
+        console.log('❌ Legacy access validation failed:', response.error);
         return null;
       }
     } catch (error) {
-      console.error('Error validating access token:', error);
+      console.error('Error validating legacy access:', error);
       setError('Error validating access key');
       return null;
     } finally {
@@ -183,12 +282,23 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   const addLegacyAccess = async (token: string): Promise<boolean> => {
+    console.log('➕ Adding legacy access for token:', token.substring(0, 10) + '...');
+    
     const legacy = await validateLegacyAccess(token);
     
-    if (legacy && !availableLegacies.find(l => l.accessToken === legacy.accessToken)) {
+    if (legacy) {
+      // Check if already exists
+      const exists = availableLegacies.find(l => l.accessToken === legacy.accessToken);
+      if (exists) {
+        setError('Access key already added');
+        return false;
+      }
+      
       const updated = [...availableLegacies, legacy];
       setAvailableLegacies(updated);
       localStorage.setItem('eternalvault_legacy_access', JSON.stringify(updated));
+      
+      console.log('✅ Legacy access added successfully:', legacy.ownerName);
       return true;
     }
     
@@ -196,6 +306,8 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   };
 
   const removeLegacyAccess = (legacyId: string) => {
+    console.log('🗑️ Removing legacy access:', legacyId);
+    
     const updated = availableLegacies.filter(l => l.id !== legacyId);
     setAvailableLegacies(updated);
     localStorage.setItem('eternalvault_legacy_access', JSON.stringify(updated));
@@ -203,10 +315,14 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     if (activeLegacy?.id === legacyId) {
       setActiveLegacy(null);
     }
+    
+    console.log('✅ Legacy access removed');
   };
 
   const recordCapsuleAccess = async (capsuleId: string, accessMethod: string = 'chat') => {
     try {
+      console.log('📊 Recording capsule access:', { capsuleId, accessMethod });
+      
       // Check if capsule exists in our current list
       const capsule = legacyCapsules.find(c => c.id === capsuleId);
       if (!capsule) {
@@ -223,13 +339,15 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       );
       
       if (response.capsuleDestroyed) {
-        // Remove the capsule from our local state since it was physically deleted
+        // Remove the capsule from our local state since it was destroyed
         setLegacyCapsules(prev => prev.filter(c => c.id !== capsuleId));
 
         // Show destruction notification
         setTimeout(() => {
           alert(`🔥 The capsule "${capsule.title}" has been permanently deleted after reaching the read limit.`);
         }, 1000);
+        
+        console.log('💥 Capsule destroyed:', capsule.title);
       } else {
         // Just update read count
         setLegacyCapsules(prev => prev.map(c => {
@@ -244,14 +362,11 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           }
           return c;
         }));
+        
+        console.log('📊 Capsule read count updated');
       }
 
-      console.log('📊 CAPSULE ACCESS RECORDED:', {
-        capsuleId,
-        accessMethod,
-        destroyed: response.capsuleDestroyed,
-        timestamp: new Date().toISOString()
-      });
+      console.log('✅ Capsule access recorded successfully');
     } catch (error) {
       console.error('Error recording capsule access:', error);
       throw error; // Re-throw to be handled by the calling component

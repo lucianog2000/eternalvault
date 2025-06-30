@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Plus, Key, Trash2, User, Calendar, Shield, Package, ChevronDown, ChevronUp, Loader } from 'lucide-react';
+import { Heart, Plus, Key, Trash2, User, Calendar, Shield, Package, ChevronDown, ChevronUp, Loader, CheckCircle, AlertTriangle } from 'lucide-react';
 import { useLegacy } from '../../contexts/LegacyContext';
 
 const LegacySelector: React.FC = () => {
@@ -20,6 +20,7 @@ const LegacySelector: React.FC = () => {
   const [newToken, setNewToken] = useState('');
   const [isValidating, setIsValidating] = useState(false);
   const [validationError, setValidationError] = useState('');
+  const [validationSuccess, setValidationSuccess] = useState('');
 
   const handleAddToken = async () => {
     if (!newToken.trim()) {
@@ -29,31 +30,45 @@ const LegacySelector: React.FC = () => {
 
     setIsValidating(true);
     setValidationError('');
+    setValidationSuccess('');
 
     try {
+      console.log('🔄 Attempting to add access key:', newToken.substring(0, 10) + '...');
+      
       const success = await addLegacyAccess(newToken.trim());
       if (success) {
         setNewToken('');
         setShowAddToken(false);
         setValidationError('');
+        setValidationSuccess('Access key added successfully!');
+        
+        // Clear success message after 3 seconds
+        setTimeout(() => setValidationSuccess(''), 3000);
+        
+        console.log('✅ Access key added successfully');
       } else {
         setValidationError(error || 'Invalid or already added access key');
+        console.log('❌ Failed to add access key:', error);
       }
     } catch (err) {
       setValidationError('Error validating access key');
+      console.error('💥 Exception adding access key:', err);
     } finally {
       setIsValidating(false);
     }
   };
 
   const handleSelectLegacy = (legacy: any) => {
+    console.log('🎯 Selecting legacy:', legacy.ownerName);
     setActiveLegacy(legacy);
   };
 
   const handleDisconnect = () => {
+    console.log('🔌 Disconnecting from active legacy');
     setActiveLegacy(null);
   };
 
+  // Show active legacy interface
   if (activeLegacy && legacyOwner && activeGroup) {
     return (
       <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 lg:p-4 border border-white/10 mb-4">
@@ -85,6 +100,16 @@ const LegacySelector: React.FC = () => {
             <p className="text-white/70 text-xs lg:text-sm">{activeGroup.description}</p>
           </div>
         )}
+
+        {/* Success Message */}
+        {validationSuccess && (
+          <div className="mt-3 p-2 bg-green-500/20 border border-green-500/30 rounded">
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-4 h-4 text-green-300" />
+              <p className="text-green-200 text-xs">{validationSuccess}</p>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -106,6 +131,16 @@ const LegacySelector: React.FC = () => {
         )}
       </div>
 
+      {/* Success Message */}
+      {validationSuccess && (
+        <div className="mb-3 p-2 bg-green-500/20 border border-green-500/30 rounded">
+          <div className="flex items-center space-x-2">
+            <CheckCircle className="w-4 h-4 text-green-300" />
+            <p className="text-green-200 text-xs">{validationSuccess}</p>
+          </div>
+        </div>
+      )}
+
       {/* Loading State */}
       {isLoading && (
         <div className="flex items-center justify-center py-4">
@@ -117,7 +152,10 @@ const LegacySelector: React.FC = () => {
       {/* Error State */}
       {error && !isValidating && (
         <div className="bg-red-500/20 border border-red-500/30 rounded p-2 lg:p-3 mb-3 lg:mb-4">
-          <p className="text-red-200 text-xs lg:text-sm">{error}</p>
+          <div className="flex items-center space-x-2">
+            <AlertTriangle className="w-4 h-4 text-red-300" />
+            <p className="text-red-200 text-xs lg:text-sm">{error}</p>
+          </div>
         </div>
       )}
 
@@ -158,7 +196,10 @@ const LegacySelector: React.FC = () => {
         <div className="space-y-3">
           {validationError && (
             <div className="bg-red-500/20 border border-red-500/30 rounded p-2">
-              <p className="text-red-200 text-xs">{validationError}</p>
+              <div className="flex items-center space-x-2">
+                <AlertTriangle className="w-4 h-4 text-red-300" />
+                <p className="text-red-200 text-xs">{validationError}</p>
+              </div>
             </div>
           )}
           
@@ -171,6 +212,11 @@ const LegacySelector: React.FC = () => {
               placeholder="evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa"
               className="w-full pl-6 lg:pl-8 pr-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500 text-xs lg:text-sm"
               disabled={isValidating}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  handleAddToken();
+                }
+              }}
             />
           </div>
           
@@ -207,10 +253,23 @@ const LegacySelector: React.FC = () => {
       {/* Information */}
       <div className="mt-3 p-2 bg-blue-500/10 rounded border border-blue-500/20">
         <p className="text-blue-200 text-xs">
-          💡 <strong>Access Keys:</strong> Each access key gives access to a specific group of capsules, 
-          ensuring maximum privacy and granular control.
+          💡 <strong>Anonymous Access:</strong> Access keys work without creating an account. 
+          Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control.
         </p>
       </div>
+
+      {/* Demo Keys for Testing */}
+      {availableLegacies.length === 0 && !showAddToken && (
+        <div className="mt-3 p-2 bg-yellow-500/10 rounded border border-yellow-500/20">
+          <p className="text-yellow-200 text-xs mb-2">
+            🧪 <strong>Demo Keys for Testing:</strong>
+          </p>
+          <div className="space-y-1 text-xs">
+            <p className="text-yellow-200/80">• evault_test_demo_2024_abc123 (Demo capsules)</p>
+            <p className="text-yellow-200/80">• evault_sample_key_2024_xyz789 (Sample data)</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

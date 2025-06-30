@@ -2164,6 +2164,117 @@ export default {
     },
     "components/Chat/LegacySelector.tsx": {
       entries: {
+        "3/0/init/body/10/argument/1/1": {
+          content: {
+            de: "Zugriffsschlüssel verbinden",
+            en: "Connect Access Key",
+            es: "Conectar clave de acceso",
+            fr: "Connecter une clé d'accès",
+          },
+          hash: "4de829327f76eccece8380f0d935d589",
+        },
+        "3/0/init/body/10/argument/1/3/expression/right/3": {
+          content: {
+            de: "Hinzufügen",
+            en: "Add",
+            es: "Añadir",
+            fr: "Ajouter",
+          },
+          hash: "87c4a663507f2bcbbf79934af8164e13",
+        },
+        "3/0/init/body/10/argument/17/expression/right/1/expression/0/body/1/3/3":
+          {
+            content: {
+              de: "Gültiger Zugriffsschlüssel • Hinzugefügt <function:Date.toLocaleDateString/>",
+              en: "Valid access key • Added <function:Date.toLocaleDateString/>",
+              es: "Clave de acceso válida • Añadida <function:Date.toLocaleDateString/>",
+              fr: "Clé d'accès valide • Ajoutée le <function:Date.toLocaleDateString/>",
+            },
+            hash: "f41949b4bebd5569e5c8c65125e6326e",
+          },
+        "3/0/init/body/10/argument/21/expression/right/3/3-placeholder": {
+          content: {
+            de: "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa",
+            en: "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa",
+            es: "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa",
+            fr: "evault_LCjhMKSvHtMjRyjWSQG0CEALKrENECxxa",
+          },
+          hash: "9a2328f6bb18326507d194a3c11e67e8",
+        },
+        "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/alternate":
+          {
+            content: {
+              de: "Verbinden",
+              en: "Connect",
+              es: "Conectar",
+              fr: "Connecter",
+            },
+            hash: "8778ee245078a8be4a2ce855c8c56edc",
+          },
+        "3/0/init/body/10/argument/21/expression/right/5/1/1/expression/consequent/3":
+          {
+            content: {
+              de: "Validiere...",
+              en: "Validating...",
+              es: "Validando...",
+              fr: "Validation...",
+            },
+            hash: "c64cddbf8207da1c7a4593f55fe24ca8",
+          },
+        "3/0/init/body/10/argument/21/expression/right/5/3": {
+          content: {
+            de: "Abbrechen",
+            en: "Cancel",
+            es: "Cancelar",
+            fr: "Annuler",
+          },
+          hash: "07296eb8d91ad98e1b60cd7ab0def914",
+        },
+        "3/0/init/body/10/argument/25/1": {
+          content: {
+            de: "💡 <element:strong>Anonymer Zugriff:</element:strong> Zugriffsschlüssel funktionieren ohne Kontoerstellung. Jeder Schlüssel gewährt Zugriff auf eine bestimmte Gruppe von Kapseln und gewährleistet maximale Privatsphäre und granulare Kontrolle.",
+            en: "💡 <element:strong>Anonymous Access:</element:strong> Access keys work without creating an account. Each key gives access to a specific group of capsules, ensuring maximum privacy and granular control.",
+            es: "💡 <element:strong>Acceso anónimo:</element:strong> Las claves de acceso funcionan sin necesidad de crear una cuenta. Cada clave da acceso a un grupo específico de cápsulas, garantizando máxima privacidad y control granular.",
+            fr: "💡 <element:strong>Accès anonyme :</element:strong> Les clés d'accès fonctionnent sans création de compte. Chaque clé donne accès à un groupe spécifique de capsules, assurant une confidentialité maximale et un contrôle précis.",
+          },
+          hash: "4b0ca151dafdf8539c51f05783f535a6",
+        },
+        "3/0/init/body/10/argument/29/expression/right/1": {
+          content: {
+            de: "🧪 <element:strong>Demo-Schlüssel zum Testen:</element:strong>",
+            en: "🧪 <element:strong>Demo Keys for Testing:</element:strong>",
+            es: "🧪 <element:strong>Claves de demostración para pruebas:</element:strong>",
+            fr: "🧪 <element:strong>Clés de démonstration pour les tests :</element:strong>",
+          },
+          hash: "2f46f9ac7a89ffcdd4d97ffca631edd7",
+        },
+        "3/0/init/body/10/argument/29/expression/right/3/1": {
+          content: {
+            de: "• evault_test_demo_2024_abc123 (Demo-Kapseln)",
+            en: "• evault_test_demo_2024_abc123 (Demo capsules)",
+            es: "• evault_test_demo_2024_abc123 (Cápsulas de demostración)",
+            fr: "• evault_test_demo_2024_abc123 (Capsules de démonstration)",
+          },
+          hash: "a3857ea2ac107b444f2d522d65124b4c",
+        },
+        "3/0/init/body/10/argument/29/expression/right/3/3": {
+          content: {
+            de: "• evault_sample_key_2024_xyz789 (Beispieldaten)",
+            en: "• evault_sample_key_2024_xyz789 (Sample data)",
+            es: "• evault_sample_key_2024_xyz789 (Datos de muestra)",
+            fr: "• evault_sample_key_2024_xyz789 (Données d'exemple)",
+          },
+          hash: "dabe544aa5dd269c3f5a9b81c6c6e681",
+        },
+        "3/0/init/body/10/argument/9/expression/right/3": {
+          content: {
+            de: "Legacy wird geladen...",
+            en: "Loading legacy...",
+            es: "Cargando legado...",
+            fr: "Chargement de l'héritage...",
+          },
+          hash: "5457965508bf9a7ce00be467809000ec",
+        },
         "3/0/init/body/8/consequent/0/argument/1/1/3/1": {
           content: {
             de: "Verbunden: {legacyOwner.name}",
@@ -2274,6 +2385,33 @@ export default {
             fr: "Chargement de l'héritage...",
           },
           hash: "5457965508bf9a7ce00be467809000ec",
+        },
+        "3/0/init/body/9/consequent/0/argument/1/1/3/1": {
+          content: {
+            de: "Verbunden: {legacyOwner.name}",
+            en: "Connected: {legacyOwner.name}",
+            es: "Conectado: {legacyOwner.name}",
+            fr: "Connecté : {legacyOwner.name}",
+          },
+          hash: "386c3dcda7f6456c0bb3f95455e6f5a4",
+        },
+        "3/0/init/body/9/consequent/0/argument/1/1/3/3": {
+          content: {
+            de: "Gruppe: {activeGroup.name} • Kapsel<expression/>",
+            en: "Group: {activeGroup.name} • capsule<expression/>",
+            es: "Grupo: {activeGroup.name} • cápsula<expression/>",
+            fr: "Groupe : {activeGroup.name} • capsule<expression/>",
+          },
+          hash: "fd036bfcd01aa149b0af7dd411ad5978",
+        },
+        "3/0/init/body/9/consequent/0/argument/1/3": {
+          content: {
+            de: "Trennen",
+            en: "Disconnect",
+            es: "Desconectar",
+            fr: "Déconnecter",
+          },
+          hash: "4c64e1137e3e17194d1752dfb02b96df",
         },
       },
     },
