@@ -329,8 +329,8 @@ export const LegacyProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         throw new Error('Capsule not found');
       }
 
-      // Get the access key ID from the active legacy
-      const accessKeyId = activeLegacy ? activeLegacy.id.split('_')[1] : undefined;
+      // Use the access token directly as the access key ID
+      const accessKeyId = activeLegacy ? activeLegacy.accessToken : undefined;
       
       const response = await supabaseService.recordCapsuleAccess(
         capsuleId, 
