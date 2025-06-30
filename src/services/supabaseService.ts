@@ -445,10 +445,25 @@ class SupabaseService {
    */
   private async incrementAccessKeyUsage(accessKeyId: string): Promise<void> {
     try {
+      // First, get the current access count
+      const { data: currentAccessKey, error: fetchError } = await supabase
+        .from('access_keys')
+        .select('access_count')
+        .eq('id', accessKeyId)
+        .single();
+
+      if (fetchError) {
+        console.error('Error fetching current access count:', fetchError);
+        return;
+      }
+
+      // Increment the count and update
+      const newAccessCount = (currentAccessKey.access_count || 0) + 1;
+      
       const { error } = await supabase
         .from('access_keys')
         .update({
-          access_count: supabase.sql`access_count + 1`,
+          access_count: newAccessCount,
           last_accessed_at: new Date().toISOString()
         })
         .eq('id', accessKeyId);
@@ -456,7 +471,7 @@ class SupabaseService {
       if (error) {
         console.error('Error incrementing access key usage:', error);
       } else {
-        console.log('✅ Access key usage incremented');
+        console.log('✅ Access key usage incremented to:', newAccessCount);
       }
     } catch (error) {
       console.error('Exception incrementing access key usage:', error);
