@@ -4913,21 +4913,21 @@ export default {
         },
         "5/0/init/body/4/argument/11/1/1": {
           content: {
-            de: "Die Lösung: EternalVault",
-            en: "The Solution: EternalVault",
-            es: "La solución: EternalVault",
-            fr: "La solution : EternalVault",
+            de: "Das Problem, das niemand kommen sieht",
+            en: "The Problem No One Sees Coming",
+            es: "El problema que nadie ve venir",
+            fr: "Le problème que personne ne voit venir",
           },
-          hash: "62d3c2943d8658fe7d805d1f53de8a10",
+          hash: "dc95f38600fe01995c729d3389bcf238",
         },
         "5/0/init/body/4/argument/11/1/3": {
           content: {
-            de: "Eine komplette Plattform, die Ihr digitales Erbe sicher und intelligent schützt, organisiert und überträgt.",
-            en: "A complete platform that protects, organizes and transmits your digital legacy securely and intelligently.",
-            es: "Una plataforma completa que protege, organiza y transmite tu legado digital de forma segura e inteligente.",
-            fr: "Une plateforme complète qui protège, organise et transmet votre patrimoine numérique de manière sécurisée et intelligente.",
+            de: "Jeden Tag verlieren Millionen von Familien dauerhaft den Zugang zu kritischen digitalen Informationen. Was wird mit deinem digitalen Erbe geschehen, wenn du nicht mehr hier bist?",
+            en: "Every day, millions of families permanently lose access to critical digital information. What will happen to your digital legacy when you're no longer here?",
+            es: "Cada día, millones de familias pierden permanentemente el acceso a información digital crítica. ¿Qué pasará con tu legado digital cuando ya no estés aquí?",
+            fr: "Chaque jour, des millions de familles perdent définitivement l'accès à des informations numériques critiques. Qu'adviendra-t-il de votre héritage numérique lorsque vous ne serez plus là ?",
           },
-          hash: "19489cdb33722c2b1050bb0263970983",
+          hash: "dd9b723d8e54bb770ac77e527b388bc9",
         },
         "5/0/init/body/4/argument/11/3/1/1": {
           content: {
@@ -5129,6 +5129,222 @@ export default {
         },
         "5/0/init/body/4/argument/15/1/1": {
           content: {
+            de: "Die Lösung: EternalVault",
+            en: "The Solution: EternalVault",
+            es: "La solución: EternalVault",
+            fr: "La solution : EternalVault",
+          },
+          hash: "62d3c2943d8658fe7d805d1f53de8a10",
+        },
+        "5/0/init/body/4/argument/15/1/3": {
+          content: {
+            de: "Eine komplette Plattform, die Ihr digitales Erbe sicher und intelligent schützt, organisiert und überträgt.",
+            en: "A complete platform that protects, organizes and transmits your digital legacy securely and intelligently.",
+            es: "Una plataforma completa que protege, organiza y transmite tu legado digital de forma segura e inteligente.",
+            fr: "Une plateforme complète qui protège, organise et transmet votre patrimoine numérique de manière sécurisée et intelligente.",
+          },
+          hash: "19489cdb33722c2b1050bb0263970983",
+        },
+        "5/0/init/body/4/argument/15/3/1/1": {
+          content: {
+            de: "🔐 Sichere Legacy-Kapseln",
+            en: "🔐 Secure Legacy Capsules",
+            es: "🔐 Cápsulas de legado seguras",
+            fr: "🔐 Capsules patrimoniales sécurisées",
+          },
+          hash: "3f3336914486c478179bccedfcac7c2f",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/1/3/1": {
+          content: {
+            de: "Passwörter und Zugangsdaten",
+            en: "Passwords and Credentials",
+            es: "Contraseñas y credenciales",
+            fr: "Mots de passe et identifiants",
+          },
+          hash: "540dbee069edb2d51e55f9c757c220a0",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/1/3/3": {
+          content: {
+            de: "Sicherer Zugang zu Bankkonten, sozialen Medien und digitalen Diensten",
+            en: "Secure access to bank accounts, social media and digital services",
+            es: "Acceso seguro a cuentas bancarias, redes sociales y servicios digitales",
+            fr: "Accès sécurisé aux comptes bancaires, réseaux sociaux et services numériques",
+          },
+          hash: "ab493956f81c3a7d909f2f04529fef52",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/3/3/1": {
+          content: {
+            de: "Persönliche Nachrichten",
+            en: "Personal Messages",
+            es: "Mensajes personales",
+            fr: "Messages personnels",
+          },
+          hash: "296f206934a95bca639a50702d60fc9f",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/3/3/3": {
+          content: {
+            de: "Letzte Worte, Lebensratschläge und Liebesbotschaften für jede Person",
+            en: "Last words, life advice and messages of love for each person",
+            es: "Últimas palabras, consejos de vida y mensajes de amor para cada persona",
+            fr: "Derniers mots, conseils de vie et messages d'amour pour chaque personne",
+          },
+          hash: "3e2da4eddfad738bd4414abbb9523187",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/5/3/1": {
+          content: {
+            de: "Wichtige Anweisungen",
+            en: "Important Instructions",
+            es: "Instrucciones importantes",
+            fr: "Instructions importantes",
+          },
+          hash: "32aa12084104dbb3e080329508ea0f29",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/5/3/3": {
+          content: {
+            de: "Prozesse, Dokumentenstandorte und zu befolgende Schritte",
+            en: "Processes, document locations and steps to follow",
+            es: "Procesos, ubicaciones de documentos y pasos a seguir",
+            fr: "Processus, emplacements des documents et étapes à suivre",
+          },
+          hash: "02bdd7b14c0c0d10ea14b7707a12df8b",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/7/3/1": {
+          content: {
+            de: "Digitale Vermögenswerte",
+            en: "Digital Assets",
+            es: "Activos digitales",
+            fr: "Actifs numériques",
+          },
+          hash: "658dbcc3ad44920a8f000fd0cbd58599",
+        },
+        "5/0/init/body/4/argument/15/3/1/3/7/3/3": {
+          content: {
+            de: "Kryptowährungen, NFTs und andere wertvolle digitale Vermögenswerte",
+            en: "Cryptocurrencies, NFTs and other valuable digital assets",
+            es: "Criptomonedas, NFTs y otros activos digitales valiosos",
+            fr: "Cryptomonnaies, NFT et autres actifs numériques de valeur",
+          },
+          hash: "b2f9a8b816387cba017dab77b5fd1b69",
+        },
+        "5/0/init/body/4/argument/15/3/3/1/3": {
+          content: {
+            de: "Beispiel-Kapsel",
+            en: "Example Capsule",
+            es: "Cápsula de ejemplo",
+            fr: "Exemple de capsule",
+          },
+          hash: "81e1d8ce73dd03398ac329d564d488c6",
+        },
+        "5/0/init/body/4/argument/15/3/3/1/5/1": {
+          content: {
+            de: "🔐 Hauptbank<element:br></element:br> Benutzer: juan.garcia@email.com<element:br></element:br> Passwort: ••••••••••••<element:br></element:br> PIN: 1985 (Geburtsjahr von Mama)",
+            en: "🔐 Main Bank<element:br></element:br> User: juan.garcia@email.com<element:br></element:br> Password: ••••••••••••<element:br></element:br> PIN: 1985 (year mom was born)",
+            es: "🔐 Banco principal<element:br></element:br> Usuario: juan.garcia@email.com<element:br></element:br> Contraseña: ••••••••••••<element:br></element:br> PIN: 1985 (año en que nació mamá)",
+            fr: "🔐 Banque principale<element:br></element:br> Utilisateur : juan.garcia@email.com<element:br></element:br> Mot de passe : ••••••••••••<element:br></element:br> Code PIN : 1985 (année de naissance de maman)",
+          },
+          hash: "6db1a309a8cfe019f019cb4ef1df5e78",
+        },
+        "5/0/init/body/4/argument/15/3/3/1/7": {
+          content: {
+            de: "Kritische Informationen geschützt und bereit zur Übermittlung",
+            en: "Critical information protected and ready to be transmitted",
+            es: "Información crítica protegida y lista para ser transmitida",
+            fr: "Informations critiques protégées et prêtes à être transmises",
+          },
+          hash: "b241fafc7239a1058b901855e916f0f9",
+        },
+        "5/0/init/body/4/argument/15/5/1/1/3": {
+          content: {
+            de: "Guardian Angel KI",
+            en: "Guardian Angel AI",
+            es: "IA Ángel Guardián",
+            fr: "IA Ange Gardien",
+          },
+          hash: "f2a3d26723a9d0310be791a455cf1266",
+        },
+        "5/0/init/body/4/argument/15/5/1/1/5/1": {
+          content: {
+            de: '"Hallo María, ich bin der Schutzengel von Juans Vermächtnis. Er hat spezifische Informationen für dich als seine Frau hinterlassen. Wie kann ich dir heute helfen?"',
+            en: "\"Hello María, I'm the guardian angel of Juan's legacy. He left specific information for you as his wife. How can I help you today?\"",
+            es: '"Hola María, soy el ángel guardián del legado de Juan. Él dejó información específica para ti como su esposa. ¿Cómo puedo ayudarte hoy?"',
+            fr: "\"Bonjour María, je suis l'ange gardien de l'héritage de Juan. Il a laissé des informations spécifiques pour vous en tant que son épouse. Comment puis-je vous aider aujourd'hui ?\"",
+          },
+          hash: "4bc8479f984ac582506e0e1700e99e61",
+        },
+        "5/0/init/body/4/argument/15/5/1/1/7": {
+          content: {
+            de: "Einfühlsame KI, die deine Liebsten begleitet",
+            en: "Empathetic AI that guides your loved ones",
+            es: "IA empática que guía a tus seres queridos",
+            fr: "IA empathique qui guide vos proches",
+          },
+          hash: "27395cc262f61f7b5aaf2327b9ea09e6",
+        },
+        "5/0/init/body/4/argument/15/5/3/1": {
+          content: {
+            de: "🤖 Einfühlsamer KI-Assistent",
+            en: "🤖 Empathetic AI Assistant",
+            es: "🤖 Asistente IA empático",
+            fr: "🤖 Assistant IA empathique",
+          },
+          hash: "30809b7f3794087638a7b11c4712a1d9",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/1/3/1": {
+          content: {
+            de: "Natürliche Konversation",
+            en: "Natural Conversation",
+            es: "Conversación natural",
+            fr: "Conversation naturelle",
+          },
+          hash: "33cb6cd76dc3f7cdd485c176217c6ed9",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/1/3/3": {
+          content: {
+            de: "Spricht, als wäre es dein geliebter Mensch, mit Empathie und Verständnis",
+            en: "Speaks as if it were your loved one, with empathy and understanding",
+            es: "Habla como si fuera tu ser querido, con empatía y comprensión",
+            fr: "S'exprime comme s'il s'agissait de votre proche, avec empathie et compréhension",
+          },
+          hash: "97c4276b2db61e3d55601551a204adee",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/3/3/1": {
+          content: {
+            de: "Kontextbezogener Zugriff",
+            en: "Contextual Access",
+            es: "Acceso contextual",
+            fr: "Accès contextuel",
+          },
+          hash: "8438def2dbc11d23ea664d173d378adf",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/3/3/3": {
+          content: {
+            de: "Zeigt nur relevante Informationen basierend auf Beziehung und Berechtigungen",
+            en: "Only shows relevant information based on relationship and permissions",
+            es: "Solo muestra información relevante según la relación y los permisos",
+            fr: "Affiche uniquement les informations pertinentes selon la relation et les autorisations",
+          },
+          hash: "7c30e3833c955f5e8d6a3a65a4d4c0f8",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/5/3/1": {
+          content: {
+            de: "Intelligente Sicherheit",
+            en: "Smart Security",
+            es: "Seguridad inteligente",
+            fr: "Sécurité intelligente",
+          },
+          hash: "d65ce86082c6f8397f3fa71b1db81ff2",
+        },
+        "5/0/init/body/4/argument/15/5/3/3/5/3/3": {
+          content: {
+            de: "Überprüft die Identität und führt Zugriffsprotokolle für Audits",
+            en: "Verifies identity and maintains access logs for auditing",
+            es: "Verifica la identidad y mantiene registros de acceso para auditorías",
+            fr: "Vérifie l'identité et conserve des journaux d'accès pour l'audit",
+          },
+          hash: "3e6aebcfc2d6f99420ff11c16c2380dd",
+        },
+        "5/0/init/body/4/argument/19/1/1": {
+          content: {
             de: "Hauptfunktionen",
             en: "Key Features",
             es: "Características principales",
@@ -5136,7 +5352,7 @@ export default {
           },
           hash: "41a63bf2397915e9e643197b7d891814",
         },
-        "5/0/init/body/4/argument/15/1/3": {
+        "5/0/init/body/4/argument/19/1/3": {
           content: {
             de: "Modernste Technologie zum Schutz dessen, was am wichtigsten ist",
             en: "Cutting-edge technology designed to protect what matters most",
@@ -5144,24 +5360,6 @@ export default {
             fr: "Technologie de pointe conçue pour protéger ce qui compte le plus",
           },
           hash: "a4b69764b8fdcd52cf5af9d1d500891b",
-        },
-        "5/0/init/body/4/argument/19/1/1": {
-          content: {
-            de: "So funktioniert es",
-            en: "How It Works",
-            es: "Cómo funciona",
-            fr: "Comment ça fonctionne",
-          },
-          hash: "de489cfbefd5cf0c241953ca9daa875e",
-        },
-        "5/0/init/body/4/argument/19/1/3": {
-          content: {
-            de: "Drei einfache Schritte zum dauerhaften Schutz deines digitalen Erbes",
-            en: "Three simple steps to protect your digital legacy forever",
-            es: "Tres simples pasos para proteger tu legado digital para siempre",
-            fr: "Trois étapes simples pour protéger votre héritage numérique pour toujours",
-          },
-          hash: "9ffdc3ebd0eeb5a50624227f2a84cd7a",
         },
         "5/0/init/body/4/argument/19/3/1/1": {
           content: {
@@ -5246,21 +5444,21 @@ export default {
         },
         "5/0/init/body/4/argument/23/1/1": {
           content: {
-            de: "Schütze dein digitales Erbe noch heute",
-            en: "Protect Your Digital Legacy Today",
-            es: "Protege tu legado digital hoy",
-            fr: "Protégez votre héritage numérique dès aujourd'hui",
+            de: "So funktioniert es",
+            en: "How It Works",
+            es: "Cómo funciona",
+            fr: "Comment ça fonctionne",
           },
-          hash: "0c210d6bc42817ac382be4815ef52b26",
+          hash: "de489cfbefd5cf0c241953ca9daa875e",
         },
         "5/0/init/body/4/argument/23/1/3": {
           content: {
-            de: "Warte nicht, bis es zu spät ist. Beginne jetzt, deine digitalen Informationen zu schützen und stelle sicher, dass deine Liebsten Zugang zu dem haben, was sie brauchen.",
-            en: "Don't wait until it's too late. Start protecting your digital information and ensure your loved ones have access to what they need.",
-            es: "No esperes hasta que sea demasiado tarde. Comienza a proteger tu información digital y asegúrate de que tus seres queridos tengan acceso a lo que necesitan.",
-            fr: "N'attendez pas qu'il soit trop tard. Commencez à protéger vos informations numériques et assurez-vous que vos proches aient accès à ce dont ils ont besoin.",
+            de: "Drei einfache Schritte zum dauerhaften Schutz deines digitalen Erbes",
+            en: "Three simple steps to protect your digital legacy forever",
+            es: "Tres simples pasos para proteger tu legado digital para siempre",
+            fr: "Trois étapes simples pour protéger votre héritage numérique pour toujours",
           },
-          hash: "cea521b89246f18635dabb22a7082053",
+          hash: "9ffdc3ebd0eeb5a50624227f2a84cd7a",
         },
         "5/0/init/body/4/argument/23/1/5/1/3": {
           content: {
@@ -5307,23 +5505,149 @@ export default {
           },
           hash: "7d0248dd9abb2f2e92048b3a4c8ba66d",
         },
+        "5/0/init/body/4/argument/23/3/1/1": {
+          content: {
+            de: "1",
+            en: "1",
+            es: "1",
+            fr: "1",
+          },
+          hash: "cbc75be59348215d0a0d3f4dc01854f2",
+        },
+        "5/0/init/body/4/argument/23/3/1/3": {
+          content: {
+            de: "Erstelle deine Kapseln",
+            en: "Create Your Capsules",
+            es: "Crea tus cápsulas",
+            fr: "Créez vos capsules",
+          },
+          hash: "95ac8decbe10f44a00c813be191651ef",
+        },
+        "5/0/init/body/4/argument/23/3/1/5": {
+          content: {
+            de: "Speichere Passwörter, Nachrichten, Anweisungen und digitale Vermögenswerte in sicheren und verschlüsselten Kapseln.",
+            en: "Store passwords, messages, instructions and digital assets in secure and encrypted capsules.",
+            es: "Almacena contraseñas, mensajes, instrucciones y activos digitales en cápsulas seguras y encriptadas.",
+            fr: "Stockez mots de passe, messages, instructions et actifs numériques dans des capsules sécurisées et chiffrées.",
+          },
+          hash: "3f6165f5799a77aa76d4f5d99705ce3d",
+        },
+        "5/0/init/body/4/argument/23/3/3/1": {
+          content: {
+            de: "2",
+            en: "2",
+            es: "2",
+            fr: "2",
+          },
+          hash: "cd803565c478dd4ec8fd8b37507aa0e5",
+        },
+        "5/0/init/body/4/argument/23/3/3/3": {
+          content: {
+            de: "Konfiguriere Zugangsschlüssel",
+            en: "Configure Access Keys",
+            es: "Configura claves de acceso",
+            fr: "Configurez les clés d'accès",
+          },
+          hash: "854b08ce82ddd6d6b2a01105a18b68cc",
+        },
+        "5/0/init/body/4/argument/23/3/3/5": {
+          content: {
+            de: "Erstelle spezifische Zugangsschlüssel für jede Person und kontrolliere genau, was sie sehen können.",
+            en: "Generate specific access keys for each person, controlling exactly what they can see.",
+            es: "Genera claves de acceso específicas para cada persona, controlando exactamente lo que pueden ver.",
+            fr: "Générez des clés d'accès spécifiques pour chaque personne, en contrôlant exactement ce qu'elles peuvent voir.",
+          },
+          hash: "2dbb78cba73a0532e39b673684c80ce5",
+        },
+        "5/0/init/body/4/argument/23/3/5/1": {
+          content: {
+            de: "3",
+            en: "3",
+            es: "3",
+            fr: "3",
+          },
+          hash: "6078bfcd8480fd2bdc3f1cc9b4507751",
+        },
+        "5/0/init/body/4/argument/23/3/5/3": {
+          content: {
+            de: "Automatischer Zugriff",
+            en: "Automatic Access",
+            es: "Acceso automático",
+            fr: "Accès automatique",
+          },
+          hash: "12382d4db2a975031ccd27f4e906df8c",
+        },
+        "5/0/init/body/4/argument/23/3/5/5": {
+          content: {
+            de: "Sobald die Freigabebedingungen erfüllt sind, können deine Liebsten über den Guardian Angel – eine einfühlsame KI, die deine letzten Worte übermittelt – auf dein Vermächtnis zugreifen.",
+            en: "Once the unlock conditions are met, your loved ones will be able to access your legacy through the Guardian Angel — a compassionate AI that delivers your final words.",
+            es: "Una vez que se cumplan las condiciones de desbloqueo, tus seres queridos podrán acceder a tu legado a través del Ángel Guardián — una IA compasiva que entrega tus últimas palabras.",
+            fr: "Une fois les conditions de déverrouillage remplies, vos proches pourront accéder à votre héritage via l'Ange Gardien — une IA compatissante qui délivre vos dernières volontés.",
+          },
+          hash: "47b50f0fc5361207711ece1f136da7c8",
+        },
         "5/0/init/body/4/argument/27/1/1": {
           content: {
-            de: "Hast du Fragen?",
-            en: "Have Questions?",
-            es: "¿Tienes preguntas?",
-            fr: "Des questions ?",
+            de: "Schütze dein digitales Erbe noch heute",
+            en: "Protect Your Digital Legacy Today",
+            es: "Protege tu legado digital hoy",
+            fr: "Protégez votre héritage numérique dès aujourd'hui",
           },
-          hash: "9eaf406d5afd72b5d5f2d3862775bc70",
+          hash: "0c210d6bc42817ac382be4815ef52b26",
         },
         "5/0/init/body/4/argument/27/1/3": {
           content: {
-            de: "Wir helfen dir, dein digitales Erbe zu schützen. Kontaktiere uns bei Fragen.",
-            en: "We're here to help you protect your digital legacy. Contact us for any questions.",
-            es: "Estamos aquí para ayudarte a proteger tu legado digital. Contáctanos para cualquier consulta.",
-            fr: "Nous sommes là pour vous aider à protéger votre héritage numérique. Contactez-nous pour toute question.",
+            de: "Warte nicht, bis es zu spät ist. Beginne jetzt, deine digitalen Informationen zu schützen und stelle sicher, dass deine Liebsten Zugang zu dem haben, was sie brauchen.",
+            en: "Don't wait until it's too late. Start protecting your digital information and ensure your loved ones have access to what they need.",
+            es: "No esperes hasta que sea demasiado tarde. Comienza a proteger tu información digital y asegúrate de que tus seres queridos tengan acceso a lo que necesitan.",
+            fr: "N'attendez pas qu'il soit trop tard. Commencez à protéger vos informations numériques et assurez-vous que vos proches aient accès à ce dont ils ont besoin.",
           },
-          hash: "389256344a19a415c7cbaa270cf89301",
+          hash: "cea521b89246f18635dabb22a7082053",
+        },
+        "5/0/init/body/4/argument/27/1/5/1/3": {
+          content: {
+            de: "Mit Guardian Angel KI chatten",
+            en: "Chat with Guardian Angel AI",
+            es: "Chatear con la IA Ángel Guardián",
+            fr: "Discuter avec l'IA Ange Gardien",
+          },
+          hash: "699bf1835b50c32e4c463afe7163f8f3",
+        },
+        "5/0/init/body/4/argument/27/1/5/3/expression/right/3": {
+          content: {
+            de: "Konto erstellen",
+            en: "Create Account",
+            es: "Crear cuenta",
+            fr: "Créer un compte",
+          },
+          hash: "3c3c9666b2acc1404eaa89e34e17f946",
+        },
+        "5/0/init/body/4/argument/27/1/7/1/3": {
+          content: {
+            de: "AES-256-Verschlüsselung",
+            en: "AES-256 Encryption",
+            es: "Encriptación AES-256",
+            fr: "Chiffrement AES-256",
+          },
+          hash: "d49f6e1300bd990a90efb07380655a8e",
+        },
+        "5/0/init/body/4/argument/27/1/7/3/3": {
+          content: {
+            de: "5-Minuten-Einrichtung",
+            en: "5-minute setup",
+            es: "Configuración en 5 minutos",
+            fr: "Configuration en 5 minutes",
+          },
+          hash: "2aee046d476c420ca7d92643df7367cb",
+        },
+        "5/0/init/body/4/argument/27/1/7/5/3": {
+          content: {
+            de: "Seelenfrieden für immer",
+            en: "Peace of mind forever",
+            es: "Tranquilidad para siempre",
+            fr: "Tranquillité d'esprit pour toujours",
+          },
+          hash: "7d0248dd9abb2f2e92048b3a4c8ba66d",
         },
         "5/0/init/body/4/argument/27/3/1/1/3/1": {
           content: {
@@ -5378,6 +5702,15 @@ export default {
             fr: "Du lundi au vendredi, de 9 h à 18 h EST. Support prioritaire pour les utilisateurs premium.",
           },
           hash: "8b08be21b6d82ffde3134f23b59943f4",
+        },
+        "5/0/init/body/4/argument/3/1-alt": {
+          content: {
+            de: "Weißes Blitz-Abzeichen",
+            en: "White Bolt Badge",
+            es: "Insignia de rayo blanco",
+            fr: "Badge éclair blanc",
+          },
+          hash: "2d768188e1557d37697478088294e42e",
         },
         "5/0/init/body/4/argument/3/3": {
           content: {
@@ -5442,6 +5775,15 @@ export default {
           },
           hash: "0608737b6e47f076cc9dddb6d9acb983",
         },
+        "5/0/init/body/4/argument/31/1/1": {
+          content: {
+            de: "Hast du Fragen?",
+            en: "Have Questions?",
+            es: "¿Tienes preguntas?",
+            fr: "Des questions ?",
+          },
+          hash: "9eaf406d5afd72b5d5f2d3862775bc70",
+        },
         "5/0/init/body/4/argument/31/1/1/1": {
           content: {
             de: "Durch die Nutzung von EternalVault stimmst du unseren Nutzungsbedingungen zu. Deine Privatsphäre und Sicherheit haben für uns höchste Priorität.",
@@ -5496,6 +5838,123 @@ export default {
           },
           hash: "cc2a66f2271dd66d65ab96ff2dee4933",
         },
+        "5/0/init/body/4/argument/31/1/3": {
+          content: {
+            de: "Wir helfen dir, dein digitales Erbe zu schützen. Kontaktiere uns bei Fragen.",
+            en: "We're here to help you protect your digital legacy. Contact us for any questions.",
+            es: "Estamos aquí para ayudarte a proteger tu legado digital. Contáctanos para cualquier consulta.",
+            fr: "Nous sommes là pour vous aider à protéger votre héritage numérique. Contactez-nous pour toute question.",
+          },
+          hash: "389256344a19a415c7cbaa270cf89301",
+        },
+        "5/0/init/body/4/argument/31/3/1/1/3/1": {
+          content: {
+            de: "E-Mail",
+            en: "Email",
+            es: "Email",
+            fr: "E-mail",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "5/0/init/body/4/argument/31/3/1/1/3/3": {
+          content: {
+            de: "support@eternalvault.com",
+            en: "support@eternalvault.com",
+            es: "support@eternalvault.com",
+            fr: "support@eternalvault.com",
+          },
+          hash: "073502c0223eedb21f98278ce2e2423f",
+        },
+        "5/0/init/body/4/argument/31/3/1/3": {
+          content: {
+            de: "Antwort in weniger als 24 Stunden. Technischer Support und allgemeine Anfragen.",
+            en: "Response in less than 24 hours. Technical support and general inquiries.",
+            es: "Respuesta en menos de 24 horas. Soporte técnico y consultas generales.",
+            fr: "Réponse en moins de 24 heures. Support technique et demandes générales.",
+          },
+          hash: "d75a9b04a0ca41660005e50b97d41c00",
+        },
+        "5/0/init/body/4/argument/31/3/3/1/3/1": {
+          content: {
+            de: "Telefon",
+            en: "Phone",
+            es: "Teléfono",
+            fr: "Téléphone",
+          },
+          hash: "b9537ee90fc5b0116942e0af29d926cc",
+        },
+        "5/0/init/body/4/argument/31/3/3/1/3/3": {
+          content: {
+            de: "+1 (555) 123-4567",
+            en: "+1 (555) 123-4567",
+            es: "+1 (555) 123-4567",
+            fr: "+1 (555) 123-4567",
+          },
+          hash: "d39074f6a278f108c68084ddcef63dbf",
+        },
+        "5/0/init/body/4/argument/31/3/3/3": {
+          content: {
+            de: "Montag bis Freitag, 9:00 - 18:00 Uhr EST. Vorrangiger Support für Premium-Nutzer.",
+            en: "Monday to Friday, 9:00 AM - 6:00 PM EST. Priority support for premium users.",
+            es: "Lunes a viernes, 9:00 AM - 6:00 PM EST. Soporte prioritario para usuarios premium.",
+            fr: "Du lundi au vendredi, de 9 h à 18 h EST. Support prioritaire pour les utilisateurs premium.",
+          },
+          hash: "8b08be21b6d82ffde3134f23b59943f4",
+        },
+        "5/0/init/body/4/argument/35/1/1/1": {
+          content: {
+            de: "Durch die Nutzung von EternalVault stimmst du unseren Nutzungsbedingungen zu. Deine Privatsphäre und Sicherheit haben für uns höchste Priorität.",
+            en: "By using EternalVault, you agree to our terms and conditions. Your privacy and security are our top priorities.",
+            es: "Al usar EternalVault, aceptas nuestros términos y condiciones. Tu privacidad y seguridad son nuestras principales prioridades.",
+            fr: "En utilisant EternalVault, vous acceptez nos conditions générales. Votre confidentialité et votre sécurité sont nos priorités absolues.",
+          },
+          hash: "2de25720d05d275cbedf886ba29a8b13",
+        },
+        "5/0/init/body/4/argument/35/1/1/3/1/3": {
+          content: {
+            de: "Nutzungsbedingungen",
+            en: "Terms & Conditions",
+            es: "Términos y condiciones",
+            fr: "Conditions générales",
+          },
+          hash: "69d0219661f5fa7c1536e6f883925fb2",
+        },
+        "5/0/init/body/4/argument/35/1/1/3/3": {
+          content: {
+            de: "•",
+            en: "•",
+            es: "•",
+            fr: "•",
+          },
+          hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+        },
+        "5/0/init/body/4/argument/35/1/1/3/5": {
+          content: {
+            de: "Datenschutzrichtlinie",
+            en: "Privacy Policy",
+            es: "Política de privacidad",
+            fr: "Politique de confidentialité",
+          },
+          hash: "085c4c74960bec8d81fee4772c315f1e",
+        },
+        "5/0/init/body/4/argument/35/1/1/3/7": {
+          content: {
+            de: "•",
+            en: "•",
+            es: "•",
+            fr: "•",
+          },
+          hash: "5f1c90d0fd46023ba1bfaaa2537f59fb",
+        },
+        "5/0/init/body/4/argument/35/1/1/3/9": {
+          content: {
+            de: "Rechtliche Informationen",
+            en: "Legal Information",
+            es: "Información legal",
+            fr: "Informations légales",
+          },
+          hash: "cc2a66f2271dd66d65ab96ff2dee4933",
+        },
         "5/0/init/body/4/argument/7/1/1": {
           content: {
             de: "Das Problem, das niemand kommen sieht",
@@ -5513,6 +5972,69 @@ export default {
             fr: "Chaque jour, des millions de familles perdent définitivement l'accès à des informations numériques critiques. Qu'adviendra-t-il de votre héritage numérique lorsque vous ne serez plus là ?",
           },
           hash: "dd9b723d8e54bb770ac77e527b388bc9",
+        },
+        "5/0/init/body/4/argument/7/3": {
+          content: {
+            de: "Dein digitales Erbe<element:br></element:br><element:span>für immer geschützt</element:span>",
+            en: "Your Digital Legacy<element:br></element:br><element:span>Protected Forever</element:span>",
+            es: "Tu legado digital<element:br></element:br><element:span>protegido para siempre</element:span>",
+            fr: "Votre héritage numérique<element:br></element:br><element:span>protégé pour toujours</element:span>",
+          },
+          hash: "630c77f88b8dc360fc1b67a9cf5e43c4",
+        },
+        "5/0/init/body/4/argument/7/5": {
+          content: {
+            de: "EternalVault ist die sicherste Plattform zum Schutz und zur Übermittlung deiner wichtigsten digitalen Informationen. Wenn du nicht mehr da bist, wird dein digitales Erbe sicher und für diejenigen zugänglich sein, die es am meisten brauchen.",
+            en: "EternalVault is the most secure platform to protect and transmit your most important digital information. When you're no longer here, your digital legacy will be safe and accessible to those who need it most.",
+            es: "EternalVault es la plataforma más segura para proteger y transmitir tu información digital más importante. Cuando ya no estés aquí, tu legado digital estará seguro y accesible para quienes más lo necesiten.",
+            fr: "EternalVault est la plateforme la plus sécurisée pour protéger et transmettre vos informations numériques les plus importantes. Lorsque vous ne serez plus là, votre héritage numérique sera en sécurité et accessible à ceux qui en ont le plus besoin.",
+          },
+          hash: "85cc72703e3a4841ee9f67ca5295205d",
+        },
+        "5/0/init/body/4/argument/7/7/1/3": {
+          content: {
+            de: "Mit Guardian Angel KI chatten",
+            en: "Chat with Guardian Angel AI",
+            es: "Chatear con la IA Ángel Guardián",
+            fr: "Discuter avec l'IA Ange Gardien",
+          },
+          hash: "699bf1835b50c32e4c463afe7163f8f3",
+        },
+        "5/0/init/body/4/argument/7/7/3/expression/right/3": {
+          content: {
+            de: "Mein Erbe erstellen",
+            en: "Create My Legacy",
+            es: "Crear mi legado",
+            fr: "Créer mon héritage",
+          },
+          hash: "0971909fecc806c0167a5da41e1cb02c",
+        },
+        "5/0/init/body/4/argument/7/9/1/3": {
+          content: {
+            de: "Für immer sicher, damit Ihre Erinnerungen weiterleben",
+            en: "Forever safe, so your memory lives on",
+            es: "Seguro para siempre, para que tu memoria perdure",
+            fr: "En sécurité pour toujours, pour que votre mémoire perdure",
+          },
+          hash: "230c677cd580ffc20305a630a961a7d9",
+        },
+        "5/0/init/body/4/argument/7/9/3/3": {
+          content: {
+            de: "Militärische Verschlüsselung",
+            en: "Military encryption",
+            es: "Encriptación militar",
+            fr: "Chiffrement militaire",
+          },
+          hash: "f95f22a69bce720b796e7dc22d78b91c",
+        },
+        "5/0/init/body/4/argument/7/9/5/3": {
+          content: {
+            de: "Sofortiger Zugriff für Ihre Liebsten",
+            en: "Immediate access for your loved ones",
+            es: "Acceso inmediato para tus seres queridos",
+            fr: "Accès immédiat pour vos proches",
+          },
+          hash: "0608737b6e47f076cc9dddb6d9acb983",
         },
       },
     },

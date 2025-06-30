@@ -66,6 +66,15 @@ const Home: React.FC = () => {
 
   return (
     <div className="space-y-12 lg:space-y-16">
+      {/* Fixed Image in Top Right Corner */}
+      <div className="fixed top-4 right-4 z-50 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+        <img 
+          src="/white_bolt_badge.svg" 
+          alt="White Bolt Badge" 
+          className="w-full h-full object-contain"
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="text-center py-8 lg:py-16">
         <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl lg:rounded-3xl flex items-center justify-center mx-auto mb-6 lg:mb-8">

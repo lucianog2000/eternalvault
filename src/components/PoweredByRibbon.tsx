@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Database, Zap, Bot, Volume2, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const PoweredByRibbon: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -7,31 +7,47 @@ const PoweredByRibbon: React.FC = () => {
   const technologies = [
     {
       name: 'Supabase',
-      icon: Database,
+      image: '/supabase.svg',
       description: 'Database & Auth',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-slate-600 to-slate-700',
       status: 'active',
       url: 'https://supabase.com'
     },
     {
+      name: 'RevenueCat',
+      image: '/revenueCat.svg',
+      description: 'Subscription Management',
+      color: 'from-blue-500 to-cyan-500',
+      status: 'active',
+      url: 'https://revenuecat.com'
+    },
+    {
       name: 'Lingo.dev',
-      icon: Zap,
+      image: '/lingo.svg',
       description: 'AI Translation',
       color: 'from-blue-500 to-cyan-500',
       status: 'active',
       url: 'https://lingo.dev'
     },
     {
-      name: 'Bolt',
-      icon: Bot,
-      description: 'AI Development',
-      color: 'from-purple-500 to-pink-500',
+      name: 'Netlify',
+      image: '/white_netlify.svg',
+      description: 'Hosting',
+      color: 'from-blue-500 to-cyan-500',
       status: 'active',
-      url: 'https://bolt.new'
+      url: 'https://netlify.com'
+    },
+    {
+      name: 'Entri',
+      image: '/white_entry.svg',
+      description: 'Domain Registration',
+      color: 'from-blue-500 to-cyan-500',
+      status: 'active',
+      url: 'https://www.entri.com/'
     },
     {
       name: 'ElevenLabs',
-      icon: Volume2,
+      image: '/white_elevenLabs.svg',
       description: 'Voice AI',
       color: 'from-orange-500 to-red-500',
       status: 'soon',
@@ -70,19 +86,19 @@ const PoweredByRibbon: React.FC = () => {
             <span className="text-white/60 text-xs font-medium">Powered by</span>
           </div>
           
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             {technologies.map((tech, index) => (
               <div
                 key={tech.name}
-                className="group relative flex flex-col items-center"
+                className="group relative flex flex-col items-center w-16"
               >
                 {/* Technology Icon */}
                 <div 
-                  className={`w-8 h-8 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center relative transition-all group-hover:scale-110 cursor-pointer hover:shadow-lg`}
+                  className={`w-8 h-8 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center relative transition-all group-hover:scale-110 cursor-pointer hover:shadow-lg p-1`}
                   onClick={() => handleTechClick(tech)}
                   title={tech.description}
                 >
-                  <tech.icon className="w-4 h-4 text-white" />
+                  <img src={tech.image} alt={tech.name} className="w-5 h-5 object-contain" />
                   
                   {/* Soon Badge */}
                   {tech.status === 'soon' && (
@@ -94,7 +110,7 @@ const PoweredByRibbon: React.FC = () => {
                 
                 {/* Technology Name */}
                 <span 
-                  className="text-white/70 text-xs mt-1 font-medium transition-colors group-hover:text-white cursor-pointer hover:text-purple-300"
+                  className="text-white/70 text-xs mt-1 font-medium transition-colors group-hover:text-white cursor-pointer hover:text-purple-300 text-center leading-tight"
                   onClick={() => handleTechClick(tech)}
                   title={tech.description}
                 >
