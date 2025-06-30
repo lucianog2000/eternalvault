@@ -565,6 +565,8 @@ export default {
           content: {
             de: "Zugriffsschlüssel werden geladen...",
             en: "Loading access keys...",
+            es: "Cargando claves de acceso...",
+            fr: "Chargement des clés d'accès...",
           },
           hash: "51b00c01b5c3b87a1f5ad7a64cb5ca00",
         },
@@ -572,6 +574,8 @@ export default {
           content: {
             de: "Aktive Schlüssel",
             en: "Active Keys",
+            es: "Claves activas",
+            fr: "Clés actives",
           },
           hash: "8f27485be69104a1376e73b70103fa16",
         },
@@ -579,6 +583,8 @@ export default {
           content: {
             de: "Funktionierend",
             en: "Working",
+            es: "Funcionando",
+            fr: "Fonctionnelles",
           },
           hash: "3fb32ff075af7daafe4ecce361322026",
         },
@@ -586,6 +592,8 @@ export default {
           content: {
             de: "Abgelaufen",
             en: "Expired",
+            es: "Expiradas",
+            fr: "Expirées",
           },
           hash: "63b27cccba4ab2143e0f5f3d46e4168a",
         },
@@ -593,6 +601,8 @@ export default {
           content: {
             de: "Gesamtzugriffe",
             en: "Total Access",
+            es: "Acceso total",
+            fr: "Accès total",
           },
           hash: "0fed120173c776f62e3eb9961790381a",
         },
@@ -600,6 +610,8 @@ export default {
           content: {
             de: "✅ Zugriffsschlüssel erfolgreich erstellt",
             en: "✅ Access Key Created Successfully",
+            es: "✅ Clave de acceso creada con éxito",
+            fr: "✅ Clé d'accès créée avec succès",
           },
           hash: "2804d2b166c9f95a234d831f409243ee",
         },
@@ -607,6 +619,8 @@ export default {
           content: {
             de: "Schlüssel kopieren",
             en: "Copy key",
+            es: "Copiar clave",
+            fr: "Copier la clé",
           },
           hash: "4930a9f1b473f7b072f0c84c63ece133",
         },
@@ -614,6 +628,8 @@ export default {
           content: {
             de: "🚨 KRITISCH: Speichern Sie diesen Schlüssel jetzt",
             en: "🚨 CRITICAL: Save this key now",
+            es: "🚨 CRÍTICO: Guarda esta clave ahora",
+            fr: "🚨 CRITIQUE : Enregistrez cette clé maintenant",
           },
           hash: "f0e6c894493fd7da4cd7d12ad532b0d2",
         },
@@ -621,6 +637,8 @@ export default {
           content: {
             de: "Dies ist das EINZIGE Mal, dass Sie diesen Schlüssel sehen werden. Sobald Sie dieses Fenster schließen, kann er nicht wiederhergestellt oder erneut angezeigt werden. Sie sind zu 100 % dafür verantwortlich, diesen Schlüssel sicher zu speichern und zu verteilen.",
             en: "This is the ONLY time you will see this key. Once you close this window, it cannot be recovered or viewed again. You are 100% responsible for storing and distributing this key securely.",
+            es: "Esta es la ÚNICA vez que verás esta clave. Una vez que cierres esta ventana, no podrá ser recuperada ni vista de nuevo. Eres 100% responsable de almacenar y distribuir esta clave de forma segura.",
+            fr: "C'est la SEULE fois que vous verrez cette clé. Une fois cette fenêtre fermée, elle ne pourra plus être récupérée ou visualisée. Vous êtes 100 % responsable du stockage et de la distribution sécurisée de cette clé.",
           },
           hash: "e8b63a812f83b9f8a5e54ebbe584662c",
         },
@@ -628,6 +646,8 @@ export default {
           content: {
             de: "Schlüssel kopieren",
             en: "Copy Key",
+            es: "Copiar clave",
+            fr: "Copier la clé",
           },
           hash: "8f4f13acec7abf7c3aa6e680b6da99f8",
         },
@@ -635,6 +655,8 @@ export default {
           content: {
             de: "Ich habe den Schlüssel gespeichert - Schließen",
             en: "I have saved the key - Close",
+            es: "He guardado la clave - Cerrar",
+            fr: "J'ai sauvegardé la clé - Fermer",
           },
           hash: "ac87ba96bbaa3ea07acee1c2088c70f1",
         },
@@ -642,6 +664,8 @@ export default {
           content: {
             de: "Aktive Zugriffsschlüssel",
             en: "Active Access Keys",
+            es: "Claves de acceso activas",
+            fr: "Clés d'accès actives",
           },
           hash: "48137798b00bc197e1db3e8f018ad0c9",
         },
@@ -649,6 +673,8 @@ export default {
           content: {
             de: "Jeder Schlüssel definiert eine Gruppe von Kapseln für spezifischen Zugriff",
             en: "Each key defines a group of capsules for specific access",
+            es: "Cada clave define un grupo de cápsulas para acceso específico",
+            fr: "Chaque clé définit un groupe de capsules pour un accès spécifique",
           },
           hash: "b3ce5927ae5977a903146b9f2a1306d4",
         },
@@ -656,6 +682,8 @@ export default {
           content: {
             de: "{accessKeys.length} aktive<expression/> Schlüssel",
             en: "{accessKeys.length} active key<expression/>",
+            es: "{accessKeys.length} clave<expression/> activa<expression/>",
+            fr: "{accessKeys.length} clé<expression/> active<expression/>",
           },
           hash: "f055eb6325c9b520eaff408fc6e6daae",
         },
@@ -664,6 +692,8 @@ export default {
             content: {
               de: "Aktiv",
               en: "Active",
+              es: "Activa",
+              fr: "Active",
             },
             hash: "3e1ec025c4a50830bbb9ad57a176630a",
           },
@@ -672,6 +702,8 @@ export default {
             content: {
               de: "Abgelaufen",
               en: "Expired",
+              es: "Expirada",
+              fr: "Expirée",
             },
             hash: "54df90bcc08fbc121668cb7d08f6c283",
           },
@@ -680,6 +712,8 @@ export default {
             content: {
               de: "Läuft ab: <function:Date.toLocaleDateString/>",
               en: "Expires: <function:Date.toLocaleDateString/>",
+              es: "Expira: <function:Date.toLocaleDateString/>",
+              fr: "Expire le : <function:Date.toLocaleDateString/>",
             },
             hash: "b87055288e32812f6fe319ba6aeda02c",
           },
@@ -688,6 +722,8 @@ export default {
             content: {
               de: "Schlüssel: ••••••••••••••••••••••••••••••••••••••••",
               en: "Key: ••••••••••••••••••••••••••••••••••••••••",
+              es: "Clave: ••••••••••••••••••••••••••••••••••••••••",
+              fr: "Clé : ••••••••••••••••••••••••••••••••••••••••",
             },
             hash: "f3121486baf9e3655abff8c0dd85abed",
           },
@@ -696,6 +732,8 @@ export default {
             content: {
               de: "Aus Sicherheitsgründen verborgen",
               en: "Hidden for security",
+              es: "Oculta por seguridad",
+              fr: "Masquée pour des raisons de sécurité",
             },
             hash: "ff4a9755cd9a190431863398091273ce",
           },
@@ -704,6 +742,8 @@ export default {
             content: {
               de: "🔒 Zugriffsschlüssel werden nach der Erstellung für maximale Sicherheit nie angezeigt",
               en: "🔒 Access keys are never displayed after creation for maximum security",
+              es: "🔒 Las claves de acceso nunca se muestran después de su creación para máxima seguridad",
+              fr: "🔒 Les clés d'accès ne sont jamais affichées après leur création pour une sécurité maximale",
             },
             hash: "4e199869be42c0e9a8d4c95a60c8b318",
           },
@@ -712,6 +752,8 @@ export default {
             content: {
               de: "<expression/> Kapsel<expression/>",
               en: "<expression/> capsule<expression/>",
+              es: "<expression/> cápsula<expression/>",
+              fr: "<expression/> capsule<expression/>",
             },
             hash: "bead03e943a09a749bf2bab4341e9884",
           },
@@ -720,6 +762,8 @@ export default {
             content: {
               de: "{accessKey.access_count} Zugriff<expression/>",
               en: "{accessKey.access_count} access<expression/>",
+              es: "{accessKey.access_count} acceso<expression/>",
+              fr: "{accessKey.access_count} accès",
             },
             hash: "cba79fc1325325ae0d849b28705ad572",
           },
@@ -728,6 +772,8 @@ export default {
             content: {
               de: "Erstellt: <function:Date.toLocaleDateString/>",
               en: "Created: <function:Date.toLocaleDateString/>",
+              es: "Creada: <function:Date.toLocaleDateString/>",
+              fr: "Créée le : <function:Date.toLocaleDateString/>",
             },
             hash: "646d864aab5966792b627be467287682",
           },
@@ -736,6 +782,8 @@ export default {
             content: {
               de: "Letzter Zugriff: <function:Date.toLocaleDateString/>",
               en: "Last access: <function:Date.toLocaleDateString/>",
+              es: "Último acceso: <function:Date.toLocaleDateString/>",
+              fr: "Dernier accès : <function:Date.toLocaleDateString/>",
             },
             hash: "1a774f6ecbbeac3793c2c6f9785d8622",
           },
@@ -744,6 +792,8 @@ export default {
             content: {
               de: "Details anzeigen",
               en: "View details",
+              es: "Ver detalles",
+              fr: "Voir les détails",
             },
             hash: "885f3ad1c2e448d104a45c0291b79ba5",
           },
@@ -752,6 +802,8 @@ export default {
             content: {
               de: "Schlüssel neu generieren (alter Schlüssel wird nicht mehr funktionieren)",
               en: "Regenerate key (old key will stop working)",
+              es: "Regenerar clave (la clave antigua dejará de funcionar)",
+              fr: "Régénérer la clé (l'ancienne clé cessera de fonctionner)",
             },
             hash: "df3cc4bc521a1a909e7cb2f291d46cf7",
           },
@@ -760,6 +812,8 @@ export default {
             content: {
               de: "Schlüssel dauerhaft löschen",
               en: "Delete key permanently",
+              es: "Eliminar clave permanentemente",
+              fr: "Supprimer définitivement la clé",
             },
             hash: "134d17114763a88e4ed449d52848fe52",
           },
@@ -767,6 +821,8 @@ export default {
           content: {
             de: "Keine aktiven Zugriffsschlüssel",
             en: "No active access keys",
+            es: "No hay claves de acceso activas",
+            fr: "Aucune clé d'accès active",
           },
           hash: "2a7d4929cc5dca87711cc633db15ad65",
         },
@@ -774,6 +830,8 @@ export default {
           content: {
             de: "Ersten Zugriffsschlüssel erstellen",
             en: "Create first access key",
+            es: "Crear primera clave de acceso",
+            fr: "Créer la première clé d'accès",
           },
           hash: "58c3d84126d621da9bad740c54979478",
         },
@@ -781,6 +839,8 @@ export default {
           content: {
             de: "🔑 Vereinfachte Zugriffsschlüssel",
             en: "🔑 Simplified Access Keys",
+            es: "🔑 Claves de acceso simplificadas",
+            fr: "🔑 Clés d'accès simplifiées",
           },
           hash: "155469aac4201762038aa88f00d249bc",
         },
@@ -788,6 +848,8 @@ export default {
           content: {
             de: "So funktioniert es jetzt:",
             en: "How it works now:",
+            es: "Cómo funciona ahora:",
+            fr: "Comment ça fonctionne maintenant :",
           },
           hash: "9a1dc11b192864cdaf66c81244944cfb",
         },
@@ -795,6 +857,8 @@ export default {
           content: {
             de: "• Zugriffsschlüssel werden als eindeutige IDs generiert (kein Hashing)",
             en: "• Access keys are generated as unique IDs (no hashing)",
+            es: "• Las claves de acceso se generan como IDs únicos (sin hash)",
+            fr: "• Les clés d'accès sont générées comme des identifiants uniques (sans hachage)",
           },
           hash: "455d5049c2542dc69ae6eb57bc6337d2",
         },
@@ -802,6 +866,8 @@ export default {
           content: {
             de: "• Direkter Datenbankzugriff über Schlüssel-ID für sofortigen Zugriff",
             en: "• Direct database lookup by key ID for instant access",
+            es: "• Búsqueda directa en la base de datos por ID de clave para acceso instantáneo",
+            fr: "• Recherche directe dans la base de données par ID de clé pour un accès instantané",
           },
           hash: "eaaf9f6cd85d6a8b4cc95ce7121d0a9f",
         },
@@ -809,6 +875,8 @@ export default {
           content: {
             de: "• Keine Verifizierung erforderlich - sofortiger Zugriff auf Kapseln",
             en: "• No verification needed - immediate access to capsules",
+            es: "• No se necesita verificación - acceso inmediato a las cápsulas",
+            fr: "• Aucune vérification nécessaire - accès immédiat aux capsules",
           },
           hash: "2eaa1436559cb79a4144e9734efcc53c",
         },
@@ -816,6 +884,8 @@ export default {
           content: {
             de: "• Perfekt für Hackathon-Demos - einfach und zuverlässig",
             en: "• Perfect for hackathon demo - simple and reliable",
+            es: "• Perfecto para demos de hackathon - simple y confiable",
+            fr: "• Parfait pour les démos de hackathon - simple et fiable",
           },
           hash: "e11bdf4587a97341b67b37ec4d7e998d",
         },
@@ -823,6 +893,8 @@ export default {
           content: {
             de: "Vorteile:",
             en: "Benefits:",
+            es: "Beneficios:",
+            fr: "Avantages :",
           },
           hash: "f5eb2ed889b4898199db3d3b617c7bad",
         },
@@ -830,6 +902,8 @@ export default {
           content: {
             de: "• ✅ Keine Hash-Inkonsistenzen",
             en: "• ✅ No hash inconsistencies",
+            es: "• ✅ Sin inconsistencias de hash",
+            fr: "• ✅ Pas d'incohérences de hachage",
           },
           hash: "e27cd54d4444437ba8ab133d58beffd9",
         },
@@ -837,6 +911,8 @@ export default {
           content: {
             de: "• ✅ Direkter ID-basierter Lookup",
             en: "• ✅ Direct ID-based lookup",
+            es: "• ✅ Búsqueda directa basada en ID",
+            fr: "• ✅ Recherche directe basée sur l'ID",
           },
           hash: "7abe15caee4a1b36e3480f7c768381d0",
         },
@@ -844,6 +920,8 @@ export default {
           content: {
             de: "• ✅ Sofortiger Zugriff ohne Verifizierung",
             en: "• ✅ Instant access without verification",
+            es: "• ✅ Acceso instantáneo sin verificación",
+            fr: "• ✅ Accès instantané sans vérification",
           },
           hash: "973ebbbcbb150a8a344e2482f77668e9",
         },
@@ -851,6 +929,8 @@ export default {
           content: {
             de: "• ✅ Einfach und zuverlässig für Demos",
             en: "• ✅ Simple and reliable for demos",
+            es: "• ✅ Simple y confiable para demos",
+            fr: "• ✅ Simple et fiable pour les démos",
           },
           hash: "21a352c395290b8f57b668b1b94c0756",
         },
@@ -858,6 +938,8 @@ export default {
           content: {
             de: "Zugriffschlüssel-Verwaltung",
             en: "Access Key Management",
+            es: "Gestión de claves de acceso",
+            fr: "Gestion des clés d'accès",
           },
           hash: "b7375644a9b22a253230eb7556b5721b",
         },
@@ -865,6 +947,8 @@ export default {
           content: {
             de: "Erstellen und verwalten Sie sichere Zugriffschlüssel für Ihre Legacy-Kapseln. Jeder Schlüssel definiert eine Gruppe von Kapseln.",
             en: "Create and manage secure access keys for your legacy capsules. Each key defines a group of capsules.",
+            es: "Crea y gestiona claves de acceso seguras para tus cápsulas heredadas. Cada clave define un grupo de cápsulas.",
+            fr: "Créez et gérez des clés d'accès sécurisées pour vos capsules existantes. Chaque clé définit un groupe de capsules.",
           },
           hash: "edef18f2b7ec45c037d659ac5050f727",
         },
@@ -872,6 +956,8 @@ export default {
           content: {
             de: "Neuer Zugriffschlüssel",
             en: "New Access Key",
+            es: "Nueva clave de acceso",
+            fr: "Nouvelle clé d'accès",
           },
           hash: "892f2214ec97ffb97ee298b0e6d4b633",
         },
@@ -879,6 +965,8 @@ export default {
           content: {
             de: "Fehler",
             en: "Error",
+            es: "Error",
+            fr: "Erreur",
           },
           hash: "3c95bcb32c2104b99a46f5b3dd015248",
         },
