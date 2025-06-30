@@ -336,12 +336,12 @@ class SupabaseService {
       const normalizedKey = this.normalizeAccessKey(rawKey);
       console.log('🔧 Normalized key:', normalizedKey.substring(0, 10) + '...');
       
-      // Direct lookup by ID (no hashing!)
-      const { data: accessKey, error: keyError } = await supabase
+      // Direct lookup by ID (no hashing!) - Use limit(1) instead of single()
+      const { data: accessKeyData, error: keyError } = await supabase
         .from('access_keys')
         .select('*')
         .eq('id', normalizedKey)
-        .single();
+        .limit(1);
 
       if (keyError) {
         console.error('❌ Error querying access key:', keyError);
@@ -351,7 +351,8 @@ class SupabaseService {
         };
       }
 
-      if (!accessKey) {
+      // Check if any results were returned
+      if (!accessKeyData || accessKeyData.length === 0) {
         console.log('❌ Access key not found');
         return {
           success: false,
@@ -359,6 +360,7 @@ class SupabaseService {
         };
       }
 
+      const accessKey = accessKeyData[0];
       console.log('✅ Access key found:', accessKey.id, accessKey.name);
 
       // Get the profile information separately
