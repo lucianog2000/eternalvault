@@ -2777,6 +2777,50 @@
         }
       }
     },
+    "components/PoweredByBadge.tsx": {
+      "scopes": {
+        "2/0/init/body/2/argument-aria-label": {
+          "type": "attribute",
+          "hash": "a1fafd9ce4421e782ce231a8b0797be5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by Bolt.new - Click to visit Bolt.new"
+        },
+        "2/0/init/body/2/argument/3/3/1-alt": {
+          "type": "attribute",
+          "hash": "53047dd9d6565b980ae3ab9c6e380f26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bolt.new logo"
+        },
+        "2/0/init/body/2/argument/3/7/1": {
+          "type": "element",
+          "hash": "40bc57ad96901d190e855357c41d84fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Powered by"
+        },
+        "2/0/init/body/2/argument/3/7/3": {
+          "type": "element",
+          "hash": "d0be7763b36c903d15b6ecc604884b74",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Bolt.new"
+        },
+        "2/0/init/body/2/argument/7": {
+          "type": "element",
+          "hash": "e6f8a14a56e27eeff8d0e78c7086c92b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Built with Bolt.new AI<element:div></element:div>"
+        }
+      }
+    },
     "components/PoweredByRibbon.tsx": {
       "scopes": {
         "2/0/init/body/1/argument/1/1/1": {
@@ -4846,6 +4890,542 @@
           "skip": false,
           "overrides": {},
           "content": "Every day, millions of families permanently lose access to critical digital information. What will happen to your digital legacy when you're no longer here?"
+        },
+        "6/0/init/body/4/argument/11/1/1": {
+          "type": "element",
+          "hash": "dc95f38600fe01995c729d3389bcf238",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Problem No One Sees Coming"
+        },
+        "6/0/init/body/4/argument/11/1/3": {
+          "type": "element",
+          "hash": "dd9b723d8e54bb770ac77e527b388bc9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Every day, millions of families permanently lose access to critical digital information. What will happen to your digital legacy when you're no longer here?"
+        },
+        "6/0/init/body/4/argument/15/1/1": {
+          "type": "element",
+          "hash": "62d3c2943d8658fe7d805d1f53de8a10",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "The Solution: EternalVault"
+        },
+        "6/0/init/body/4/argument/15/1/3": {
+          "type": "element",
+          "hash": "19489cdb33722c2b1050bb0263970983",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "A complete platform that protects, organizes and transmits your digital legacy securely and intelligently."
+        },
+        "6/0/init/body/4/argument/15/3/1/1": {
+          "type": "element",
+          "hash": "3f3336914486c478179bccedfcac7c2f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Secure Legacy Capsules"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/1/3/1": {
+          "type": "element",
+          "hash": "540dbee069edb2d51e55f9c757c220a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Passwords and Credentials"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/1/3/3": {
+          "type": "element",
+          "hash": "ab493956f81c3a7d909f2f04529fef52",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Secure access to bank accounts, social media and digital services"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/3/3/1": {
+          "type": "element",
+          "hash": "296f206934a95bca639a50702d60fc9f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Personal Messages"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/3/3/3": {
+          "type": "element",
+          "hash": "3e2da4eddfad738bd4414abbb9523187",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Last words, life advice and messages of love for each person"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/5/3/1": {
+          "type": "element",
+          "hash": "32aa12084104dbb3e080329508ea0f29",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Important Instructions"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/5/3/3": {
+          "type": "element",
+          "hash": "02bdd7b14c0c0d10ea14b7707a12df8b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Processes, document locations and steps to follow"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/7/3/1": {
+          "type": "element",
+          "hash": "658dbcc3ad44920a8f000fd0cbd58599",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Digital Assets"
+        },
+        "6/0/init/body/4/argument/15/3/1/3/7/3/3": {
+          "type": "element",
+          "hash": "b2f9a8b816387cba017dab77b5fd1b69",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cryptocurrencies, NFTs and other valuable digital assets"
+        },
+        "6/0/init/body/4/argument/15/3/3/1/3": {
+          "type": "element",
+          "hash": "81e1d8ce73dd03398ac329d564d488c6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Example Capsule"
+        },
+        "6/0/init/body/4/argument/15/3/3/1/5/1": {
+          "type": "element",
+          "hash": "6db1a309a8cfe019f019cb4ef1df5e78",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🔐 Main Bank<element:br></element:br> User: juan.garcia@email.com<element:br></element:br> Password: ••••••••••••<element:br></element:br> PIN: 1985 (year mom was born)"
+        },
+        "6/0/init/body/4/argument/15/3/3/1/7": {
+          "type": "element",
+          "hash": "b241fafc7239a1058b901855e916f0f9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Critical information protected and ready to be transmitted"
+        },
+        "6/0/init/body/4/argument/15/5/1/1/3": {
+          "type": "element",
+          "hash": "f2a3d26723a9d0310be791a455cf1266",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Guardian Angel AI"
+        },
+        "6/0/init/body/4/argument/15/5/1/1/5/1": {
+          "type": "element",
+          "hash": "4bc8479f984ac582506e0e1700e99e61",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "\"Hello María, I'm the guardian angel of Juan's legacy. He left specific information for you as his wife. How can I help you today?\""
+        },
+        "6/0/init/body/4/argument/15/5/1/1/7": {
+          "type": "element",
+          "hash": "27395cc262f61f7b5aaf2327b9ea09e6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Empathetic AI that guides your loved ones"
+        },
+        "6/0/init/body/4/argument/15/5/3/1": {
+          "type": "element",
+          "hash": "30809b7f3794087638a7b11c4712a1d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "🤖 Empathetic AI Assistant"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/1/3/1": {
+          "type": "element",
+          "hash": "33cb6cd76dc3f7cdd485c176217c6ed9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Natural Conversation"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/1/3/3": {
+          "type": "element",
+          "hash": "97c4276b2db61e3d55601551a204adee",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Speaks as if it were your loved one, with empathy and understanding"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/3/3/1": {
+          "type": "element",
+          "hash": "8438def2dbc11d23ea664d173d378adf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Contextual Access"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/3/3/3": {
+          "type": "element",
+          "hash": "7c30e3833c955f5e8d6a3a65a4d4c0f8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Only shows relevant information based on relationship and permissions"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/5/3/1": {
+          "type": "element",
+          "hash": "d65ce86082c6f8397f3fa71b1db81ff2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Smart Security"
+        },
+        "6/0/init/body/4/argument/15/5/3/3/5/3/3": {
+          "type": "element",
+          "hash": "3e6aebcfc2d6f99420ff11c16c2380dd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Verifies identity and maintains access logs for auditing"
+        },
+        "6/0/init/body/4/argument/19/1/1": {
+          "type": "element",
+          "hash": "41a63bf2397915e9e643197b7d891814",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Key Features"
+        },
+        "6/0/init/body/4/argument/19/1/3": {
+          "type": "element",
+          "hash": "a4b69764b8fdcd52cf5af9d1d500891b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Cutting-edge technology designed to protect what matters most"
+        },
+        "6/0/init/body/4/argument/23/1/1": {
+          "type": "element",
+          "hash": "de489cfbefd5cf0c241953ca9daa875e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "How It Works"
+        },
+        "6/0/init/body/4/argument/23/1/3": {
+          "type": "element",
+          "hash": "9ffdc3ebd0eeb5a50624227f2a84cd7a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Three simple steps to protect your digital legacy forever"
+        },
+        "6/0/init/body/4/argument/23/3/1/1": {
+          "type": "element",
+          "hash": "cbc75be59348215d0a0d3f4dc01854f2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "1"
+        },
+        "6/0/init/body/4/argument/23/3/1/3": {
+          "type": "element",
+          "hash": "95ac8decbe10f44a00c813be191651ef",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Your Capsules"
+        },
+        "6/0/init/body/4/argument/23/3/1/5": {
+          "type": "element",
+          "hash": "3f6165f5799a77aa76d4f5d99705ce3d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Store passwords, messages, instructions and digital assets in secure and encrypted capsules."
+        },
+        "6/0/init/body/4/argument/23/3/3/1": {
+          "type": "element",
+          "hash": "cd803565c478dd4ec8fd8b37507aa0e5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "2"
+        },
+        "6/0/init/body/4/argument/23/3/3/3": {
+          "type": "element",
+          "hash": "854b08ce82ddd6d6b2a01105a18b68cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Configure Access Keys"
+        },
+        "6/0/init/body/4/argument/23/3/3/5": {
+          "type": "element",
+          "hash": "2dbb78cba73a0532e39b673684c80ce5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generate specific access keys for each person, controlling exactly what they can see."
+        },
+        "6/0/init/body/4/argument/23/3/5/1": {
+          "type": "element",
+          "hash": "6078bfcd8480fd2bdc3f1cc9b4507751",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "3"
+        },
+        "6/0/init/body/4/argument/23/3/5/3": {
+          "type": "element",
+          "hash": "12382d4db2a975031ccd27f4e906df8c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Automatic Access"
+        },
+        "6/0/init/body/4/argument/23/3/5/5": {
+          "type": "element",
+          "hash": "47b50f0fc5361207711ece1f136da7c8",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Once the unlock conditions are met, your loved ones will be able to access your legacy through the Guardian Angel — a compassionate AI that delivers your final words."
+        },
+        "6/0/init/body/4/argument/27/1/1": {
+          "type": "element",
+          "hash": "0c210d6bc42817ac382be4815ef52b26",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Protect Your Digital Legacy Today"
+        },
+        "6/0/init/body/4/argument/27/1/3": {
+          "type": "element",
+          "hash": "cea521b89246f18635dabb22a7082053",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Don't wait until it's too late. Start protecting your digital information and ensure your loved ones have access to what they need."
+        },
+        "6/0/init/body/4/argument/27/1/5/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "6/0/init/body/4/argument/27/1/5/3/expression/right/3": {
+          "type": "element",
+          "hash": "3c3c9666b2acc1404eaa89e34e17f946",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create Account"
+        },
+        "6/0/init/body/4/argument/27/1/7/1/3": {
+          "type": "element",
+          "hash": "d49f6e1300bd990a90efb07380655a8e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "AES-256 Encryption"
+        },
+        "6/0/init/body/4/argument/27/1/7/3/3": {
+          "type": "element",
+          "hash": "2aee046d476c420ca7d92643df7367cb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "5-minute setup"
+        },
+        "6/0/init/body/4/argument/27/1/7/5/3": {
+          "type": "element",
+          "hash": "7d0248dd9abb2f2e92048b3a4c8ba66d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Peace of mind forever"
+        },
+        "6/0/init/body/4/argument/31/1/1": {
+          "type": "element",
+          "hash": "9eaf406d5afd72b5d5f2d3862775bc70",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Have Questions?"
+        },
+        "6/0/init/body/4/argument/31/1/3": {
+          "type": "element",
+          "hash": "389256344a19a415c7cbaa270cf89301",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "We're here to help you protect your digital legacy. Contact us for any questions."
+        },
+        "6/0/init/body/4/argument/31/3/1/1/3/1": {
+          "type": "element",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "6/0/init/body/4/argument/31/3/1/1/3/3": {
+          "type": "element",
+          "hash": "073502c0223eedb21f98278ce2e2423f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "support@eternalvault.com"
+        },
+        "6/0/init/body/4/argument/31/3/1/3": {
+          "type": "element",
+          "hash": "d75a9b04a0ca41660005e50b97d41c00",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Response in less than 24 hours. Technical support and general inquiries."
+        },
+        "6/0/init/body/4/argument/31/3/3/1/3/1": {
+          "type": "element",
+          "hash": "b9537ee90fc5b0116942e0af29d926cc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Phone"
+        },
+        "6/0/init/body/4/argument/31/3/3/1/3/3": {
+          "type": "element",
+          "hash": "d39074f6a278f108c68084ddcef63dbf",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "+1 (555) 123-4567"
+        },
+        "6/0/init/body/4/argument/31/3/3/3": {
+          "type": "element",
+          "hash": "8b08be21b6d82ffde3134f23b59943f4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Monday to Friday, 9:00 AM - 6:00 PM EST. Priority support for premium users."
+        },
+        "6/0/init/body/4/argument/35/1/1/1": {
+          "type": "element",
+          "hash": "2de25720d05d275cbedf886ba29a8b13",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "By using EternalVault, you agree to our terms and conditions. Your privacy and security are our top priorities."
+        },
+        "6/0/init/body/4/argument/35/1/1/3/1/3": {
+          "type": "element",
+          "hash": "69d0219661f5fa7c1536e6f883925fb2",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Terms & Conditions"
+        },
+        "6/0/init/body/4/argument/35/1/1/3/3": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "6/0/init/body/4/argument/35/1/1/3/5": {
+          "type": "element",
+          "hash": "085c4c74960bec8d81fee4772c315f1e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Privacy Policy"
+        },
+        "6/0/init/body/4/argument/35/1/1/3/7": {
+          "type": "element",
+          "hash": "5f1c90d0fd46023ba1bfaaa2537f59fb",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "•"
+        },
+        "6/0/init/body/4/argument/35/1/1/3/9": {
+          "type": "element",
+          "hash": "cc2a66f2271dd66d65ab96ff2dee4933",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Legal Information"
+        },
+        "6/0/init/body/4/argument/7/3": {
+          "type": "element",
+          "hash": "630c77f88b8dc360fc1b67a9cf5e43c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Your Digital Legacy<element:br></element:br><element:span>Protected Forever</element:span>"
+        },
+        "6/0/init/body/4/argument/7/5": {
+          "type": "element",
+          "hash": "85cc72703e3a4841ee9f67ca5295205d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "EternalVault is the most secure platform to protect and transmit your most important digital information. When you're no longer here, your digital legacy will be safe and accessible to those who need it most."
+        },
+        "6/0/init/body/4/argument/7/7/1/3": {
+          "type": "element",
+          "hash": "699bf1835b50c32e4c463afe7163f8f3",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat with Guardian Angel AI"
+        },
+        "6/0/init/body/4/argument/7/7/3/expression/right/3": {
+          "type": "element",
+          "hash": "0971909fecc806c0167a5da41e1cb02c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Create My Legacy"
+        },
+        "6/0/init/body/4/argument/7/9/1/3": {
+          "type": "element",
+          "hash": "230c677cd580ffc20305a630a961a7d9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Forever safe, so your memory lives on"
+        },
+        "6/0/init/body/4/argument/7/9/3/3": {
+          "type": "element",
+          "hash": "f95f22a69bce720b796e7dc22d78b91c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Military encryption"
+        },
+        "6/0/init/body/4/argument/7/9/5/3": {
+          "type": "element",
+          "hash": "0608737b6e47f076cc9dddb6d9acb983",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Immediate access for your loved ones"
         }
       }
     },
