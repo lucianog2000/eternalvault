@@ -3,7 +3,6 @@ import { Star, Heart, Shield, Key, MessageCircle, ArrowRight, CheckCircle, Users
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import PoweredByRibbon from '../components/PoweredByRibbon';
-import PoweredByBadge from '../components/PoweredByBadge';
 
 const Home: React.FC = () => {
   const { user } = useAuth();
@@ -66,10 +65,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-12 lg:space-y-16 relative">
-      {/* Powered by Bolt.new Badge */}
-      <PoweredByBadge />
-
+    <div className="space-y-12 lg:space-y-16">
       {/* Hero Section */}
       <section className="text-center py-8 lg:py-16">
         <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl lg:rounded-3xl flex items-center justify-center mx-auto mb-6 lg:mb-8">
