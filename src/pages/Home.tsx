@@ -66,8 +66,8 @@ const Home: React.FC = () => {
 
   return (
     <div className="space-y-12 lg:space-y-16">
-      {/* Fixed Image in Top Right Corner */}
-      <div className="fixed top-4 right-4 z-50 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+      {/* Fixed Badge - Mobile: below navbar, Desktop: top corner */}
+      <div className="fixed top-20 right-4 lg:top-4 z-30 w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20">
         <img 
           src="/white_bolt_badge.svg" 
           alt="White Bolt Badge" 

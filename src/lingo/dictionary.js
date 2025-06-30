@@ -2648,24 +2648,6 @@ export default {
           },
           hash: "c84f6b3cee4e0010ceb0264bb1418694",
         },
-        "3/0/init/body/10/argument/29/expression/right/1": {
-          content: {
-            de: "🧪 <element:strong>Demo-Schlüssel zum Testen:</element:strong>",
-            en: "🧪 <element:strong>Demo Keys for Testing:</element:strong>",
-            es: "🧪 <element:strong>Claves de demostración para pruebas:</element:strong>",
-            fr: "🧪 <element:strong>Clés de démonstration pour les tests :</element:strong>",
-          },
-          hash: "2f46f9ac7a89ffcdd4d97ffca631edd7",
-        },
-        "3/0/init/body/10/argument/29/expression/right/3/1": {
-          content: {
-            de: "• evault_test_demo_2024_abc123 (Demo-Kapseln)",
-            en: "• evault_test_demo_2024_abc123 (Demo capsules)",
-            es: "• evault_test_demo_2024_abc123 (Cápsulas de demostración)",
-            fr: "• evault_test_demo_2024_abc123 (Capsules de démonstration)",
-          },
-          hash: "a3857ea2ac107b444f2d522d65124b4c",
-        },
         "3/0/init/body/10/argument/29/expression/right/3/3": {
           content: {
             de: "• evault_sample_key_2024_xyz789 (Beispieldaten)",

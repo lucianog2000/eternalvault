@@ -69,7 +69,7 @@ const PoweredByRibbon: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-40">
+    <div className="fixed bottom-4 right-2 sm:right-4 z-40 max-w-[calc(100vw-1rem)] sm:max-w-none">
       <div className="bg-black/80 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl overflow-visible relative">
         {/* Close Button */}
         <button
@@ -81,36 +81,36 @@ const PoweredByRibbon: React.FC = () => {
         </button>
 
         {/* Content */}
-        <div className="p-3 min-w-[200px]">
+        <div className="p-3 w-full sm:min-w-[200px]">
           <div className="flex items-center space-x-1 mb-2">
             <span className="text-white/60 text-xs font-medium">Powered by</span>
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className="grid grid-cols-3 sm:flex sm:items-center gap-2 sm:space-x-2 sm:gap-0">
             {technologies.map((tech, index) => (
               <div
                 key={tech.name}
-                className="group relative flex flex-col items-center w-16"
+                className="group relative flex flex-col items-center w-12 sm:w-16"
               >
                 {/* Technology Icon */}
                 <div 
-                  className={`w-8 h-8 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center relative transition-all group-hover:scale-110 cursor-pointer hover:shadow-lg p-1`}
+                  className={`w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center relative transition-all group-hover:scale-110 cursor-pointer hover:shadow-lg p-1`}
                   onClick={() => handleTechClick(tech)}
                   title={tech.description}
                 >
-                  <img src={tech.image} alt={tech.name} className="w-5 h-5 object-contain" />
+                  <img src={tech.image} alt={tech.name} className="w-3 h-3 sm:w-5 sm:h-5 object-contain" />
                   
                   {/* Soon Badge */}
                   {tech.status === 'soon' && (
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-black text-xs font-bold leading-none">!</span>
+                    <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full flex items-center justify-center">
+                      <span className="text-black text-[8px] sm:text-xs font-bold leading-none">!</span>
                     </div>
                   )}
                 </div>
                 
                 {/* Technology Name */}
                 <span 
-                  className="text-white/70 text-xs mt-1 font-medium transition-colors group-hover:text-white cursor-pointer hover:text-purple-300 text-center leading-tight"
+                  className="text-white/70 text-[10px] sm:text-xs mt-1 font-medium transition-colors group-hover:text-white cursor-pointer hover:text-purple-300 text-center leading-tight"
                   onClick={() => handleTechClick(tech)}
                   title={tech.description}
                 >

@@ -2307,22 +2307,6 @@
           "overrides": {},
           "content": "✅ <element:strong>Direct Access:</element:strong> Access keys work immediately without any verification. Simply enter the key and get instant access to all associated capsules."
         },
-        "3/0/init/body/10/argument/29/expression/right/1": {
-          "type": "element",
-          "hash": "2f46f9ac7a89ffcdd4d97ffca631edd7",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "🧪 <element:strong>Demo Keys for Testing:</element:strong>"
-        },
-        "3/0/init/body/10/argument/29/expression/right/3/1": {
-          "type": "element",
-          "hash": "a3857ea2ac107b444f2d522d65124b4c",
-          "context": "",
-          "skip": false,
-          "overrides": {},
-          "content": "• evault_test_demo_2024_abc123 (Demo capsules)"
-        },
         "3/0/init/body/10/argument/29/expression/right/3/3": {
           "type": "element",
           "hash": "dabe544aa5dd269c3f5a9b81c6c6e681",

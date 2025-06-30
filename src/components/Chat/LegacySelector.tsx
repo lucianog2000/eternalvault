@@ -267,19 +267,6 @@ const LegacySelector: React.FC = () => {
           Simply enter the key and get instant access to all associated capsules.
         </p>
       </div>
-
-      {/* Demo Keys for Testing */}
-      {availableLegacies.length === 0 && !showAddToken && (
-        <div className="mt-3 p-2 bg-yellow-500/10 rounded border border-yellow-500/20">
-          <p className="text-yellow-200 text-xs mb-2">
-            🧪 <strong>Demo Keys for Testing:</strong>
-          </p>
-          <div className="space-y-1 text-xs">
-            <p className="text-yellow-200/80">• evault_test_demo_2024_abc123 (Demo capsules)</p>
-            <p className="text-yellow-200/80">• evault_sample_key_2024_xyz789 (Sample data)</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
